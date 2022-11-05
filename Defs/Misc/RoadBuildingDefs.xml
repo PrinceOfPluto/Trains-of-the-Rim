@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <VFEC.RoadBuildingDef>
+        <label>Build Railroad</label>
+        <defName>BuildRailRoad</defName>
+        <description>Orders pawns in the caravan to clear foliage, assemble a stone track bed, arrange railroad ties, and lay steel rails.</description>
+        <iconPath>UI/Gizmos/BuildRailRoad</iconPath>
+        <road>Railroad</road>
+        <workRequired>100</workRequired>
+    </VFEC.RoadBuildingDef>
+</Defs>

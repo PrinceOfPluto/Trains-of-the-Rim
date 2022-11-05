@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+    <Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+        <defName>Steam_Engine_Train_Blueprint</defName>
+        <label>Steam Engine Train</label>
+        <description>A steam engine train to rule the rails.</description>
+        <terrainAffordanceNeeded>RailAffordance</terrainAffordanceNeeded>
+
+        <!-- TODO: update to train texture -->
+        <graphicData>
+            <texPath>Vehicles/Land/Car/Car</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(4,7)</drawSize>
+        </graphicData>
+
+        <statBases>
+            <MaxHitPoints>10000</MaxHitPoints>
+            <WorkToBuild>30</WorkToBuild>
+            <Flammability>0.05</Flammability>
+        </statBases>
+        <size>(3,5)</size>
+
+        <researchPrerequisites/>
+
+        <costList>
+            <ComponentIndustrial>35</ComponentIndustrial>
+            <Steel>3000</Steel>
+        </costList>
+
+        <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+
+        <thingToSpawn>Steam_Engine_Train</thingToSpawn>
+        <!-- TODO: update to train whistle -->
+        <soundBuilt>ShipBigConstruction</soundBuilt>
+    </Vehicles.VehicleBuildDef>
+</Defs>

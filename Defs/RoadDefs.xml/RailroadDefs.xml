@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <RoadDef>
+        <defName>Railroad</defName>
+        <label>railroad</label>
+        <priority>50</priority>
+        <movementCostMultiplier>0.5</movementCostMultiplier>
+        <tilesPerSegment>400</tilesPerSegment>
+        <pathingMode>Bulldoze</pathingMode>
+        <roadGenSteps>
+            <li Class="RoadDefGenStep_Bulldoze">
+                <chancePerPositionCurve>
+                    <points>
+                        <li>(0, 1)</li>
+                        <li>(4, 1)</li>
+                        <li>(4, 0)</li>
+                    </points>
+                </chancePerPositionCurve>
+            </li>
+            <li Class="RoadDefGenStep_Place">
+                <chancePerPositionCurve>
+                    <points>
+                        <li>(3.0, 1)</li>
+                        <li>(3.0, 0)</li>
+                    </points>
+                </chancePerPositionCurve>
+                <place>Bridge</place>
+                <antialiasingMultiplier>0</antialiasingMultiplier>
+                <onlyIfOriginAllows>true</onlyIfOriginAllows>                <!-- only if bridge also at the center -->
+            </li>
+            <li Class="RoadDefGenStep_Place">
+                <chancePerPositionCurve>
+                    <points>
+                        <li>(0, 0.8)</li>
+                        <li>(2.8, 0.8)</li>
+                        <li>(3.2, 0)</li>
+                    </points>
+                </chancePerPositionCurve>
+                <suppressOnTerrainTag>Water</suppressOnTerrainTag>
+                <place>Gravel</place>
+            </li>
+            <li Class="RoadDefGenStep_Place">
+                <chancePerPositionCurve>
+                    <points>
+                        <li>(0, 0.9)</li>
+                        <li>(2.6, 0.8)</li>
+                        <li>(3.0, 0)</li>
+                    </points>
+                </chancePerPositionCurve>
+                <place>RailroadBallastLimestone</place>
+            </li>
+        </roadGenSteps>
+        <worldRenderSteps>
+            <li>
+                <layer>Outline</layer>
+                <width>0.95</width>
+            </li>
+            <li>
+                <layer>Gravel</layer>
+                <width>0.8</width>
+            </li>
+            <li>
+                <layer>Asphalt</layer>
+                <width>0.55</width>
+            </li>
+        </worldRenderSteps>
+        <worldTransitionGroup>Asphalt</worldTransitionGroup>
+    </RoadDef>
+
+</Defs>
