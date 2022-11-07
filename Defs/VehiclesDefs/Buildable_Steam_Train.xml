@@ -5,13 +5,16 @@
         <defName>Steam_Engine_Train_Blueprint</defName>
         <label>Steam Engine Train</label>
         <description>A steam engine train to rule the rails.</description>
+        <designationCategory>DecoRailProp</designationCategory>
+
         <terrainAffordanceNeeded>RailAffordance</terrainAffordanceNeeded>
 
-        <!-- TODO: update to train texture -->
         <graphicData>
-            <texPath>Vehicles/Land/Car/Car</texPath>
+            <texPath>Things/Vehicles/Rail/Frisco/frisco</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
-            <drawSize>(4,7)</drawSize>
+            <drawSize>(4,12)</drawSize>
+            <drawOffset>(0,0,1)</drawOffset>
+            <drawRotated>false</drawRotated>
         </graphicData>
 
         <statBases>
@@ -19,9 +22,11 @@
             <WorkToBuild>30</WorkToBuild>
             <Flammability>0.05</Flammability>
         </statBases>
-        <size>(3,5)</size>
+        <size>(2,11)</size>
 
-        <researchPrerequisites/>
+        <researchPrerequisites>
+            <li>Research_Vehicles_Trains_Steam_Engine</li>
+        </researchPrerequisites>
 
         <costList>
             <ComponentIndustrial>35</ComponentIndustrial>

@@ -1,62 +1,83 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-    <Vehicles.VehicleDef ParentName="BaseVehiclePawn">
+    <Vehicles.VehicleDef ParentName="VVE_VehiclePawn_Land">
         <defName>Steam_Engine_Train</defName>
         <label>Steam Engine Train</label>
         <description>A steam engine train to rule the rails.</description>
 
         <!-- TODO: update to train texture -->
         <graphicData>
-            <texPath>Vehicles/Land/Car/Car</texPath>
+            <texPath>Things/Vehicles/Rail/Frisco/frisco</texPath>
             <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
-            <drawSize>(4,7)</drawSize>
-            <shaderType>CutoutComplexPattern</shaderType>
-            <color>(120, 120, 120)</color>
-            <colorTwo>(0, 80, 0)</colorTwo>
-            <colorThree>(0, 80, 0)</colorThree>
-            <shadowData>
-                <volume>(0.4,0.1,0.4)</volume>
-            </shadowData>
+            <!-- <shaderType>CutoutComplexPattern</shaderType> -->
+            <drawSize>(4,12)</drawSize>
+            <drawOffset>(0,0,1)</drawOffset>
+            <drawRotated>false</drawRotated>
         </graphicData>
+        <!-- <graphicData>
+            <texPath>Things/Vehicles/Tier1/Tier1_Van/Tier1_Van</texPath>
+            <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+            <shaderType>CutoutComplexPattern</shaderType>
+            <drawSize>(3,5)</drawSize>
+            <color>(160, 160, 160)</color>
+            <colorTwo>(126, 126, 126)</colorTwo>
+            <colorThree>(196, 200, 202)</colorThree>
+        </graphicData> -->
 
-        <combatPower>200</combatPower>
         <fillPercent>1</fillPercent>
 
-        <nameable>true</nameable>
         <buildDef>Steam_Engine_Train_Blueprint</buildDef>
 
-        <!-- TODO: update to train size -->
-        <size>(3,5)</size>
+        <!-- TODO: update to full train size -->
+        <size>(2,11)</size>
 
         <vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
         <vehicleCategory>Transport</vehicleCategory>
         <techLevel>Industrial</techLevel>
         <vehicleType>Land</vehicleType>
-        <defaultTerrainImpassable>true</defaultTerrainImpassable>
 
         <!-- TODO: update train stats -->
         <statBases>
-            <Mass>10000</Mass>
             <ArmorRating_Blunt>1.0</ArmorRating_Blunt>
             <ArmorRating_Sharp>1.0</ArmorRating_Sharp>
-            <MarketValue>250000</MarketValue>
             <Flammability>0</Flammability>
+            <MarketValue>2000</MarketValue>
         </statBases>
+
+        <soundOneShotsOnEvent Inherit = "False">
+            <li>
+                <key>PawnEntered</key>
+                <value>VVE_VehicleEnter</value>
+            </li>
+            <li>
+                <key>PawnExited</key>
+                <value>VVE_VehicleEnter</value>
+            </li>
+            <li>
+                <key>DraftOn</key>
+                <value>SRTS_Trains_Sound_Steam_Train_Leaving</value>
+            </li>
+            <li>
+                <key>DraftOff</key>
+                <value>SRTS_Trains_Sound_Steam_Train_Incoming</value>
+            </li>
+        </soundOneShotsOnEvent>
 
         <!-- TODO: update train vehicle stats -->
         <vehicleStats>
-            <MoveSpeed>4.5</MoveSpeed>
+            <Mass>200</Mass>
+            <MoveSpeed>10</MoveSpeed>
             <CargoCapacity>24000</CargoCapacity>
-            <RepairRate>3.25</RepairRate>
+            <RepairRate>0.5</RepairRate>
+            <AccelerationRate>0.02</AccelerationRate>
         </vehicleStats>
 
         <properties>
             <healthLabel_Healthy>Operational</healthLabel_Healthy>
             <healthLabel_Injured>Needs Repairs</healthLabel_Injured>
             <healthLabel_Immobile>Inoperable</healthLabel_Immobile>
-
-            <customBiomeCosts/>
+            <defaultTerrainImpassable>true</defaultTerrainImpassable>
 
             <roles>
                 <li>
@@ -95,163 +116,20 @@
                         </cells>
                     </hitbox>
                 </li>
-                <!-- TODO: add for militarized train def -->
-                <!-- <li>
-					<key>gunner</key>
-					<label>Gunner</label>
-					<slots>1</slots>
-					<slotsToOperate>1</slotsToOperate>
-					<handlingTypes>
-						<li>Cannon</li>
-					</handlingTypes>
-					<turretIds>
-						<li>mainTurret</li>
-					</turretIds>
-					<hitbox>
-						<cells>
-							<li>(0,0)</li>
-						</cells>
-					</hitbox>
-				</li>
-                <li>
-					<key>loader</key>
-					<label>Loader</label>
-					<slots>1</slots>
-					<slotsToOperate>1</slotsToOperate>
-					<handlingTypes>
-						<li>Cannon</li>
-					</handlingTypes>
-					<turretIds>
-						<li>mainTurret</li>
-					</turretIds>
-					<hitbox>
-						<cells>
-							<li>(0,0)</li>
-						</cells>
-					</hitbox>
-				</li> -->
             </roles>
 
-            <!-- TODO: update with terrain cost -->
-            <!-- PR for customRestrictedToRoads -->
-            <customTerrainCosts DisallowTerrainWithTag="Floor">
+            <customTerrainCosts AllowTerrainWithTag="Rail" PathCost="1">
                 <li>
                     <key>Bridge</key>
                     <value>1</value>
                 </li>
-                <li>
-                    <key>RailroadBallastSandstone</key>
-                    <value>1</value>
-                </li>
-                <li>
-                    <key>RailroadBallastGranite</key>
-                    <value>1</value>
-                </li>
-                <li>
-                    <key>RailroadBallastLimestone</key>
-                    <value>1</value>
-                </li>
-                <li>
-                    <key>RailroadBallastSlate</key>
-                    <value>1</value>
-                </li>
-                <li>
-                    <key>RailroadBallastMarble</key>
-                    <value>1</value>
-                </li>
-                <li>
-                    <key>Soil</key>
-                    <value>-1</value>
-                </li>
-                <li>
-                    <key>MossyTerrain</key>
-                    <value>-1</value>
-                </li>
-                <li>
-                    <key>MarshyTerrain</key>
-                    <value>-1</value>
-                </li>
-                <li>
-                    <key>SoilRich</key>
-                    <value>-1</value>
-                </li>
-                <li>
-                    <key>Gravel</key>
-                    <value>-1</value>
-                </li>
-                <li>
-                    <key>Sand</key>
-                    <value>-1</value>
-                </li>
-                <li>
-                    <key>SoftSand</key>
-                    <value>-1</value>
-                </li>
-                <li>
-                    <key>Mud</key>
-                    <value>-1</value>
-                </li>
-                <li>
-                    <key>Ice</key>
-                    <value>-1</value>
-                </li>
-                <li>
-                    <key>Underwall</key>
-                    <value>-1</value>
-                </li>
-                <li>
-                    <key>BrokenAsphalt</key>
-                    <value>-1</value>
-                </li>
-                <li>
-                    <key>PackedDirt</key>
-                    <value>-1</value>
-                </li>
-                <li>
-                    <key>WaterDeep</key>
-                    <value>-1</value>
-                </li>
-                <li>
-                    <key>WaterDeep</key>
-                    <value>-1</value>
-                </li>
-                <li>
-                    <key>WaterOceanDeep</key>
-                    <value>-1</value>
-                </li>
-                <li>
-                    <key>WaterMovingChestDeep</key>
-                    <value>-1</value>
-                </li>
-                <li>
-                    <key>WaterShallow</key>
-                    <value>-1</value>
-                </li>
-                <li>
-                    <key>WaterOceanShallow</key>
-                    <value>-1</value>
-                </li>
-                <li>
-                    <key>WaterMovingShallow</key>
-                    <value>-1</value>
-                </li>
-                <li>
-                    <key>Marsh</key>
-                    <value>-1</value>
-                </li>
-                <li>
-                    <key>BurnedWoodPlankFloor</key>
-                    <value>-1</value>
-                </li>
-                <li>
-                    <key>BurnedCarpet</key>
-                    <value>-1</value>
-                </li>
-                <li>
-                    <key>BurnedStrawMatting</key>
-                    <value>-1</value>
-                </li>
             </customTerrainCosts>
+            <customRoadCosts>
+                <li>
+                    <key>Railroad</key>
+                    <value>1</value>
+                </li>
+            </customRoadCosts>
         </properties>
 
         <!-- TODO: update with health and armor stats for train components -->
@@ -259,11 +137,11 @@
             <li>
                 <key>Body</key>
                 <label>Body</label>
-                <health>100</health>
-                <armor>.25</armor>
+                <health>250</health>
+                <armor>4</armor>
 
                 <hitbox>
-                    <side>Body</side>
+                    <side>BodyNoOverlap</side>
                 </hitbox>
 
                 <categories>
@@ -271,25 +149,9 @@
                 </categories>
             </li>
             <li>
-                <key>Wheels</key>
-                <label>Wheels</label>
-                <health>25</health>
-                <armor>0</armor>
-
-                <hitbox>
-                    <cells>
-                        <li>(-1, 1)</li>
-                        <li>(1, 1)</li>
-                        <li>(-1, -2)</li>
-                        <li>(1, -2)</li>
-                    </cells>
-                </hitbox>
-            </li>
-            <li>
                 <key>Engine</key>
                 <label>Engine</label>
-                <health>100</health>
-                <armor>.1</armor>
+                <health>50</health>
                 <efficiencyWeight>10</efficiencyWeight>
 
                 <reactors>
@@ -304,36 +166,217 @@
 
                 <hitbox>
                     <cells>
-                        <li>(0, 2)</li>
+                        <li>(-1, -2)</li>
+                        <li>(0, -2)</li>
                     </cells>
                 </hitbox>
+
                 <categories>
                     <li>MoveSpeed</li>
                 </categories>
             </li>
+            <li>
+                <key>FrontLeftWheel</key>
+                <label>Front Left Wheel</label>
+                <health>30</health>
+                <tags>
+                    <li>Wheel</li>
+                </tags>
+                <hitbox>
+                    <fallthrough>false</fallthrough>
+                    <cells>
+                        <li>(-1, 1)</li>
+                    </cells>
+                </hitbox>
+
+                <categories>
+                    <li>MoveSpeed</li>
+                </categories>
+            </li>
+            <li>
+                <key>FrontRightWheel</key>
+                <label>Front Right Wheel</label>
+                <health>30</health>
+                <tags>
+                    <li>Wheel</li>
+                </tags>
+                <hitbox>
+                    <fallthrough>false</fallthrough>
+                    <cells>
+                        <li>(0, 1)</li>
+                    </cells>
+                </hitbox>
+
+                <categories>
+                    <li>MoveSpeed</li>
+                </categories>
+            </li>
+            <li>
+                <key>BackLeftWheel</key>
+                <label>Back Left Wheel</label>
+                <health>30</health>
+                <tags>
+                    <li>Wheel</li>
+                </tags>
+                <hitbox>
+                    <fallthrough>false</fallthrough>
+                    <cells>
+                        <li>(-1, -2)</li>
+                    </cells>
+                </hitbox>
+
+                <categories>
+                    <li>MoveSpeed</li>
+                </categories>
+            </li>
+            <li>
+                <key>BackRightWheel</key>
+                <label>Back Right Wheel</label>
+                <health>30</health>
+                <tags>
+                    <li>Wheel</li>
+                </tags>
+                <hitbox>
+                    <fallthrough>false</fallthrough>
+                    <cells>
+                        <li>(0, -2)</li>
+                    </cells>
+                </hitbox>
+
+                <categories>
+                    <li>MoveSpeed</li>
+                </categories>
+            </li>
+            <li>
+                <key>FrontLeftSuspension</key>
+                <label>Front Left Suspension</label>
+                <health>20</health>
+
+                <hitbox>
+                    <cells>
+                        <li>(-1, 1)</li>
+                    </cells>
+                </hitbox>
+
+                <categories>
+                    <li>MoveSpeed</li>
+                </categories>
+            </li>
+            <li>
+                <key>FrontRightSuspension</key>
+                <label>Front Right Suspension</label>
+                <health>20</health>
+
+                <hitbox>
+                    <cells>
+                        <li>(0, 1)</li>
+                    </cells>
+                </hitbox>
+
+                <categories>
+                    <li>MoveSpeed</li>
+                </categories>
+            </li>
+            <li>
+                <key>Gearbox</key>
+                <label>Gearbox</label>
+                <health>45</health>
+
+                <hitbox>
+                    <cells>
+                        <li>(-1, 1)</li>
+                        <li>(0, 1)</li>
+                    </cells>
+                </hitbox>
+
+                <categories>
+                    <li>MoveSpeed</li>
+                </categories>
+            </li>
+            <li>
+                <key>LeftSidePanel</key>
+                <label>Left Side Panel</label>
+                <health>90</health>
+
+                <hitbox>
+                    <side>Left</side>
+                </hitbox>
+            </li>
+            <li>
+                <key>RightSidePanel</key>
+                <label>Right Side Panel</label>
+                <health>90</health>
+
+                <hitbox>
+                    <side>Right</side>
+                </hitbox>
+            </li>
+            <li>
+                <key>Chemtank</key>
+                <label>Chemtank</label>
+                <health>40</health>
+
+                <hitbox>
+                    <cells>
+                        <li>(-1, -2)</li>
+                        <li>(0, -2)</li>
+                    </cells>
+                </hitbox>
+            </li>
+            <li>
+                <key>FrontBumper</key>
+                <label>Front Bumper</label>
+                <health>30</health>
+
+                <hitbox>
+                    <side>Front</side>
+                </hitbox>
+            </li>
+            <li>
+                <key>RearBumper</key>
+                <label>Rear Bumper</label>
+                <health>30</health>
+
+                <hitbox>
+                    <side>Back</side>
+                </hitbox>
+            </li>
+            <li>
+                <key>Upholstery</key>
+                <label>Upholstery</label>
+                <health>30</health>
+            </li>
+            <li>
+                <key>Dashboard</key>
+                <label>Dashboard</label>
+                <health>45</health>
+            </li>
+            <li>
+                <key>SteeringWheel</key>
+                <label>Steering Wheel</label>
+                <health>20</health>
+            </li>
+            <li>
+                <key>Alternator</key>
+                <label>Alternator</label>
+                <health>20</health>
+            </li>
+            <li>
+                <key>Hood</key>
+                <label>Hood</label>
+                <health>40</health>
+            </li>
+            <li>
+                <key>Roof</key>
+                <label>Roof</label>
+                <health>45</health>
+            </li>
         </components>
-
-        <race>
-            <thinkTreeMain>Vehicle</thinkTreeMain>
-            <intelligence>ToolUser</intelligence>
-            <fleshType>MetalVehicle</fleshType>
-            <needsRest>false</needsRest>
-            <hasGenders>false</hasGenders>
-            <foodType>None</foodType>
-
-            <baseBodySize>1.0</baseBodySize>
-            <baseHealthScale>1.0</baseHealthScale>
-
-            <soundMeleeHitPawn>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHitPawn>
-            <soundMeleeHitBuilding>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHitBuilding>
-            <soundMeleeMiss>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeMiss>
-        </race>
 
         <comps>
             <li Class="Vehicles.CompProperties_FueledTravel">
-                <!-- Must Include -->
                 <fuelType>Chemfuel</fuelType>
-                <fuelConsumptionRate>60</fuelConsumptionRate>
+                <fuelConsumptionRate>30</fuelConsumptionRate>
                 <fuelCapacity>2000</fuelCapacity>
                 <fuelConsumptionCondition>Drafted</fuelConsumptionCondition>
             </li>

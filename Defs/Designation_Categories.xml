@@ -2,8 +2,8 @@
 <Defs>
     <DesignationCategoryDef>
         <defName>DecoRailProp</defName>
-        <label>Railway</label>
-        <description>Decorative Railway Props</description>
+        <label>Railroad</label>
+        <description>Railroads</description>
         <order>101</order>
         <specialDesignatorClasses>
             <li>Designator_Cancel</li>

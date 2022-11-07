@@ -2,7 +2,7 @@
 <Defs>
 
     <TerrainDef Abstract="True" Name="RailroadBallastBase">
-        <layerable>true</layerable>
+        <!-- <layerable>true</layerable> -->
         <affordances>
             <li>Light</li>
             <li>Medium</li>
@@ -11,15 +11,16 @@
         </affordances>
         <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
         <tags>
+            <li>Rail</li>
             <li>Road</li>
         </tags>
         <renderPrecedence>370</renderPrecedence>
         <description>Track ballast forms the trackbed upon which railroad ties (sleepers) are laid.</description>
         <texturePath>Terrain/Surfaces/RailroadBallast</texturePath>
-        <pollutionShaderType MayRequire="Ludeon.RimWorld.Biotech">TerrainFadeRoughLinearBurn</pollutionShaderType>
+        <!-- <pollutionShaderType MayRequire="Ludeon.RimWorld.Biotech">TerrainFadeRoughLinearBurn</pollutionShaderType>
         <pollutionOverlayTexturePath>Terrain/Surfaces/PollutionFloorSmooth</pollutionOverlayTexturePath>
         <pollutionColor>(1, 1, 1, 1)</pollutionColor>
-        <isPaintable>true</isPaintable>
+        <isPaintable>true</isPaintable> -->
         <edgeType>FadeRough</edgeType>
         <statBases>
             <WorkToBuild>100</WorkToBuild>
@@ -30,7 +31,7 @@
         <designationCategory>DecoRailProp</designationCategory>
         <fertility>0</fertility>
         <constructEffect>ConstructDirt</constructEffect>
-        <uiOrder>2070</uiOrder>
+        <!-- <uiOrder>2070</uiOrder> -->
         <scatterType>Rocky</scatterType>
         <researchPrerequisites>
             <li>Research_Vehicles_Trains_Metal_Rails</li>

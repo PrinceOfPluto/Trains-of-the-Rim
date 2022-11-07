@@ -27,11 +27,16 @@
         <displayName>Vanilla Factions Expanded - Classical</displayName>
         <steamWorkshopUrl>steam://url/CommunityFilePage/2787850474</steamWorkshopUrl>
       </li>
+      <li>
+        <packageId>OskarPotocki.VanillaVehiclesExpanded</packageId>
+        <displayName>Vanilla Vehicles Expanded</displayName>
+      </li>
     </v1.4>
   </modDependenciesByVersion>
   <loadAfter>
     <li>smashphil.vehicleframework</li>
     <li>pentalimbedcat.DecoRail</li>
     <li>oskarpotocki.vfe.classical</li>
+    <li>OskarPotocki.VanillaVehiclesExpanded</li>
   </loadAfter>
 </ModMetaData>
