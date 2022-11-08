@@ -22,4 +22,26 @@
             </value>
         </match>
     </Operation>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Decorative Railway Prop</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/DesignationCategoryDef[defName="DecoRailProp"]/defName</xpath>
+            <value>
+                <defName>RailroadCategory</defName>
+            </value>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Decorative Railway Prop</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[designationCategory="DecoRailProp"]/designationCategory</xpath>
+            <value>
+                <designationCategory>RailroadCategory</designationCategory>
+            </value>
+        </match>
+    </Operation>
 </Patch>

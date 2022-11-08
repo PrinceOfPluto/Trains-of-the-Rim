@@ -1,44 +1,59 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-    <Vehicles.VehicleDef ParentName="VVE_VehiclePawn_Land">
+    <Vehicles.VehicleDef Name = "BaseRailVehiclePawn" ParentName = "BaseVehiclePawn" Abstract = "True">
+        <vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
+        <vehicleCategory>Transport</vehicleCategory>
+        <techLevel>Industrial</techLevel>
+        <vehicleType>Land</vehicleType>
+        <properties>
+            <healthLabel_Healthy>Operational</healthLabel_Healthy>
+            <healthLabel_Injured>Needs Repairs</healthLabel_Injured>
+            <healthLabel_Immobile>Inoperable</healthLabel_Immobile>
+            <defaultTerrainImpassable>true</defaultTerrainImpassable>
+            <customTerrainCosts AllowTerrainWithTag="Rail" PathCost="1">
+                <li>
+                    <key>Bridge</key>
+                    <value>1</value>
+                </li>
+            </customTerrainCosts>
+            <customRoadCosts>
+                <li>
+                    <key>Railroad</key>
+                    <value>1</value>
+                </li>
+            </customRoadCosts>
+        </properties>
+    </Vehicles.VehicleDef>
+
+    <Vehicles.VehicleDef ParentName="BaseRailVehiclePawn">
         <defName>Steam_Engine_Train</defName>
         <label>Steam Engine Train</label>
         <description>A steam engine train to rule the rails.</description>
 
-        <!-- TODO: update to train texture -->
+        <!-- TODO: update to full train texture -->
         <graphicData>
-            <texPath>Things/Vehicles/Rail/Frisco/frisco</texPath>
+            <texPath>Things/Vehicles/Rail/FriscoWithTender/frisco_full</texPath>
             <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
             <!-- <shaderType>CutoutComplexPattern</shaderType> -->
-            <drawSize>(4,12)</drawSize>
-            <drawOffset>(0,0,1)</drawOffset>
+            <drawSize>(4,21)</drawSize>
+            <drawOffsetWest>(0,0,0.5)</drawOffsetWest>
+            <drawOffsetEast>(0,0,0.5)</drawOffsetEast>
+            <drawOffsetNorth>(0.5,0,0)</drawOffsetNorth>
+            <drawOffsetSouth>(0.5,0,0)</drawOffsetSouth>
             <drawRotated>false</drawRotated>
         </graphicData>
-        <!-- <graphicData>
-            <texPath>Things/Vehicles/Tier1/Tier1_Van/Tier1_Van</texPath>
-            <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
-            <shaderType>CutoutComplexPattern</shaderType>
-            <drawSize>(3,5)</drawSize>
-            <color>(160, 160, 160)</color>
-            <colorTwo>(126, 126, 126)</colorTwo>
-            <colorThree>(196, 200, 202)</colorThree>
-        </graphicData> -->
 
         <fillPercent>1</fillPercent>
 
         <buildDef>Steam_Engine_Train_Blueprint</buildDef>
 
         <!-- TODO: update to full train size -->
-        <size>(2,11)</size>
-
-        <vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
-        <vehicleCategory>Transport</vehicleCategory>
-        <techLevel>Industrial</techLevel>
-        <vehicleType>Land</vehicleType>
+        <size>(2,18)</size>
 
         <!-- TODO: update train stats -->
         <statBases>
+            <Mass>100000</Mass>
             <ArmorRating_Blunt>1.0</ArmorRating_Blunt>
             <ArmorRating_Sharp>1.0</ArmorRating_Sharp>
             <Flammability>0</Flammability>
@@ -46,14 +61,6 @@
         </statBases>
 
         <soundOneShotsOnEvent Inherit = "False">
-            <li>
-                <key>PawnEntered</key>
-                <value>VVE_VehicleEnter</value>
-            </li>
-            <li>
-                <key>PawnExited</key>
-                <value>VVE_VehicleEnter</value>
-            </li>
             <li>
                 <key>DraftOn</key>
                 <value>SRTS_Trains_Sound_Steam_Train_Leaving</value>
@@ -66,11 +73,11 @@
 
         <!-- TODO: update train vehicle stats -->
         <vehicleStats>
-            <Mass>200</Mass>
+            <!-- <Mass>200</Mass> -->
             <MoveSpeed>10</MoveSpeed>
-            <CargoCapacity>24000</CargoCapacity>
+            <CargoCapacity>680000</CargoCapacity>
             <RepairRate>0.5</RepairRate>
-            <AccelerationRate>0.02</AccelerationRate>
+            <!-- <AccelerationRate>0.02</AccelerationRate> -->
         </vehicleStats>
 
         <properties>
@@ -117,19 +124,6 @@
                     </hitbox>
                 </li>
             </roles>
-
-            <customTerrainCosts AllowTerrainWithTag="Rail" PathCost="1">
-                <li>
-                    <key>Bridge</key>
-                    <value>1</value>
-                </li>
-            </customTerrainCosts>
-            <customRoadCosts>
-                <li>
-                    <key>Railroad</key>
-                    <value>1</value>
-                </li>
-            </customRoadCosts>
         </properties>
 
         <!-- TODO: update with health and armor stats for train components -->

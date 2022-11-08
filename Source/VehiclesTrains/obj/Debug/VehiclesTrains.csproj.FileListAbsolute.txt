@@ -1,3 +1,4 @@
 E:\SteamLibrary2\steamapps\common\RimWorld\Mods\Vehicles-Trains\Assemblies\VehiclesTrains.dll
 E:\SteamLibrary2\steamapps\common\RimWorld\Mods\Vehicles-Trains\Source\VehiclesTrains\obj\Debug\VehiclesTrains.csproj.CoreCompileInputs.cache
 E:\SteamLibrary2\steamapps\common\RimWorld\Mods\Vehicles-Trains\Source\VehiclesTrains\obj\Debug\VehiclesTrains.dll
+E:\SteamLibrary2\steamapps\common\RimWorld\Mods\Vehicles-Trains\Source\VehiclesTrains\obj\Debug\VehiclesTrains.csproj.AssemblyReference.cache

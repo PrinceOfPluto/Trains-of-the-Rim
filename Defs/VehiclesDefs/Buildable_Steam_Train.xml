@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-    <Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+    <Vehicles.VehicleBuildDef Name="RailVehicleBaseBuildable" ParentName="VehicleBaseBuildable" Abstract="True">
+        <designationCategory>RailroadCategory</designationCategory>
+        <terrainAffordanceNeeded>RailAffordance</terrainAffordanceNeeded>
+    </Vehicles.VehicleBuildDef>
+
+    <Vehicles.VehicleBuildDef ParentName="RailVehicleBaseBuildable">
         <defName>Steam_Engine_Train_Blueprint</defName>
         <label>Steam Engine Train</label>
         <description>A steam engine train to rule the rails.</description>
-        <designationCategory>DecoRailProp</designationCategory>
-
-        <terrainAffordanceNeeded>RailAffordance</terrainAffordanceNeeded>
 
         <graphicData>
-            <texPath>Things/Vehicles/Rail/Frisco/frisco</texPath>
+            <texPath>Things/Vehicles/Rail/FriscoWithTender/frisco_full</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
-            <drawSize>(4,12)</drawSize>
-            <drawOffset>(0,0,1)</drawOffset>
+            <drawSize>(4,21)</drawSize>
+            <drawOffset>(0,0,1.5)</drawOffset>
             <drawRotated>false</drawRotated>
         </graphicData>
+        <size>(2,18)</size>
 
         <statBases>
             <MaxHitPoints>10000</MaxHitPoints>
             <WorkToBuild>30</WorkToBuild>
             <Flammability>0.05</Flammability>
         </statBases>
-        <size>(2,11)</size>
 
         <researchPrerequisites>
             <li>Research_Vehicles_Trains_Steam_Engine</li>

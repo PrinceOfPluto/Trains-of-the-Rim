@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
     <DesignationCategoryDef>
-        <defName>DecoRailProp</defName>
+        <defName>RailroadCategory</defName>
         <label>Railroad</label>
         <description>Railroads</description>
         <order>101</order>

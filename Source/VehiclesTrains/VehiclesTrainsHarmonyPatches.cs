@@ -43,11 +43,6 @@ namespace VehiclesTrains
             if (vehicleDef.buildDef.GetTerrainAffordanceNeed().defName == "RailAffordance" && !vehicleDef.properties.customRoadCosts.NullOrEmpty())
             {
                 Dictionary<RoadDef, float> passableRoads = vehicleDef.properties.customRoadCosts.Where(x => x.Value >= 0 && !WorldVehiclePathGrid.ImpassableCost(x.Value)).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
-                Log.Message("Passable roads defined as");
-                foreach (RoadDef road in passableRoads.Keys)
-                {
-                    Log.Message($"RoadDef {road.defName} with cost {passableRoads[road]}");
-                }
                 if (passableRoads.Count == 0)
                 {
                     Log.Warning($"{vehicleDef.defName} is defaultOffroadImpassable but has no passable roads defined in customRoadCosts.");
@@ -55,20 +50,12 @@ namespace VehiclesTrains
                     return;
                 }
                 List<Tile.RoadLink> roadLinks = Find.WorldGrid.tiles[tile].Roads;
-                Log.Message("roadLinks defined");
                 if (roadLinks.NullOrEmpty())
                 {
-                    Log.Message("tile had zero road links");
                     __result = WorldVehiclePathGrid.ImpassableMovementDifficulty;
                     return;
                 }
-                foreach (Tile.RoadLink roadLink in roadLinks)
-                {
-                    Log.Message($"RoadLink {roadLink.road.defName} found");
-                }
                 List<RoadDef> tileRoads = roadLinks.Select(x => x.road).ToList();
-                Log.Message("tileRoads defined");
-                Log.Message($"tileRoads count {tileRoads.Count()}");
                 foreach (RoadDef road in tileRoads)
                 {
                     if (passableRoads.ContainsKey(road))

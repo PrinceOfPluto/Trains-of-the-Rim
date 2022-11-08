@@ -28,7 +28,7 @@
             <Cleanliness>-2</Cleanliness>
         </statBases>
         <designatorDropdown>Floor_RailroadBallast</designatorDropdown>
-        <designationCategory>DecoRailProp</designationCategory>
+        <designationCategory>RailroadCategory</designationCategory>
         <fertility>0</fertility>
         <constructEffect>ConstructDirt</constructEffect>
         <!-- <uiOrder>2070</uiOrder> -->
