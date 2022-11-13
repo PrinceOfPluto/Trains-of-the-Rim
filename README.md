@@ -1,4 +1,4 @@
-# Vehicles - Trains
+# Rails of the Rim
 
 ## Overview
 
@@ -14,7 +14,7 @@ Adds trains to Rimworld using Vehicle Framework and Vanilla Expanded mods.
 
 ## Trains
 
-Below are the trains currently available.
+Below are the trains currently planned.
 
 ---
 
@@ -28,7 +28,7 @@ TBD
 
 ### Heavy Steam Locomotive
 
-A heavy 4-8-4 locomotive that burns chemfuel to heat water, generating steam to drive pistons and move the wheels. This type is quite capable of hauling heavy loads even across hilly terrain. Based on the oil burning 4-8-2 "Mountain" locomotives by the St. Louis - San Francisco Railway Company operated from the 1920s to the 1950s for both passenger and freight service. Art by PentalimbedCat.
+A heavy 4-8-4 locomotive that burns chemfuel to heat water, generating steam to drive pistons and move the wheels. This type is quite capable of hauling heavy loads even across hilly terrain. Based on the oil burning 4-8-2 "Mountain" locomotives operated by the St. Louis - San Francisco Railway Company from the 1920s to the 1950s for both passenger and freight service. Art by PentalimbedP.
 
 **Stats**
 
