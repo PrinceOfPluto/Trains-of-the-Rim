@@ -1,31 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-    <Vehicles.VehicleDef Name = "BaseRailVehiclePawn" ParentName = "BaseVehiclePawn" Abstract = "True">
-        <vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
-        <vehicleCategory>Transport</vehicleCategory>
-        <techLevel>Industrial</techLevel>
-        <vehicleType>Land</vehicleType>
-        <properties>
-            <healthLabel_Healthy>Operational</healthLabel_Healthy>
-            <healthLabel_Injured>Needs Repairs</healthLabel_Injured>
-            <healthLabel_Immobile>Inoperable</healthLabel_Immobile>
-            <defaultTerrainImpassable>true</defaultTerrainImpassable>
-            <customTerrainCosts AllowTerrainWithTag="Rail" PathCost="1">
-                <li>
-                    <key>Bridge</key>
-                    <value>1</value>
-                </li>
-            </customTerrainCosts>
-            <customRoadCosts>
-                <li>
-                    <key>Railroad</key>
-                    <value>1</value>
-                </li>
-            </customRoadCosts>
-        </properties>
-    </Vehicles.VehicleDef>
-
     <Vehicles.VehicleDef ParentName="BaseRailVehiclePawn">
         <defName>Steam_Engine_Train</defName>
         <label>Steam Engine Train</label>
@@ -33,7 +8,7 @@
 
         <!-- TODO: update to full train texture -->
         <graphicData>
-            <texPath>Things/Vehicles/Rail/FriscoWithTender/frisco_full</texPath>
+            <texPath>Things/Vehicles/Rail/Locomotives/FriscoWithTender/frisco_full</texPath>
             <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
             <!-- <shaderType>CutoutComplexPattern</shaderType> -->
             <drawSize>(4,21)</drawSize>

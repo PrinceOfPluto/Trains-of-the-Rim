@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-    <Vehicles.VehicleBuildDef Name="RailVehicleBaseBuildable" ParentName="VehicleBaseBuildable" Abstract="True">
-        <designationCategory>RailroadCategory</designationCategory>
-        <terrainAffordanceNeeded>RailAffordance</terrainAffordanceNeeded>
-    </Vehicles.VehicleBuildDef>
-
     <Vehicles.VehicleBuildDef ParentName="RailVehicleBaseBuildable">
         <defName>Steam_Engine_Train_Blueprint</defName>
         <label>Steam Engine Train</label>
         <description>A steam engine train to rule the rails.</description>
 
         <graphicData>
-            <texPath>Things/Vehicles/Rail/FriscoWithTender/frisco_full</texPath>
+            <texPath>Things/Vehicles/Rail/Locomotives/FriscoWithTender/frisco_full</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
             <drawSize>(4,21)</drawSize>
             <drawOffset>(0,0,1.5)</drawOffset>
