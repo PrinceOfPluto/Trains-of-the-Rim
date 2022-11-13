@@ -50,7 +50,10 @@ namespace VehiclesTrains
             // Preferable to create a new VehicleProperties field named defaultOffroadImpassable
             if (vehicleDef.buildDef.GetTerrainAffordanceNeed().defName == "RailAffordance" && !vehicleDef.properties.customRoadCosts.NullOrEmpty())
             {
-                Dictionary<RoadDef, float> passableRoads = vehicleDef.properties.customRoadCosts.Where(x => x.Value >= 0 && !WorldVehiclePathGrid.ImpassableCost(x.Value)).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+                Dictionary<RoadDef, float> passableRoads = vehicleDef.properties.customRoadCosts
+                    .Where(x => x.Value >= 0 && !WorldVehiclePathGrid.ImpassableCost(x.Value))
+                    .ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+                    
                 if (passableRoads.Count == 0)
                 {
                     Log.Warning($"{vehicleDef.defName} is defaultOffroadImpassable but has no passable roads defined in customRoadCosts.");
