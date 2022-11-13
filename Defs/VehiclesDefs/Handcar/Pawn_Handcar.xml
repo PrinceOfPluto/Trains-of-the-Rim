@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+    <Vehicles.VehicleDef ParentName="BaseRailVehiclePawn">
+        <defName>Railroad_Handcar</defName>
+        <label>Handcar</label>
+        <description>A handcar is a railroad car powered by its passengers mostly used as a railway maintenance of way or mining car.</description>
+
+        <!-- TODO: update to full train texture -->
+        <graphicData>
+            <texPath>Things/Vehicles/Rail/Locomotives/Handcar/handcar</texPath>
+            <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+            <shaderType>CutoutComplexPattern</shaderType>
+            <color>(122, 75, 39)</color>
+            <drawSize>(3,3)</drawSize>
+            <drawOffset>(0,0,0.5)</drawOffset>
+            <drawRotated>false</drawRotated>
+        </graphicData>
+
+        <fillPercent>1</fillPercent>
+
+        <buildDef>Railroad_Handcar_Blueprint</buildDef>
+
+        <!-- TODO: update to full train size -->
+        <size>(2,3)</size>
+
+        <!-- TODO: update train stats -->
+        <statBases>
+            <Mass>200</Mass>
+            <ArmorRating_Blunt>1.0</ArmorRating_Blunt>
+            <ArmorRating_Sharp>1.0</ArmorRating_Sharp>
+            <Flammability>0</Flammability>
+            <MarketValue>150</MarketValue>
+        </statBases>
+
+        <soundOneShotsOnEvent Inherit = "False">
+            <li>
+                <key>DraftOn</key>
+                <value>SRTS_Trains_Sound_Handcar_Launch</value>
+            </li>
+            <li>
+                <key>DraftOff</key>
+                <value>SRTS_Trains_Sound_Handcar_Launch</value>
+            </li>
+        </soundOneShotsOnEvent>
+
+        <!-- TODO: update train vehicle stats -->
+        <vehicleStats>
+            <!-- <Mass>200</Mass> -->
+            <MoveSpeed>8</MoveSpeed>
+            <CargoCapacity>150</CargoCapacity>
+            <RepairRate>0.5</RepairRate>
+            <!-- <AccelerationRate>0.02</AccelerationRate> -->
+        </vehicleStats>
+
+        <properties>
+            <healthLabel_Healthy>Operational</healthLabel_Healthy>
+            <healthLabel_Injured>Needs Repairs</healthLabel_Injured>
+            <healthLabel_Immobile>Inoperable</healthLabel_Immobile>
+            <defaultTerrainImpassable>true</defaultTerrainImpassable>
+
+            <roles>
+                <li>
+                    <key>driver</key>
+                    <label>Engineer</label>
+                    <handlingTypes>
+                        <li>Movement</li>
+                    </handlingTypes>
+                    <slots>2</slots>
+                    <slotsToOperate>1</slotsToOperate>
+                    <hitbox>
+                        <cells>
+                            <li>(-1, 1)</li>
+                        </cells>
+                    </hitbox>
+                </li>
+                <li>
+                    <key>passengers</key>
+                    <label>Passenger</label>
+                    <slots>2</slots>
+                    <hitbox>
+                        <cells>
+                            <li>(-1, 0)</li>
+                            <li>(-0, 0)</li>
+                            <li>(1, 0)</li>
+                        </cells>
+                    </hitbox>
+                </li>
+            </roles>
+        </properties>
+
+        <!-- TODO: update with health and armor stats for train components -->
+        <components>
+            <li>
+                <key>Body</key>
+                <label>Body</label>
+                <health>250</health>
+                <armor>4</armor>
+
+                <hitbox>
+                    <side>BodyNoOverlap</side>
+                </hitbox>
+
+                <categories>
+                    <li>BodyIntegrity</li>
+                </categories>
+            </li>
+            <li>
+                <key>Engine</key>
+                <label>Engine</label>
+                <health>50</health>
+                <efficiencyWeight>10</efficiencyWeight>
+
+                <reactors>
+                    <li Class = "Vehicles.Reactor_Explosive">
+                        <indicator>VF_Explosive</indicator>
+                        <chance>0.25</chance>
+                        <radius>3</radius>
+                        <damageDef>Bomb</damageDef>
+                    </li>
+                    <li Class = "Vehicles.Reactor_FuelLeak"/>
+                </reactors>
+
+                <hitbox>
+                    <cells>
+                        <li>(-1, -2)</li>
+                        <li>(0, -2)</li>
+                    </cells>
+                </hitbox>
+
+                <categories>
+                    <li>MoveSpeed</li>
+                </categories>
+            </li>
+        </components>
+
+        <comps>
+            <li Class="Vehicles.CompProperties_FueledTravel">
+                <fuelType>Chemfuel</fuelType>
+                <fuelConsumptionRate>30</fuelConsumptionRate>
+                <fuelCapacity>2000</fuelCapacity>
+                <fuelConsumptionCondition>Drafted</fuelConsumptionCondition>
+            </li>
+            <li Class="Vehicles.CompProperties_UpgradeTree">
+                <upgrades/>
+            </li>
+        </comps>
+    </Vehicles.VehicleDef>
+</Defs>

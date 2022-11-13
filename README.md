@@ -20,6 +20,8 @@ Below are the trains currently planned.
 
 ### Handcar
 
+![Handcar](https://i.imgur.com/ohNyptr.png)
+
 A handcar is a railroad car powered by its passengers, or by people pushing the car from behind. It is mostly used as a railway maintenance of way or mining car, but it was also used for passenger service in some cases.
 
 **Stats**
@@ -27,6 +29,8 @@ A handcar is a railroad car powered by its passengers, or by people pushing the 
 TBD
 
 ### Heavy Steam Locomotive
+
+![Frisco Steamer](https://i.imgur.com/qrropmK.png)
 
 A heavy 4-8-4 locomotive that burns chemfuel to heat water, generating steam to drive pistons and move the wheels. This type is quite capable of hauling heavy loads even across hilly terrain. Based on the oil burning 4-8-2 "Mountain" locomotives operated by the St. Louis - San Francisco Railway Company from the 1920s to the 1950s for both passenger and freight service. Art by PentalimbedP.
 
@@ -43,6 +47,8 @@ A smaller 0-6-0 tank engine locomotive that burns chemfuel to heat water, genera
 TBD
 
 ### Diesel Shunter
+
+![Diesel Shunter](https://i.imgur.com/FEcZbsx.png)
 
 A smaller 2 axle diesel elective locomotive primarily used for heavy railyard shunting and light journeys.
 

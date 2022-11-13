@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+    <Vehicles.VehicleBuildDef ParentName="RailVehicleBaseBuildable">
+        <defName>Railroad_Handcar_Blueprint</defName>
+        <label>Handcar</label>
+        <description>A handcar is a railroad car powered by its passengers mostly used as a railway maintenance of way or mining car.</description>
+
+        <graphicData>
+            <texPath>Things/Vehicles/Rail/Locomotives/Handcar/handcar</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(3,3)</drawSize>
+            <color>(122, 75, 39)</color>
+            <drawOffset>(0,0,0.5)</drawOffset>
+            <drawRotated>false</drawRotated>
+        </graphicData>
+        <size>(2,3)</size>
+
+        <statBases>
+            <MaxHitPoints>10000</MaxHitPoints>
+            <WorkToBuild>30</WorkToBuild>
+            <Flammability>0.05</Flammability>
+        </statBases>
+
+        <researchPrerequisites>
+            <li>Research_Vehicles_Trains_Metal_Rails</li>
+        </researchPrerequisites>
+
+        <costList>
+            <WoodLog>60</WoodLog>
+            <Steel>40</Steel>
+        </costList>
+
+        <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+
+        <thingToSpawn>Railroad_Handcar</thingToSpawn>
+        <!-- TODO: update to train sound -->
+        <soundBuilt>ShipBigConstruction</soundBuilt>
+    </Vehicles.VehicleBuildDef>
+</Defs>
