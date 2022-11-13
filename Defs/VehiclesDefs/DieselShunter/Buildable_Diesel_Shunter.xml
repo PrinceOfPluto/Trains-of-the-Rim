@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+    <Vehicles.VehicleBuildDef ParentName="RailVehicleBaseBuildable">
+        <defName>Diesel_Shunter_Blueprint</defName>
+        <label>Diesel Shunter</label>
+        <description>A small 2 axle diesel electic locomotive primarily used for railyard shunting and light journeys.</description>
+
+        <graphicData>
+            <texPath>Things/Vehicles/Rail/Locomotives/DE2/diesel_shunter</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(3,6)</drawSize>
+            <drawOffset>(0,0,1.5)</drawOffset>
+            <drawRotated>false</drawRotated>
+        </graphicData>
+        <size>(2,5)</size>
+
+        <statBases>
+            <MaxHitPoints>10000</MaxHitPoints>
+            <WorkToBuild>30</WorkToBuild>
+            <Flammability>0.05</Flammability>
+        </statBases>
+
+        <researchPrerequisites>
+            <li>Research_Vehicles_Trains_Diesel</li>
+        </researchPrerequisites>
+
+        <costList>
+            <ComponentIndustrial>35</ComponentIndustrial>
+            <Steel>3000</Steel>
+        </costList>
+
+        <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+
+        <thingToSpawn>Diesel_Shunter_Locomotive</thingToSpawn>
+        <!-- TODO: update to train whistle -->
+        <soundBuilt>ShipBigConstruction</soundBuilt>
+    </Vehicles.VehicleBuildDef>
+</Defs>
