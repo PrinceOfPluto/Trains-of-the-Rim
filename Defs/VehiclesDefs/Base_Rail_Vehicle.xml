@@ -3,7 +3,7 @@
 <Defs>
     <Vehicles.VehicleBuildDef Name="RailVehicleBaseBuildable" ParentName="VehicleBaseBuildable" Abstract="True">
         <designationCategory>RailroadCategory</designationCategory>
-        <terrainAffordanceNeeded>RailAffordance</terrainAffordanceNeeded>
+        <!-- <terrainAffordanceNeeded>RailAffordance</terrainAffordanceNeeded> -->
     </Vehicles.VehicleBuildDef>
     <Vehicles.VehicleDef Name = "BaseRailVehiclePawn" ParentName = "BaseVehiclePawn" Abstract = "True">
         <vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
