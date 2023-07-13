@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<ThingDef ParentName="CarBase" Name="CAT_DRP_Flatcar">
+        <defName>Trains_Railcar_Boxcar</defName>
+        <label>Boxcar</label>
+        <description>A boxcar for cargo transportation.</description>
+
+        <thingClass>Building_Storage</thingClass>
+
+        <passability>Standable</passability>
+        <pathCost>50</pathCost>
+        <fillPercent>0.5</fillPercent>
+        <statBases>
+            <MaxHitPoints>600</MaxHitPoints>
+            <Mass>30</Mass>
+            <Beauty>2</Beauty>
+            <Flammability>1</Flammability>
+            <WorkToBuild>6000</WorkToBuild>
+        </statBases>
+
+        <building>
+            <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+            <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+            <fixedStorageSettings>
+                <filter>
+                    <disallowNotEverStorable>true</disallowNotEverStorable>
+                    <categories>
+                        <li>Root</li>
+                    </categories>
+                </filter>
+            </fixedStorageSettings>
+            <defaultStorageSettings Inherit="false"/>
+        </building>
+        <inspectorTabs>
+            <li>ITab_Storage</li>
+        </inspectorTabs>
+        <surfaceType>Item</surfaceType>
+        <canOverlapZones>false</canOverlapZones>
+
+        <size>(3,9)</size>
+        <graphicData>
+            <shaderType>CutoutComplex</shaderType>
+            <texPath>Things/Vehicles/Rail/Railcars/Boxcar/boxcar</texPath>
+            <drawSize>(4,12)</drawSize>
+            <drawOffset>(0,0,0.5)</drawOffset>
+        </graphicData>
+        <staticSunShadowHeight>0.5</staticSunShadowHeight>
+
+        <stuffCategories>
+            <li>Metallic</li>
+        </stuffCategories>
+        <costStuffCount>100</costStuffCount>
+        <costList>
+            <Steel>50</Steel>
+        </costList>
+    </ThingDef>
+</Defs>
