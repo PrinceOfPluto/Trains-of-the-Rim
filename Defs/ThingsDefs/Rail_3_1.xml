@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef Abstract="True" ParentName="BuildingBase" Name="TOTRRailBase">
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>true</rotatable>
+        <altitudeLayer>FloorEmplacement</altitudeLayer>
+        <passability>Standable</passability>
+        <pathCost>0</pathCost>
+        <drawerType>MapMeshOnly</drawerType>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <castEdgeShadows>false</castEdgeShadows>
+        <fillPercent>0</fillPercent>
+        <building>
+            <isEdifice>false</isEdifice>
+            <ai_chillDestination>false</ai_chillDestination>
+        </building>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Mass>1</Mass>
+            <Flammability>0</Flammability>
+        </statBases>
+        <designationCategory>RailroadCategory</designationCategory>
+        <uiIconScale>1</uiIconScale>
+        <filthLeaving Inherit="False"/>
+        <designatorDropdown>TOTR_Rails</designatorDropdown>
+    </ThingDef>
+    <ThingDef ParentName="TOTRRailBase" Name="POP_TOTR_Rail">
+        <defName>POP_TOTR_Rail</defName>
+        <label>Rail 3x1</label>
+
+        <placingDraggableDimensions>1</placingDraggableDimensions>
+
+        <size>(3,1)</size>
+        <graphicData>
+            <texPath>Things/Vehicles/Rail/Track/rail_3_1</texPath>
+            <drawSize>(3,1)</drawSize>
+        </graphicData>
+
+        <statBases>
+            <WorkToBuild>200</WorkToBuild>
+        </statBases>
+        <costList>
+            <Steel>2</Steel>
+        </costList>
+    </ThingDef>
+</Defs>
