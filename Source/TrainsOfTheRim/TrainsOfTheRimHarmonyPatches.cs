@@ -9,17 +9,17 @@ using RimWorld.Planet;
 using Vehicles;
 using Verse;
 
-namespace VehiclesTrains
+namespace TrainsOfTheRim
 {
     [StaticConstructorOnStartup]
-    public static class VehiclesTrainsHarmonyPatches
+    public static class TrainsOfTheRimHarmonyPatches
     {
-        static VehiclesTrainsHarmonyPatches()
+        static TrainsOfTheRimHarmonyPatches()
         {
             var harmony = new Harmony("VehiclesTrains");
             Harmony.DEBUG = true;
             MethodInfo vehiclesMethod = AccessTools.Method(typeof(WorldVehiclePathGrid), "CalculatedMovementDifficultyAt", new[] { typeof(int), typeof(VehicleDef), typeof(int), typeof(StringBuilder), typeof(bool) });
-            MethodInfo trainsMethod = typeof(VehiclesTrainsHarmonyPatches).GetMethod("CalculatedMovementDifficultyAtPatchTrains");
+            MethodInfo trainsMethod = typeof(TrainsOfTheRimHarmonyPatches).GetMethod("CalculatedMovementDifficultyAtPatchTrains");
 
             if (vehiclesMethod != null && trainsMethod != null)
             {
