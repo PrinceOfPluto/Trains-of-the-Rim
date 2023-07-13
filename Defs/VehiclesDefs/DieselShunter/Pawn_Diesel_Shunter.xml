@@ -8,15 +8,10 @@
 
         <!-- TODO: update to full train texture -->
         <graphicData>
-            <texPath>Things/Vehicles/Rail/Locomotives/DE2/diesel_shunter</texPath>
+            <texPath>Things/Vehicles/Rail/Locomotives/DE2/de2</texPath>
             <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
             <!-- <shaderType>CutoutComplexPattern</shaderType> -->
-            <drawSize>(4,9)</drawSize>
-            <drawOffsetWest>(0,0,0.5)</drawOffsetWest>
-            <drawOffsetEast>(0,0,0.5)</drawOffsetEast>
-            <drawOffsetNorth>(0.5,0,0)</drawOffsetNorth>
-            <drawOffsetSouth>(0.5,0,0)</drawOffsetSouth>
-            <drawRotated>false</drawRotated>
+            <drawSize>(4,7)</drawSize>
         </graphicData>
 
         <fillPercent>1</fillPercent>
@@ -24,7 +19,7 @@
         <buildDef>Diesel_Shunter_Blueprint</buildDef>
 
         <!-- TODO: update to full train size -->
-        <size>(2,7)</size>
+        <size>(3,5)</size>
 
         <!-- TODO: update train stats -->
         <statBases>
