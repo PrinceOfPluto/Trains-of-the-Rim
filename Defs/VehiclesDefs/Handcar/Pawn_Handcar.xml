@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-    <Vehicles.VehicleDef ParentName="BaseRailVehiclePawn">
+    <Vehicles.VehicleDef ParentName="VehiclePawn_Railroad">
         <defName>Railroad_Handcar</defName>
         <label>Handcar</label>
         <description>A handcar is a railroad car powered by its passengers mostly used as a railway maintenance of way or mining car.</description>
@@ -54,10 +54,6 @@
         </vehicleStats>
 
         <properties>
-            <healthLabel_Healthy>Operational</healthLabel_Healthy>
-            <healthLabel_Injured>Needs Repairs</healthLabel_Injured>
-            <healthLabel_Immobile>Inoperable</healthLabel_Immobile>
-            <defaultTerrainImpassable>true</defaultTerrainImpassable>
 
             <roles>
                 <li>

@@ -2,37 +2,36 @@
 
 <Defs>
     <Vehicles.VehicleBuildDef ParentName="RailVehicleBaseBuildable">
-        <defName>TOTR_Diesel_Shunter_Blueprint</defName>
-        <label>Diesel Shunter</label>
-        <description>A small 2 axle diesel electic locomotive primarily used for railyard shunting and light journeys.</description>
+        <defName>TOTR_Trains_Railcar_Boxcar_Blueprint</defName>
+        <label>Boxcar</label>
+        <description>A boxcar for cargo transportation.</description>
 
         <graphicData>
-            <texPath>Things/Vehicles/Rail/Locomotives/DE2/de2</texPath>
+            <texPath>Things/Vehicles/Rail/Railcars/Boxcar/boxcar</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
-            <drawSize>(4,6)</drawSize>
+            <drawSize>(4,12)</drawSize>
         </graphicData>
+
+        <size>(3,9)</size>
 
         <statBases>
             <MaxHitPoints>10000</MaxHitPoints>
             <WorkToBuild>30</WorkToBuild>
             <Flammability>0.05</Flammability>
         </statBases>
-        
-        <size>(3,5)</size>
 
         <researchPrerequisites>
-            <li>Research_Vehicles_Trains_Diesel</li>
+            <li>Research_Vehicles_Trains_Metal_Rails</li>
         </researchPrerequisites>
 
         <costList>
-            <ComponentIndustrial>35</ComponentIndustrial>
-            <Steel>3000</Steel>
+            <Steel>500</Steel>
         </costList>
 
         <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 
-        <thingToSpawn>TOTR_Diesel_Shunter_Locomotive</thingToSpawn>
+        <thingToSpawn>TOTR_Trains_Railcar_Boxcar</thingToSpawn>
         <!-- TODO: update to train whistle -->
-        <soundBuilt>BulletImpact_Metal</soundBuilt>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
     </Vehicles.VehicleBuildDef>
 </Defs>

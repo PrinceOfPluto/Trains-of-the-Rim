@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-<ThingDef ParentName="CarBase" Name="CAT_DRP_Flatcar">
+<ThingDef ParentName="CarBase" Name="POP_TOTR_Boxcar">
         <defName>Trains_Railcar_Boxcar</defName>
         <label>Boxcar</label>
         <description>A boxcar for cargo transportation.</description>

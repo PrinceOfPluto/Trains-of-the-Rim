@@ -3,8 +3,9 @@
 <Defs>
     <Vehicles.VehicleBuildDef ParentName="RailVehicleBaseBuildable">
         <defName>Steam_Engine_Train_Blueprint</defName>
-        <label>Steam Engine Train</label>
+        <label>Frisco</label>
         <description>A steam engine train to rule the rails.</description>
+		<designationCategory>VF_Vehicles</designationCategory>
 
         <graphicData>
             <texPath>Things/Vehicles/Rail/Locomotives/FriscoWithTender/frisco_full</texPath>
@@ -34,6 +35,6 @@
 
         <thingToSpawn>Steam_Engine_Train</thingToSpawn>
         <!-- TODO: update to train whistle -->
-        <soundBuilt>ShipBigConstruction</soundBuilt>
+        <soundBuilt>BulletImpact_Metal</soundBuilt>
     </Vehicles.VehicleBuildDef>
 </Defs>

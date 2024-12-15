@@ -2,57 +2,42 @@
 
 <Defs>
     <Vehicles.VehicleDef ParentName="VehiclePawn_Railroad">
-        <defName>Steam_Engine_Train</defName>
-        <label>Steam Engine Train</label>
-        <description>A steam engine train to rule the rails.</description>
+        <defName>TOTR_Trains_Railcar_Boxcar</defName>
+        <label>Boxcar</label>
+        <description>A boxcar for cargo transportation.</description>
 
         <!-- TODO: update to full train texture -->
         <graphicData>
-            <texPath>Things/Vehicles/Rail/Locomotives/FriscoWithTender/frisco_full</texPath>
+            <texPath>Things/Vehicles/Rail/Railcars/Boxcar/boxcar</texPath>
             <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
             <!-- <shaderType>CutoutComplexPattern</shaderType> -->
-            <drawSize>(4,21)</drawSize>
-            <drawOffsetWest>(0,0,0.5)</drawOffsetWest>
-            <drawOffsetEast>(0,0,0.5)</drawOffsetEast>
-            <drawOffsetNorth>(0.5,0,0)</drawOffsetNorth>
-            <drawOffsetSouth>(0.5,0,0)</drawOffsetSouth>
-            <drawRotated>false</drawRotated>
+            <drawSize>(4,12)</drawSize>
         </graphicData>
 
-        <fillPercent>1</fillPercent>
+        <fillPercent>0.8</fillPercent>
 
-        <buildDef>Steam_Engine_Train_Blueprint</buildDef>
+        <buildDef>TOTR_Trains_Railcar_Boxcar_Blueprint</buildDef>
 
         <!-- TODO: update to full train size -->
-        <size>(2,18)</size>
+        <size>(3,9)</size>
 
         <!-- TODO: update train stats -->
         <statBases>
             <Mass>100000</Mass>
             <ArmorRating_Blunt>1.0</ArmorRating_Blunt>
             <ArmorRating_Sharp>1.0</ArmorRating_Sharp>
+			<ArmorRating_Heat>1.0</ArmorRating_Heat>
             <Flammability>0</Flammability>
             <MarketValue>2000</MarketValue>
         </statBases>
 
-        <soundOneShotsOnEvent Inherit = "False">
-            <li>
-                <key>DraftOn</key>
-                <value>SRTS_Trains_Sound_Steam_Train_Leaving</value>
-            </li>
-            <li>
-                <key>DraftOff</key>
-                <value>SRTS_Trains_Sound_Steam_Train_Incoming</value>
-            </li>
-        </soundOneShotsOnEvent>
-
         <!-- TODO: update train vehicle stats -->
         <vehicleStats>
-            <!-- <Mass>200</Mass> -->
-            <MoveSpeed>10</MoveSpeed>
+            <Mass>200</Mass>
+            <MoveSpeed>0</MoveSpeed>
             <CargoCapacity>680000</CargoCapacity>
             <RepairRate>0.5</RepairRate>
-            <!-- <AccelerationRate>0.02</AccelerationRate> -->
+            <AccelerationRate>0.02</AccelerationRate>
         </vehicleStats>
 
         <race>
@@ -60,16 +45,15 @@
 		</race>
 
         <properties>
-
             <roles>
                 <li>
                     <key>driver</key>
                     <label>Engineer</label>
                     <handlingTypes>
-                        <li>Movement</li>
-                    </handlingTypes>
                     <slots>1</slots>
                     <slotsToOperate>1</slotsToOperate>
+                        <li>Movement</li>
+                    </handlingTypes>
                     <hitbox>
                         <cells>
                             <li>(-1, 1)</li>
