@@ -10,10 +10,11 @@
         <graphicData>
             <texPath>Things/Vehicles/Rail/Locomotives/DE2/de2</texPath>
             <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
-            <!-- <shaderType>CutoutComplexPattern</shaderType> -->
+            <shaderType>CutoutComplexPattern</shaderType>
             <drawSize>(5,7)</drawSize>
 			<drawOffsetWest>(0,0,0.25)</drawOffsetWest>
             <drawOffsetEast>(0,0,0.25)</drawOffsetEast>
+			<color>(204, 140, 57)</color>
         </graphicData>
 
         <fillPercent>0.8</fillPercent>
