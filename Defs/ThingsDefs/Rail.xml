@@ -4,7 +4,7 @@
         <graphicData>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
-        <rotatable>false</rotatable>
+        <rotatable>true</rotatable>
         <altitudeLayer>FloorEmplacement</altitudeLayer>
         <passability>Standable</passability>
         <pathCost>0</pathCost>
@@ -27,8 +27,8 @@
         <designatorDropdown>TOTR_Rails</designatorDropdown>
     </ThingDef>
     <ThingDef ParentName="TOTRRailBase" Name="POP_TOTR_Rail">
-        <defName>POP_TOTR_Rail_North_South</defName>
-        <label>Rail North-South</label>
+        <defName>POP_TOTR_Rail</defName>
+        <label>Rail</label>
 
         <placingDraggableDimensions>1</placingDraggableDimensions>
 
@@ -42,26 +42,7 @@
             <WorkToBuild>200</WorkToBuild>
         </statBases>
         <costList>
-            <Steel>2</Steel>
-        </costList>
-    </ThingDef>
-    <ThingDef ParentName="TOTRRailBase" Name="POP_TOTR_Rail_East">
-        <defName>POP_TOTR_Rail_East_West</defName>
-        <label>Rail East-West</label>
-
-        <placingDraggableDimensions>1</placingDraggableDimensions>
-
-        <size>(1,3)</size>
-        <graphicData>
-            <texPath>Things/Vehicles/Rail/Track/rail_east</texPath>
-            <drawSize>(1,3)</drawSize>
-        </graphicData>
-
-        <statBases>
-            <WorkToBuild>200</WorkToBuild>
-        </statBases>
-        <costList>
-            <Steel>2</Steel>
+            <Steel>1</Steel>
         </costList>
     </ThingDef>
 </Defs>
