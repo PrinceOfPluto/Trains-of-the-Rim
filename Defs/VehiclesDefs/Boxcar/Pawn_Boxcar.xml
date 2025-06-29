@@ -11,7 +11,9 @@
             <texPath>Things/Vehicles/Rail/Railcars/Boxcar/boxcar</texPath>
             <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
             <!-- <shaderType>CutoutComplexPattern</shaderType> -->
-            <drawSize>(4,12)</drawSize>
+            <drawSize>(5,10)</drawSize>
+            <drawOffsetWest>(0,0,0.25)</drawOffsetWest>
+            <drawOffsetEast>(0,0,0.25)</drawOffsetEast>
         </graphicData>
 
         <fillPercent>0.8</fillPercent>
@@ -19,7 +21,7 @@
         <buildDef>TOTR_Trains_Railcar_Boxcar_Blueprint</buildDef>
 
         <!-- TODO: update to full train size -->
-        <size>(3,9)</size>
+        <size>(3,10)</size>
 
         <!-- TODO: update train stats -->
         <statBases>

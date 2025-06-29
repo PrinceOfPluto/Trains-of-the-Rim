@@ -9,7 +9,9 @@
         <graphicData>
             <texPath>Things/Vehicles/Rail/Locomotives/DE2/de2</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
-            <drawSize>(4,6)</drawSize>
+            <drawSize>(5,7)</drawSize>
+            <drawOffsetWest>(0,0,0.25)</drawOffsetWest>
+            <drawOffsetEast>(0,0,0.25)</drawOffsetEast>
         </graphicData>
 
         <statBases>
@@ -18,7 +20,7 @@
             <Flammability>0.05</Flammability>
         </statBases>
         
-        <size>(3,5)</size>
+        <size>(3,7)</size>
 
         <researchPrerequisites>
             <li>Research_Vehicles_Trains_Diesel</li>

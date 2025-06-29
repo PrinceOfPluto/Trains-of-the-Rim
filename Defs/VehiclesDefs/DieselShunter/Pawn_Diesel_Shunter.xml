@@ -11,7 +11,9 @@
             <texPath>Things/Vehicles/Rail/Locomotives/DE2/de2</texPath>
             <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
             <!-- <shaderType>CutoutComplexPattern</shaderType> -->
-            <drawSize>(4,7)</drawSize>
+            <drawSize>(5,7)</drawSize>
+			<drawOffsetWest>(0,0,0.25)</drawOffsetWest>
+            <drawOffsetEast>(0,0,0.25)</drawOffsetEast>
         </graphicData>
 
         <fillPercent>0.8</fillPercent>
@@ -19,7 +21,7 @@
         <buildDef>TOTR_Diesel_Shunter_Blueprint</buildDef>
 
         <!-- TODO: update to full train size -->
-        <size>(3,5)</size>
+        <size>(3,7)</size>
 
         <!-- TODO: update train stats -->
         <statBases>
@@ -83,7 +85,7 @@
 				</li>
 				<li>
 					<key>passenger_shotgun</key>
-					<label>Shotgun</label>
+					<label>Stoker</label>
 					<slots>1</slots>
 					
 					<hitbox>

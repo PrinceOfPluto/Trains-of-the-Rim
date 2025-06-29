@@ -2,25 +2,26 @@
 
 <Defs>
     <Vehicles.VehicleBuildDef ParentName="RailVehicleBaseBuildable">
-        <defName>Steam_Engine_Train_Blueprint</defName>
-        <label>Frisco</label>
+        <defName>TOTR_Steam_Locomotive_Frisco_Blueprint</defName>
+        <label>Frisco Steam Locomotive</label>
         <description>A steam engine train to rule the rails.</description>
 		<designationCategory>VF_Vehicles</designationCategory>
 
         <graphicData>
             <texPath>Things/Vehicles/Rail/Locomotives/FriscoWithTender/frisco_full</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
-            <drawSize>(4,21)</drawSize>
-            <drawOffset>(0,0,1.5)</drawOffset>
-            <drawRotated>false</drawRotated>
+            <drawSize>(5,22)</drawSize>
+            <drawOffsetWest>(0,0,0.25)</drawOffsetWest>
+            <drawOffsetEast>(0,0,0.25)</drawOffsetEast>
         </graphicData>
-        <size>(2,18)</size>
 
         <statBases>
             <MaxHitPoints>10000</MaxHitPoints>
             <WorkToBuild>30</WorkToBuild>
             <Flammability>0.05</Flammability>
         </statBases>
+
+        <size>(3,22)</size>
 
         <researchPrerequisites>
             <li>Research_Vehicles_Trains_Steam_Engine</li>
@@ -33,7 +34,7 @@
 
         <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 
-        <thingToSpawn>Steam_Engine_Train</thingToSpawn>
+        <thingToSpawn>TOTR_Steam_Locomotive_Frisco</thingToSpawn>
         <!-- TODO: update to train whistle -->
         <soundBuilt>BulletImpact_Metal</soundBuilt>
     </Vehicles.VehicleBuildDef>
