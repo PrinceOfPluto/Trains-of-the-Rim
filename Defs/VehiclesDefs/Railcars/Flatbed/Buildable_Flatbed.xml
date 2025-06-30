@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+    <Vehicles.VehicleBuildDef ParentName="RailVehicleBaseBuildable">
+        <defName>TOTR_Trains_Railcar_Flatbed_Blueprint</defName>
+        <label>Flatbed</label>
+        <description>A flatbed for cargo transportation.</description>
+
+        <graphicData>
+            <texPath>Things/Vehicles/Rail/Railcars/Flatbed/flatbed</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(5,10)</drawSize>
+            <drawOffsetWest>(0,0,0.25)</drawOffsetWest>
+            <drawOffsetEast>(0,0,0.25)</drawOffsetEast>
+        </graphicData>
+
+        <size>(3,10)</size>
+
+        <statBases>
+            <MaxHitPoints>10000</MaxHitPoints>
+            <WorkToBuild>30</WorkToBuild>
+            <Flammability>0.05</Flammability>
+        </statBases>
+
+        <researchPrerequisites>
+            <li>Research_Vehicles_Trains_Metal_Rails</li>
+        </researchPrerequisites>
+
+        <costList>
+            <Steel>500</Steel>
+        </costList>
+
+        <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+
+        <thingToSpawn>TOTR_Trains_Railcar_Flatbed</thingToSpawn>
+        <!-- TODO: update to train whistle -->
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    </Vehicles.VehicleBuildDef>
+</Defs>
