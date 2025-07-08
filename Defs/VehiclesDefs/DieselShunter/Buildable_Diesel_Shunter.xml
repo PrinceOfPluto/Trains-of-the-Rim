@@ -23,7 +23,7 @@
         <size>(3,7)</size>
 
         <researchPrerequisites>
-            <li>Research_Vehicles_Trains_Diesel</li>
+            <li>Research_Vehicles_Trains_Chemfuel</li>
         </researchPrerequisites>
 
         <costList>
@@ -34,7 +34,6 @@
         <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 
         <thingToSpawn>TOTR_Diesel_Shunter_Locomotive</thingToSpawn>
-        <!-- TODO: update to train whistle -->
         <soundBuilt>BulletImpact_Metal</soundBuilt>
     </Vehicles.VehicleBuildDef>
 </Defs>
