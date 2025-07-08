@@ -22,7 +22,6 @@
 
         <size>(3,7)</size>
 
-        <!-- TODO: update train stats -->
         <statBases>
             <ArmorRating_Blunt>1.0</ArmorRating_Blunt>
             <ArmorRating_Sharp>1.0</ArmorRating_Sharp>
@@ -42,7 +41,6 @@
             </li>
         </soundOneShotsOnEvent> -->
 
-        <!-- TODO: update train vehicle stats -->
         <vehicleStats>
             <Mass>750</Mass>
             <MoveSpeed>10</MoveSpeed>
@@ -51,13 +49,13 @@
             <AccelerationRate>0.02</AccelerationRate>
         </vehicleStats>
 
-        <soundSustainersOnEvent>
+        <!-- <soundSustainersOnEvent>
 			<li>
 				<start>IgnitionOn</start>
 				<stop>IgnitionOff</stop>
 				<value>VVE_VehicleEngineCar</value>
 			</li>
-		</soundSustainersOnEvent>
+		</soundSustainersOnEvent> -->
 
         <race>
 			<baseBodySize>3.5</baseBodySize>
@@ -66,7 +64,7 @@
         <properties>
             <roles>
                 <li>
-					<key>train_driver</key>
+					<key>engineer</key>
 					<label>Engineer</label>
 					<slots>2</slots>
 					<slotsToOperate>1</slotsToOperate>
@@ -76,20 +74,21 @@
 					</handlingTypes>
 					
 					<hitbox>
-						<side>Front</side>
+						<cells>
+							<li>(0, -2)</li>
+							<li>(1, -2)</li>
+						</cells>
 					</hitbox>
 				</li>
 				<li>
-					<key>train_passenger</key>
+					<key>passenger</key>
 					<label>Passenger</label>
 					<slots>1</slots>
 					
 					<hitbox>
 						<cells>
-							<li>(0, 1)</li>
-							<li>(1, 1)</li>
-							<li>(0, 0)</li>
-							<li>(1, 0)</li>
+							<li>(0, -2)</li>
+							<li>(1, -2)</li>
 						</cells>
 					</hitbox>
 				</li>
@@ -310,10 +309,10 @@
 
         <comps>
             <li Class="Vehicles.CompProperties_FueledTravel">
-				<fuelType>Chemfuel</fuelType>
+				<fuelType>Wood</fuelType>
 				<leakDef>Filth_Fuel</leakDef>
-				<fuelConsumptionRate>15</fuelConsumptionRate>
-				<fuelCapacity>2000</fuelCapacity>
+				<fuelConsumptionRate>24</fuelConsumptionRate>
+				<fuelCapacity>800</fuelCapacity>
                 <fuelConsumptionCondition>Drafted</fuelConsumptionCondition>
 			</li>
 			<li Class="TrainsOfTheRim.TrainCompProperties">

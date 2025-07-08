@@ -24,7 +24,7 @@
         <size>(3,7)</size>
 
         <researchPrerequisites>
-            <li>Research_Vehicles_Trains_Diesel</li>
+            <li>Research_Vehicles_Trains_Chemfuel</li>
         </researchPrerequisites>
 
         <costList>
