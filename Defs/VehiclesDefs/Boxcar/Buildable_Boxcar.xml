@@ -23,7 +23,7 @@
         </statBases>
 
         <researchPrerequisites>
-            <li>Research_Vehicles_Trains_Metal_Rails</li>
+            <li>Research_Vehicles_Trains_Steam</li>
         </researchPrerequisites>
 
         <costList>
@@ -31,9 +31,6 @@
         </costList>
 
         <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-
         <thingToSpawn>TOTR_Trains_Railcar_Boxcar</thingToSpawn>
-        <!-- TODO: update to train whistle -->
-		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
     </Vehicles.VehicleBuildDef>
 </Defs>
