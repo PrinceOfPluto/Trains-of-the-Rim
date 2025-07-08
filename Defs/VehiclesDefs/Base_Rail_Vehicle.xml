@@ -5,7 +5,6 @@
         <!-- <terrainAffordanceNeeded>RailAffordance</terrainAffordanceNeeded> -->
     </Vehicles.VehicleBuildDef>
     <Vehicles.VehicleDef Name = "VehiclePawn_Railroad" ParentName = "VehiclePawn_Mechanical" Abstract = "True">
-        <vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
         <vehicleCategory>Transport</vehicleCategory>
         <techLevel>Industrial</techLevel>
         <vehicleType>Land</vehicleType>
@@ -16,10 +15,41 @@
                     <value>1</value>
                 </li>
             </customTerrainCosts> -->
+			<visibilityWeight>12</visibilityWeight>
+            <diagonalRotation>false</diagonalRotation>
+            <offRoadMultiplier>100000</offRoadMultiplier>
             <customRoadCosts>
                 <li>
+                    <key>DirtRoad</key>
+                    <value>0.2</value>
+                </li>
+                <li>
                     <key>Railroad</key>
-                    <value>1</value>
+                    <value>0.2</value>
+                </li>
+                <li>
+                    <key>RailroadOverpass</key>
+                    <value>0.2</value>
+                </li>
+                <li>
+                    <key>RailYard</key>
+                    <value>0.2</value>
+                </li>
+                <li>
+                    <key>Glitterrail</key>
+                    <value>0.1</value>
+                </li>
+                <li>
+                    <key>GlitterOverpass</key>
+                    <value>0.1</value>
+                </li>
+                <li>
+                    <key>GlitterYard</key>
+                    <value>0.1</value>
+                </li>
+                <li>
+                    <key>RailTunnel</key>
+                    <value>0.2</value>
                 </li>
             </customRoadCosts>
         </properties>
