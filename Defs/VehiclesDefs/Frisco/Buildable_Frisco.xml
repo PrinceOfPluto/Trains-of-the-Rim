@@ -8,7 +8,7 @@
 		<designationCategory>VF_Vehicles</designationCategory>
 
         <graphicData>
-            <texPath>Things/Vehicles/Rail/Locomotives/FriscoWithTender/frisco_full</texPath>
+            <texPath>Things/Vehicles/Rail/Locomotives/FriscoWithTender/frisco</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
             <drawSize>(5,22)</drawSize>
             <drawOffsetWest>(0,0,0.25)</drawOffsetWest>
@@ -24,7 +24,7 @@
         <size>(3,22)</size>
 
         <researchPrerequisites>
-            <li>Research_Vehicles_Trains_Steam_Engine</li>
+            <li>Research_Vehicles_Trains_Steam</li>
         </researchPrerequisites>
 
         <costList>
@@ -35,7 +35,6 @@
         <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 
         <thingToSpawn>TOTR_Steam_Locomotive_Frisco</thingToSpawn>
-        <!-- TODO: update to train whistle -->
         <soundBuilt>BulletImpact_Metal</soundBuilt>
     </Vehicles.VehicleBuildDef>
 </Defs>
