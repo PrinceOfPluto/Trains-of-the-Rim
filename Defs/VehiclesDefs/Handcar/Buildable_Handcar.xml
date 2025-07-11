@@ -23,7 +23,7 @@
         </statBases>
 
         <researchPrerequisites>
-            <li>Research_Vehicles_Trains_Metal_Rails</li>
+            <li>Research_Vehicles_Trains_Steam</li>
         </researchPrerequisites>
 
         <costList>

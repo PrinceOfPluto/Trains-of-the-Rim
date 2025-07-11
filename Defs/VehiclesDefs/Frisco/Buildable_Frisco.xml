@@ -11,8 +11,8 @@
             <texPath>Things/Vehicles/Rail/Locomotives/FriscoWithTender/frisco</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
             <drawSize>(5,22)</drawSize>
-            <drawOffsetWest>(0,0,0.25)</drawOffsetWest>
-            <drawOffsetEast>(0,0,0.25)</drawOffsetEast>
+            <drawOffsetWest>(0,0,0.75)</drawOffsetWest>
+            <drawOffsetEast>(0,0,0.75)</drawOffsetEast>
         </graphicData>
 
         <statBases>

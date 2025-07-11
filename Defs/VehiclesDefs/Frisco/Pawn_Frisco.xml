@@ -11,8 +11,8 @@
             <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
             <!-- <shaderType>CutoutComplexPattern</shaderType> -->
             <drawSize>(5,22)</drawSize>
-			<drawOffsetWest>(0,0,0.25)</drawOffsetWest>
-            <drawOffsetEast>(0,0,0.25)</drawOffsetEast>
+			<drawOffsetWest>(0,0,0.75)</drawOffsetWest>
+            <drawOffsetEast>(0,0,0.75)</drawOffsetEast>
         </graphicData>
 
         <fillPercent>1</fillPercent>
@@ -288,7 +288,7 @@
 
         <comps>
             <li Class="Vehicles.CompProperties_FueledTravel">
-                <fuelType>Wood</fuelType>
+                <fuelType>WoodLog</fuelType>
 				<leakDef>Filth_Fuel</leakDef>
                 <fuelConsumptionRate>24</fuelConsumptionRate>
                 <fuelCapacity>2000</fuelCapacity>

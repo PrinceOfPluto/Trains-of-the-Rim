@@ -11,8 +11,8 @@
             <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
             <shaderType>CutoutComplexPattern</shaderType>
             <drawSize>(5,10)</drawSize>
-            <drawOffsetWest>(0,0,0.25)</drawOffsetWest>
-            <drawOffsetEast>(0,0,0.25)</drawOffsetEast>
+            <drawOffsetWest>(0,0,0.75)</drawOffsetWest>
+            <drawOffsetEast>(0,0,0.75)</drawOffsetEast>
 			<color>(75, 75, 75)</color>
         </graphicData>
 

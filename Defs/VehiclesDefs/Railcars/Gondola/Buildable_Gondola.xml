@@ -2,38 +2,35 @@
 
 <Defs>
     <Vehicles.VehicleBuildDef ParentName="RailVehicleBaseBuildable">
-        <defName>TOTR_Diesel_Shunter_Blueprint</defName>
-        <label>Diesel Shunter</label>
-        <description>A small 2 axle diesel electic locomotive primarily used for railyard shunting and light journeys.</description>
+        <defName>TOTR_Trains_Railcar_Gondola_Blueprint</defName>
+        <label>Gondola</label>
+        <description>A Gondola for cargo transportation.</description>
 
         <graphicData>
-            <texPath>Things/Vehicles/Rail/Locomotives/DE2/de2</texPath>
+            <texPath>Things/Vehicles/Rail/Railcars/Gondola/gondola</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
-            <drawSize>(5,7)</drawSize>
+            <drawSize>(5,10)</drawSize>
             <drawOffsetWest>(0,0,0.75)</drawOffsetWest>
             <drawOffsetEast>(0,0,0.75)</drawOffsetEast>
         </graphicData>
+
+        <size>(3,10)</size>
 
         <statBases>
             <MaxHitPoints>10000</MaxHitPoints>
             <WorkToBuild>30</WorkToBuild>
             <Flammability>0.05</Flammability>
         </statBases>
-        
-        <size>(3,7)</size>
 
         <researchPrerequisites>
-            <li>Research_Vehicles_Trains_Chemfuel</li>
+            <li>Research_Vehicles_Trains_Steam</li>
         </researchPrerequisites>
 
         <costList>
-            <ComponentIndustrial>35</ComponentIndustrial>
-            <Steel>3000</Steel>
+            <Steel>500</Steel>
         </costList>
 
         <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-
-        <thingToSpawn>TOTR_Diesel_Shunter_Locomotive</thingToSpawn>
-        <soundBuilt>BulletImpact_Metal</soundBuilt>
+        <thingToSpawn>TOTR_Trains_Railcar_Gondola</thingToSpawn>
     </Vehicles.VehicleBuildDef>
 </Defs>

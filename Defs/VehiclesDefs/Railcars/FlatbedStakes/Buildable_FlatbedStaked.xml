@@ -10,8 +10,8 @@
             <texPath>Things/Vehicles/Rail/Railcars/FlatbedStaked/flatbedstake</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
             <drawSize>(5,10)</drawSize>
-            <drawOffsetWest>(0,0,0.25)</drawOffsetWest>
-            <drawOffsetEast>(0,0,0.25)</drawOffsetEast>
+            <drawOffsetWest>(0,0,0.75)</drawOffsetWest>
+            <drawOffsetEast>(0,0,0.75)</drawOffsetEast>
         </graphicData>
 
         <size>(3,10)</size>

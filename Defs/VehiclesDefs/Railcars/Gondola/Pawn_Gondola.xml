@@ -2,12 +2,12 @@
 
 <Defs>
     <Vehicles.VehicleDef ParentName="VehiclePawn_Railroad">
-        <defName>TOTR_Railcars_Tanker</defName>
-        <label>Tanker</label>
-        <description>A railcar for transporting bulk fluids.</description>
+        <defName>TOTR_Trains_Railcar_Gondola</defName>
+        <label>Gondola</label>
+        <description>A Gondola for cargo transportation.</description>
 
         <graphicData>
-            <texPath>Things/Vehicles/Rail/Railcars/Tanker/tanker</texPath>
+            <texPath>Things/Vehicles/Rail/Railcars/Gondola/gondola</texPath>
             <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
             <shaderType>CutoutComplexPattern</shaderType>
             <drawSize>(5,10)</drawSize>
@@ -18,7 +18,7 @@
 
         <fillPercent>0.8</fillPercent>
 
-        <buildDef>TOTR_Railcars_Tanker_Blueprint</buildDef>
+        <buildDef>TOTR_Trains_Railcar_Gondola_Blueprint</buildDef>
 
         <size>(3,10)</size>
 
@@ -31,7 +31,7 @@
         </statBases>
 
         <vehicleStats>
-            <Mass>300</Mass>
+            <Mass>400</Mass>
             <MoveSpeed>10</MoveSpeed>
             <CargoCapacity>30000</CargoCapacity>
             <RepairRate>0.5</RepairRate>
@@ -42,7 +42,21 @@
 			<baseBodySize>3.5</baseBodySize>
 		</race>
 
-        <components>
+        <properties>
+            <roles>
+                <li>
+                    <key>passenger</key>
+                    <label>Passenger</label>
+                    <slots>10</slots>
+					<hitbox>
+						<side>Left</side>
+						<side>Right</side>
+					</hitbox>
+                </li>
+            </roles>
+        </properties>
+
+       <components>
 			<li>
 				<key>FrontBogie</key>
 				<label>Front Bogie</label>
@@ -102,8 +116,8 @@
 				</hitbox>
 			</li>
 			<li>
-				<key>Tank</key>
-				<label>Tank</label>
+				<key>Frame</key>
+				<label>Frame</label>
 				<health>65</health>
 				<depth>External</depth>
 			</li>
