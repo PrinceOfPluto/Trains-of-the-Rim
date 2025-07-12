@@ -13,7 +13,7 @@
             <drawSize>(5,10)</drawSize>
             <drawOffsetWest>(0,0,0.75)</drawOffsetWest>
             <drawOffsetEast>(0,0,0.75)</drawOffsetEast>
-			<color>(75, 75, 75)</color>
+			<color>(250, 250, 250)</color>
         </graphicData>
 
         <fillPercent>0.8</fillPercent>
