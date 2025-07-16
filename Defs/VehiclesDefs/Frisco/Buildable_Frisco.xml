@@ -5,7 +5,6 @@
         <defName>TOTR_Steam_Locomotive_Frisco_Blueprint</defName>
         <label>Frisco Steam Locomotive</label>
         <description>A steam engine train to rule the rails.</description>
-		<designationCategory>VF_Vehicles</designationCategory>
 
         <graphicData>
             <texPath>Things/Vehicles/Rail/Locomotives/FriscoWithTender/frisco</texPath>

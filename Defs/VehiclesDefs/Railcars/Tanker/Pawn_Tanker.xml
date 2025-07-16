@@ -110,7 +110,7 @@
 		</components>
 
         <comps>
-			<li Class="TrainsOfTheRim.TrainCompProperties">
+			<li Class="TrainsOfTheRim.TrainVehicleCompProperties">
 				<isLocomotive>false</isLocomotive>
 				<isRailroadVehicle>true</isRailroadVehicle>
 			</li>

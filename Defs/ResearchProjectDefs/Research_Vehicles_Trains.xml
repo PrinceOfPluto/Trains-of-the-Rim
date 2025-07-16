@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
     <ResearchProjectDef>
         <tab>Vehicles</tab>
         <defName>Research_Vehicles_Trains_Steam</defName>
         <label>Steam Locomotives</label>
-        <description>Build steam engine locomotives capable of transporting passengers and cargo across the Rim.</description>
+        <description>Build steam engine locomotives capable of transporting passengers and cargo
+            across the Rim.</description>
         <baseCost>700</baseCost>
         <techLevel>Industrial</techLevel>
         <prerequisites>
@@ -14,13 +15,13 @@
         <researchViewX>1</researchViewX>
         <researchViewY>0</researchViewY>
         <generalRules>
-        <rulesStrings>
-            <li>subject->steam locomotives</li>
-            <li>subject_story->built steam engine locomotives</li>
-            <li>subject_story->made it easier to move things and people over long distances</li>
-            <li>subject_story->opened up new industrial and trade opportunities</li>
-            <li>subject_gerund->going full steam ahead</li>
-        </rulesStrings>
+            <rulesStrings>
+                <li>subject->steam locomotives</li>
+                <li>subject_story->built steam engine locomotives</li>
+                <li>subject_story->made it easier to move things and people over long distances</li>
+                <li>subject_story->opened up new industrial and trade opportunities</li>
+                <li>subject_gerund->going full steam ahead</li>
+            </rulesStrings>
         </generalRules>
     </ResearchProjectDef>
 
@@ -28,7 +29,8 @@
         <tab>Vehicles</tab>
         <defName>Research_Vehicles_Trains_Chemfuel</defName>
         <label>Chemfuel Locomotives</label>
-        <description>Build chemfuel powered locomotives capable of efficiently hauling massive amounts of cargo across the Rim.</description>
+        <description>Build chemfuel powered locomotives capable of efficiently hauling massive
+            amounts of cargo across the Rim.</description>
         <baseCost>1000</baseCost>
         <techLevel>Industrial</techLevel>
         <prerequisites>
@@ -38,13 +40,15 @@
         </prerequisites>
         <researchViewX>2</researchViewX>
         <researchViewY>0</researchViewY>
-        <rulesStrings>
-    <li>subject->chemfuel locomotives</li>
-    <li>subject_story->built chemfuel locomotives</li>
-    <li>subject_story->made trains more fuel efficient</li>
-    <li>subject_story->reduced transportation costs</li>
-    <li>subject_gerund->ruling the rails</li>
-  </rulesStrings>
+        <generalRules>
+            <rulesStrings>
+                <li>subject->chemfuel locomotives</li>
+                <li>subject_story->built chemfuel locomotives</li>
+                <li>subject_story->made trains more fuel efficient</li>
+                <li>subject_story->reduced transportation costs</li>
+                <li>subject_gerund->ruling the rails</li>
+            </rulesStrings>
+        </generalRules>
     </ResearchProjectDef>
 
 </Defs>

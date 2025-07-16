@@ -34,7 +34,7 @@
         <!-- <uiOrder>2070</uiOrder> -->
         <scatterType>Rocky</scatterType>
         <researchPrerequisites>
-            <li>Research_Vehicles_Trains_Metal_Rails</li>
+            <li>Research_Vehicles_Trains_Steam</li>
         </researchPrerequisites>
     </TerrainDef>
 

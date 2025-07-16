@@ -3,11 +3,22 @@
 <Defs>
     <Vehicles.VehicleBuildDef Name="RailVehicleBaseBuildable" ParentName="VehicleBaseBuildable" Abstract="True">
         <!-- <terrainAffordanceNeeded>RailAffordance</terrainAffordanceNeeded> -->
+         <designationCategory>RailroadCategory</designationCategory>
     </Vehicles.VehicleBuildDef>
     <Vehicles.VehicleDef Name = "VehiclePawn_Railroad" ParentName = "VehiclePawn_Mechanical" Abstract = "True">
         <vehicleCategory>Transport</vehicleCategory>
         <techLevel>Industrial</techLevel>
         <vehicleType>Land</vehicleType>
+        <soundOneShotsOnEvent Inherit = "False">
+			<li>
+				<key>PawnEntered</key>
+				<value>VVE_VehicleEnter</value>
+			</li>
+			<li>
+				<key>PawnExited</key>
+				<value>VVE_VehicleEnter</value>
+			</li>
+		</soundOneShotsOnEvent>
         <properties>
             <!-- <customTerrainCosts AllowTerrainWithTag="Rail" PathCost="1">
                 <li>
@@ -15,19 +26,23 @@
                     <value>1</value>
                 </li>
             </customTerrainCosts> -->
+            <!-- <defaultImpassable>
+                <li>Biome</li>
+                <li>Roads</li>
+            </defaultImpassable> -->
 			<visibilityWeight>12</visibilityWeight>
             <diagonalRotation>false</diagonalRotation>
-            <offRoadMultiplier>100000</offRoadMultiplier>
+            <!-- <offRoadMultiplier>100000</offRoadMultiplier> -->
             <customRoadCosts>
-                <li>
+                <!-- <li>
                     <key>DirtRoad</key>
                     <value>0.2</value>
-                </li>
+                </li> -->
                 <li>
-                    <key>Railroad</key>
+                    <key>TOTR_Railroad</key>
                     <value>0.2</value>
                 </li>
-                <li>
+                <!-- <li>
                     <key>RailroadOverpass</key>
                     <value>0.2</value>
                 </li>
@@ -50,7 +65,7 @@
                 <li>
                     <key>RailTunnel</key>
                     <value>0.2</value>
-                </li>
+                </li> -->
             </customRoadCosts>
         </properties>
     </Vehicles.VehicleDef>

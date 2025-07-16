@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <RoadDef>
-        <defName>Railroad</defName>
+        <defName>TOTR_Railroad</defName>
         <label>railroad</label>
         <priority>50</priority>
         <movementCostMultiplier>0.5</movementCostMultiplier>

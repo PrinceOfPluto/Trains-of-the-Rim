@@ -8,6 +8,7 @@ using HarmonyLib;
 using RimWorld;
 using RimWorld.Planet;
 using SmashTools;
+using TrainsOfTheRim.Patches;
 using Vehicles;
 using Vehicles.World;
 using Verse;
@@ -15,36 +16,48 @@ using Verse;
 namespace TrainsOfTheRim
 {
     [StaticConstructorOnStartup]
-    public static class TrainsOfTheRimHarmonyPatches
+    public static class HarmonyPatches
     {
-        static TrainsOfTheRimHarmonyPatches()
+        static HarmonyPatches()
         {
-            var harmony = new Harmony("VehiclesTrains");
+            var harmony = new Harmony("TrainsOfTheRim");
             Harmony.DEBUG = true;
-            MethodInfo vehiclesMovementMethod = AccessTools.Method(typeof(WorldVehiclePathGrid), "CalculatedMovementDifficultyAt", new[] { typeof(PlanetTile), typeof(VehicleDef), typeof(int), typeof(StringBuilder), typeof(bool) });
-            MethodInfo trainsMovementMethod = typeof(TrainsOfTheRimHarmonyPatches).GetMethod("CalculatedMovementDifficultyAtPatchTrains");
+            MethodInfo vehiclesMovementMethod = AccessTools.Method(typeof(WorldVehiclePathGrid), "CalculatedMovementDifficultyAt");
+            MethodInfo trainsMovementMethod = typeof(HarmonyPatches).GetMethod("CalculatedMovementDifficultyAtPatchTrains");
 
             if (vehiclesMovementMethod != null && trainsMovementMethod != null)
             {
                 harmony.Patch(vehiclesMovementMethod, postfix: new HarmonyMethod(trainsMovementMethod));
-                Log.Message("VehiclesTrains: Patched WorldVehiclePathGrid.CalculatedMovementDifficultyAt()");
+                Log.Message("TrainsOfTheRim: Patched WorldVehiclePathGrid.CalculatedMovementDifficultyAt()");
             }
             else
             {
-                Log.Error("VehiclesTrains: Unable to patch CalculatedMovementDifficultyAt()");
+                Log.Error($"TrainsOfTheRim: Unable to patch CalculatedMovementDifficultyAt(). Vehicle method ${vehiclesMovementMethod == null}, train method ${trainsMovementMethod == null}");
             }
 
             MethodInfo vehiclesCaravanErrorsMethod = AccessTools.Method(typeof(CaravanFormation), "CheckForErrors");
-            MethodInfo trainsCaravanErrorsMethod = typeof(TrainsOfTheRimHarmonyPatches).GetMethod("CheckForTrainCaravanErrors");
+            MethodInfo trainsCaravanErrorsMethod = typeof(HarmonyPatches).GetMethod("CheckForTrainCaravanErrors");
 
             if (vehiclesCaravanErrorsMethod != null && trainsCaravanErrorsMethod != null)
             {
                 harmony.Patch(vehiclesCaravanErrorsMethod, postfix: new HarmonyMethod(trainsCaravanErrorsMethod));
-                Log.Message("VehiclesTrains: Patched Dialog_FormVehicleCaravan.CheckForErrors()");
+                Log.Message("TrainsOfTheRim: Patched Dialog_FormVehicleCaravan.CheckForErrors()");
             }
             else
             {
-                Log.Error("VehiclesTrains: Unable to patch Dialog_FormVehicleCaravan.CheckForErrors()");
+                Log.Error("TrainsOfTheRim: Unable to patch Dialog_FormVehicleCaravan.CheckForErrors()");
+            }
+
+            MethodInfo vehicleGizmoMethod = AccessTools.Method(typeof(VehiclePawn), nameof(VehiclePawn.GetGizmos));
+            MethodInfo trainGizmoMethod = AccessTools.Method(typeof(Patch_Gizmos), nameof(Patch_Gizmos.GetTrainGizmos));
+            if (vehicleGizmoMethod != null && trainGizmoMethod != null)
+            {
+                harmony.Patch(vehicleGizmoMethod, postfix: new HarmonyMethod(trainGizmoMethod));
+                Log.Message("TrainsOfTheRim: Patched train gizmos");
+            }
+            else
+            {
+                Log.Error($"TrainsOfTheRim: Unable to patch train gizmos, {vehicleGizmoMethod == null}, {trainGizmoMethod == null}");
             }
 
             //MethodInfo vehiclesPathMethod = AccessTools.Method(typeof(VehiclePathGrid), "CalculatePathCostFor", new[] { typeof(VehicleDef), typeof(Map), typeof(IntVec3), typeof(StringBuilder) });
@@ -75,64 +88,25 @@ namespace TrainsOfTheRim
                 return;
             }
 
-            TrainCompProperties trainCompProps = (TrainCompProperties)vehicleDef.comps.Find(x => x is TrainCompProperties);
+            TrainVehicleCompProperties trainCompProps = (TrainVehicleCompProperties)vehicleDef.comps.Find(x => x is TrainVehicleCompProperties);
             if (trainCompProps == null)
             {
                 // Not a railroad vehicle
                 return;
             }
 
-            if (!trainCompProps.isRailroadVehicle)
-            {
-                Log.WarningOnce($"{vehicleDef.defName} with TrainCompProperties is not marked as a railroad vehicle", 2025070801 + vehicleDef.DefIndex);
-                return;
-            }
-
-            if (vehicleDef.properties.customRoadCosts.NullOrEmpty())
-            {
-                Log.ErrorOnce($"{vehicleDef.defName} has no custom road costs defined.", 2025070802 + vehicleDef.DefIndex);
-                return;
-            }
-
-            Dictionary<RoadDef, float> passableRoads = vehicleDef.properties.customRoadCosts
-                .Where(x => x.Value >= 0 && x.Value <= WorldVehiclePathGrid.ImpassableMovementDifficulty)
-                .ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
-
-            if (passableRoads.Count == 0)
-            {
-                Log.WarningOnce($"{vehicleDef.defName} is recognized as a railroad vehicle but has no passable roads defined in customRoadCosts.", 2025070803 + vehicleDef.DefIndex);
-                __result = WorldVehiclePathGrid.ImpassableMovementDifficulty;
-                return;
-            }
-
-            SurfaceTile worldTile = (SurfaceTile)Find.WorldGrid[tile];
-            List<SurfaceTile.RoadLink> roadLinks = worldTile.Roads;
-            if (roadLinks.NullOrEmpty())
+            SurfaceTile surfaceTile = (SurfaceTile)Find.WorldGrid[tile];
+            if (surfaceTile.Roads.NullOrEmpty() || !surfaceTile.Roads.Exists(PassableRoad))
             {
                 // No road links on tile
                 __result = WorldVehiclePathGrid.ImpassableMovementDifficulty;
                 return;
             }
 
-            List<RoadDef> tileRoads = roadLinks.Select(x => x.road).ToList();
-            float minRoadCost = 0f;
-            foreach (RoadDef road in tileRoads)
+            bool PassableRoad(SurfaceTile.RoadLink roadLink)
             {
-                if (passableRoads.ContainsKey(road))
-                {
-                    // If minRoadCost still initialized as 0f, assign current road's cost, otherwise take the least costly road
-                    minRoadCost = minRoadCost == 0f ? passableRoads[road] : Math.Min(minRoadCost, passableRoads[road]);
-                }
+                return vehicleDef.properties.customRoadCosts.ContainsKey(roadLink.road);
             }
-            if (minRoadCost == 0f)
-            {
-                // Tile has no roads matching vehicle's passable roads in customRoadCosts
-                __result = WorldVehiclePathGrid.ImpassableMovementDifficulty;
-                return;
-            }
-
-            __result += minRoadCost;
-            return;
         }
 
         public static void CheckForTrainCaravanErrors(FormationInfo ___formation, ref bool __result)
@@ -149,11 +123,11 @@ namespace TrainsOfTheRim
 
             foreach (VehiclePawn vehicle in vehicles)
             {
-                TrainComp trainComp = vehicle.GetComp<TrainComp>();
+                TrainVehicleComp trainComp = vehicle.GetComp<TrainVehicleComp>();
                 if (trainComp != null)
                 {
                     isTrainCaravan = true;
-                    TrainCompProperties props = (TrainCompProperties)trainComp.props;
+                    TrainVehicleCompProperties props = (TrainVehicleCompProperties)trainComp.props;
                     if (props.isLocomotive)
                     {
                         locomotivePresent = true;
@@ -174,7 +148,7 @@ namespace TrainsOfTheRim
 
         public static void CalculatePathCostForTrain(VehicleDef vehicleDef, Map map, IntVec3 cell, StringBuilder stringBuilder, ref int __result)
         {
-            TrainCompProperties trainCompProps = (TrainCompProperties)vehicleDef.comps.Find(x => x is TrainCompProperties);
+            TrainVehicleCompProperties trainCompProps = (TrainVehicleCompProperties)vehicleDef.comps.Find(x => x is TrainVehicleCompProperties);
             if (trainCompProps == null)
             {
                 // Not a railroad vehicle
@@ -207,10 +181,10 @@ namespace TrainsOfTheRim
                             if(thing.def.defName == "TOTR_Rail")
                             {
                                 Log.Message($"Found {thing.def.defName} at cell {cell}");
-                                TrainComp thingTrainComp = thing.TryGetComp<TrainComp>();
+                                TrainVehicleComp thingTrainComp = thing.TryGetComp<TrainVehicleComp>();
                                 if (thingTrainComp != null)
                                 {
-                                    TrainCompProperties thingTrainCompProps = (TrainCompProperties)thingTrainComp.props;
+                                    TrainVehicleCompProperties thingTrainCompProps = (TrainVehicleCompProperties)thingTrainComp.props;
                                     if (thingTrainCompProps != null && thingTrainCompProps.hasRailAffordance)
                                     {
                                         Log.Message($"{thing.def.defName} has rail affordance");

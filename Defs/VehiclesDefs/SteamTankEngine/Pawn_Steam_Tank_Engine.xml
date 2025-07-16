@@ -315,7 +315,7 @@
 				<fuelCapacity>800</fuelCapacity>
                 <fuelConsumptionCondition>Drafted</fuelConsumptionCondition>
 			</li>
-			<li Class="TrainsOfTheRim.TrainCompProperties">
+			<li Class="TrainsOfTheRim.TrainVehicleCompProperties">
 				<isLocomotive>true</isLocomotive>
 				<isRailroadVehicle>true</isRailroadVehicle>
 			</li>
