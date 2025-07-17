@@ -51,9 +51,6 @@
 		</race>
 
         <properties>
-			<winterSpeedMultiplier>3.25</winterSpeedMultiplier>
-			<customRoadCosts AssignDefaults = "0.25"/>
-
             <roles>
                 <li>
 					<key>driver</key>
@@ -255,6 +252,10 @@
 				<fuelConsumptionRate>15</fuelConsumptionRate>
 				<fuelCapacity>1000</fuelCapacity>
                 <fuelConsumptionCondition>Drafted</fuelConsumptionCondition>
+			</li>
+			<li Class="TrainsOfTheRim.TrainVehicleCompProperties">
+				<isLocomotive>true</isLocomotive>
+				<isRailroadVehicle>true</isRailroadVehicle>
 			</li>
         </comps>
     </Vehicles.VehicleDef>

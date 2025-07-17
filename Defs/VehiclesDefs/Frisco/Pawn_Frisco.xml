@@ -294,6 +294,10 @@
                 <fuelCapacity>2000</fuelCapacity>
                 <fuelConsumptionCondition>Drafted</fuelConsumptionCondition>
             </li>
+			<li Class="TrainsOfTheRim.TrainVehicleCompProperties">
+				<isLocomotive>true</isLocomotive>
+				<isRailroadVehicle>true</isRailroadVehicle>
+			</li>
         </comps>
     </Vehicles.VehicleDef>
 </Defs>
