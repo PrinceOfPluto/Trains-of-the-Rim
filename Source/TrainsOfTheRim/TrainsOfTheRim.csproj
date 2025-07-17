@@ -80,6 +80,8 @@
     <Compile Include="Patches\Patch_JobSystem.cs" />
     <Compile Include="Patches\Patch_VehiclePathing.cs" />
     <Compile Include="Patches\Patch_WorldPathing.cs" />
+    <Compile Include="RailComp.cs" />
+    <Compile Include="RailCompProperties.cs" />
     <Compile Include="Resources.cs" />
     <Compile Include="TrainMod.cs" />
     <Compile Include="TrainModSettings.cs" />

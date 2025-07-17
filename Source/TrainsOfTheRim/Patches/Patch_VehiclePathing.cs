@@ -47,27 +47,14 @@ namespace TrainsOfTheRim.Patches
                     {
                         foreach (Thing thing in thingList)
                         {
-                            if (thing.def.defName == "TOTR_Rail")
+                            RailComp railComp = thing.TryGetComp<RailComp>();
+                            if (railComp != null && railComp.Props != null && railComp.Props.hasRailAffordance)
                             {
-                                Log.Message($"Found {thing.def.defName} at cell {cell}");
-                                TrainVehicleComp thingTrainComp = thing.TryGetComp<TrainVehicleComp>();
-                                if (thingTrainComp != null)
-                                {
-                                    TrainVehicleCompProperties thingTrainCompProps = (TrainVehicleCompProperties)thingTrainComp.props;
-                                    if (thingTrainCompProps != null && thingTrainCompProps.hasRailAffordance)
-                                    {
-                                        Log.Message($"{thing.def.defName} has rail affordance");
-                                        // Has rail affordance so don't change whatever the original result was
-                                        __result = 0;
-                                        return;
-                                    }
-                                }
-                                else
-                                {
-                                    Log.Message($"{thing.def.defName} had null thingTrainComp");
-                                }
+                                Log.Message($"{thing.def.defName} has rail affordance");
+                                // Has rail affordance so don't change whatever the original result was
+                                __result = 0;
+                                return;
                             }
-
                         }
                     }
                 }
