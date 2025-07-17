@@ -2,7 +2,6 @@
 
 <Defs>
     <Vehicles.VehicleBuildDef Name="RailVehicleBaseBuildable" ParentName="VehicleBaseBuildable" Abstract="True">
-        <!-- <terrainAffordanceNeeded>RailAffordance</terrainAffordanceNeeded> -->
          <designationCategory>RailroadCategory</designationCategory>
     </Vehicles.VehicleBuildDef>
     <Vehicles.VehicleDef Name = "VehiclePawn_Railroad" ParentName = "VehiclePawn_Mechanical" Abstract = "True">
