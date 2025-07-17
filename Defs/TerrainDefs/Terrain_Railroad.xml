@@ -7,7 +7,6 @@
             <li>Light</li>
             <li>Medium</li>
             <li>Heavy</li>
-            <li>RailAffordance</li>
         </affordances>
         <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
         <tags>
