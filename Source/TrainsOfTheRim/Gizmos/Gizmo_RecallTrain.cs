@@ -45,7 +45,7 @@ namespace TrainsOfTheRim.Gizmos
 
         public override void ProcessInput(Event ev)
         {
-            OwnerTrainVehicleComp.RecallToPosition();
+            OwnerTrainVehicleComp.RecallConsistToPosition();
         }
     }
 }

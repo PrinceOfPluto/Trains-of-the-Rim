@@ -97,6 +97,14 @@ namespace TrainsOfTheRim
             return Vehicle.Map != null && savedPositions.ContainsKey(Vehicle.Map);
         }
 
+        public void RecallConsistToPosition()
+        {
+            if(currentTrain != null)
+            {
+                currentTrain.RecallConsistToPosition();
+            }
+        }
+
         public void RecallToPosition()
         {
             if (Vehicle.Map == null)

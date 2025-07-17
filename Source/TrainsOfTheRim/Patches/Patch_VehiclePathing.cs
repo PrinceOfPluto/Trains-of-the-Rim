@@ -1,44 +1,20 @@
-﻿using System;
+﻿using HarmonyLib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading;
-using HarmonyLib;
-using RimWorld;
-using RimWorld.Planet;
-using SmashTools;
-using TrainsOfTheRim.Patches;
+using System.Threading.Tasks;
 using Vehicles;
-using Vehicles.World;
 using Verse;
-using Verse.AI;
 
-namespace TrainsOfTheRim
+namespace TrainsOfTheRim.Patches
 {
-    [StaticConstructorOnStartup]
-    public static class HarmonyPatches
+    [HarmonyPatch(typeof(VehiclePathGrid))]
+    internal class Patch_VehiclePathing
     {
-        static HarmonyPatches()
-        {
-            var harmony = new Harmony("TrainsOfTheRim");
-            Harmony.DEBUG = true;
-            harmony.PatchAll();
-
-            //MethodInfo vehiclesPathMethod = AccessTools.Method(typeof(VehiclePathGrid), "CalculatePathCostFor", new[] { typeof(VehicleDef), typeof(Map), typeof(IntVec3), typeof(StringBuilder) });
-            //MethodInfo trainsPathMethod = typeof(TrainsOfTheRimHarmonyPatches).GetMethod("CalculatePathCostForTrain");
-            //if (vehiclesPathMethod != null && trainsPathMethod != null)
-            //{
-            //    harmony.Patch(vehiclesPathMethod, postfix: new HarmonyMethod(trainsPathMethod));
-            //    Log.Message("VehiclesTrains: Patched VehiclePathGrid.CalculatePathCostFor()");
-            //}
-            //else
-            //{
-            //    Log.Error("VehiclesTrains: Unable to patch VehiclePathGrid.CalculatePathCostFor()");
-            //}
-
-        }
-
+        //[HarmonyPostfix]
+        //[HarmonyPatch(nameof(VehiclePathGrid.CalculatePathCostFor))]
         public static void CalculatePathCostForTrain(VehicleDef vehicleDef, Map map, IntVec3 cell, StringBuilder stringBuilder, ref int __result)
         {
             TrainVehicleCompProperties trainCompProps = (TrainVehicleCompProperties)vehicleDef.comps.Find(x => x is TrainVehicleCompProperties);

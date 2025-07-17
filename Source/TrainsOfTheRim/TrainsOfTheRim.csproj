@@ -75,8 +75,14 @@
     <Compile Include="Gizmos\Gizmo_RecallTrain.cs" />
     <Compile Include="Gizmos\Gizmo_RemoveFromTrain.cs" />
     <Compile Include="JobDriver_RecallTrainToPosition.cs" />
+    <Compile Include="Patches\Patch_CaravanFormation.cs" />
     <Compile Include="Patches\Patch_Gizmos.cs" />
+    <Compile Include="Patches\Patch_JobSystem.cs" />
+    <Compile Include="Patches\Patch_VehiclePathing.cs" />
+    <Compile Include="Patches\Patch_WorldPathing.cs" />
     <Compile Include="Resources.cs" />
+    <Compile Include="TrainMod.cs" />
+    <Compile Include="TrainModSettings.cs" />
     <Compile Include="TrainVehicleComp.cs" />
     <Compile Include="TrainVehicleCompProperties.cs" />
     <Compile Include="TrainConsist.cs" />

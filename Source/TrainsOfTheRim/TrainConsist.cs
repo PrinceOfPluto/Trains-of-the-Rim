@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Vehicles;
 using Verse;
+using Verse.AI;
 
 namespace TrainsOfTheRim
 {
@@ -66,6 +67,33 @@ namespace TrainsOfTheRim
             }
             members.Add(p);
             trainVehicleComp.currentTrain = this;
+        }
+
+        public void RecallConsistToPosition()
+        {
+            foreach (VehiclePawn v in members)
+            {
+                TrainVehicleComp trainVehicleComp = v.TryGetComp<TrainVehicleComp>();
+                if(trainVehicleComp.CanRecallToPosition())
+                {
+                    trainVehicleComp.RecallToPosition();
+                }
+            }
+        }
+
+        public void OrderFollowVehicleAhead()
+        {
+            // start at 1 to skip the locomotive
+            for (int i = 1; i < members.Count; i++)
+            {
+                VehiclePawn targetToFollow = members[i-1];
+                VehiclePawn follower = members[i];
+
+                follower.mindState.duty = new PawnDuty(DutyDefOf_Vehicles.FollowVehicle, targetToFollow, targetToFollow.VehicleDef.Size.z * 1.5f)
+                {
+                    locomotion = LocomotionUrgency.Sprint
+                };
+            }
         }
 
         private static bool IsEligibleForMembership(VehiclePawn v)

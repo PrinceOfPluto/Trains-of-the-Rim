@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HarmonyLib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,8 +10,11 @@ using Verse;
 
 namespace TrainsOfTheRim.Patches
 {
+    [HarmonyPatch(typeof(VehiclePawn))]
     public class Patch_Gizmos
     {
+        [HarmonyPostfix]
+        [HarmonyPatch(nameof(VehiclePawn.GetGizmos))]
         public static void GetTrainGizmos(ref IEnumerable<Gizmo> __result, VehiclePawn __instance)
         {
             TrainVehicleComp trainVehicleComp = __instance.TryGetComp<TrainVehicleComp>();
