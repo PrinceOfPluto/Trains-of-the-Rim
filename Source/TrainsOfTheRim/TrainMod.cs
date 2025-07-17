@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
+﻿using UnityEngine;
 using Verse;
 
 namespace TrainsOfTheRim
@@ -20,14 +15,14 @@ namespace TrainsOfTheRim
         {
             Listing_Standard listingStandard = new Listing_Standard();
             listingStandard.Begin(inRect);
-            listingStandard.CheckboxLabeled("Experimental: Require rails", ref settings.useRails, "Controls whether train vehicles require rails to move on the colony map. This is different from the world map which requires trains to move along railroads.");
+            listingStandard.CheckboxLabeled("TOTR.RequireRailTerrainLabel".Translate(), ref settings.requireRailroadTerrain, "TOTR.RequireRailTerrainDesc".Translate());
             listingStandard.End();
             base.DoSettingsWindowContents(inRect);
         }
 
         public override string SettingsCategory()
         {
-            return "TrainsOfTheRim";
+            return "TOTR.SettingsCategoryName".Translate();
         }
     }
 }

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+    <TOTR.BuildingRoad>Building road: {0}, progress: {1}, ({2}/{3})</TOTR.BuildingRoad>
+    <TOTR.RoadFinished>{0} has finished building {1}</TOTR.RoadFinished>
+    <TOTR.DebugFinishRoad>DEV: Finish road</TOTR.DebugFinishRoad>
+    <TOTR.SettingsCategoryName>Trains of the Rim</TOTR.SettingsCategoryName>
+
+    <TOTR.RequireRailTerrainLabel>Experimental: Require railroad terrain</TOTR.RequireRailTerrainLabel>
+    <TOTR.RequireRailTerrainDesc>Controls whether train vehicles require special railroad ballast
+        terrain to move on the colony map. This is different from the world map which requires
+        trains to move along railroads.</TOTR.RequireRailTerrainDesc>
+
+    <TOTR.CreateTrainLabel>Create train</TOTR.CreateTrainLabel>
+    <TOTR.CoupleToTrainLabel>Couple to train</TOTR.CoupleToTrainLabel>
+    <TOTR.UncoupleFromTrainLabel>Uncouple from train</TOTR.UncoupleFromTrainLabel>
+    <TOTR.RecallTrainLabel>Recall train</TOTR.RecallTrainLabel>
+    <TOTR.RecallTrainDesc>Orders the train vehicles to return to the saved positions</TOTR.RecallTrainDesc>
+
+    <TOTR.CaravanRequiresLocomotive>A train caravan must have at least one locomotive.</TOTR.CaravanRequiresLocomotive>
+</LanguageData>

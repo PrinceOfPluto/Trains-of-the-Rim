@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using Vehicles;
 using Verse;
@@ -28,7 +24,8 @@ namespace TrainsOfTheRim.Gizmos
         public Gizmo_RemoveFromTrain(VehiclePawn vehiclePawn)
         {
             owner = vehiclePawn;
-            defaultLabel = "Uncouple from train";
+            defaultLabel = "TOTR.UncoupleFromTrainLabel".Translate();
+            icon = ContentFinder<Texture2D>.Get("UI/Gizmos/Uncouple");
         }
 
         public override GizmoResult GizmoOnGUI(Vector2 topLeft, float maxWidth, GizmoRenderParms parms)

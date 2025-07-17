@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using Vehicles;
 using Verse;
@@ -27,8 +23,9 @@ namespace TrainsOfTheRim
 
         public Gizmo_CreateNewTrain(VehiclePawn vehiclePawn)
         {
-            defaultLabel = "Create train";
+            defaultLabel = "TOTR.CreateTrainLabel".Translate();
             owner = vehiclePawn;
+            icon = ContentFinder<Texture2D>.Get("UI/Gizmos/CreateTrain");
         }
 
         public override GizmoResult GizmoOnGUI(Vector2 topLeft, float maxWidth, GizmoRenderParms parms)

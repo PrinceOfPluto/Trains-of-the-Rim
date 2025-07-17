@@ -1,24 +1,20 @@
 ﻿using LudeonTK;
 using RimWorld.Planet;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Text;
-using System.Threading.Tasks;
 using Vehicles;
 using Verse;
-using Verse.Noise;
 
 namespace TrainsOfTheRim
 {
-    public class Trains_WorldComp : WorldComponent
+    public class WorldComponent_Trains : WorldComponent
     {
-        public static Trains_WorldComp Instance { get; private set; }
+        public static WorldComponent_Trains Instance { get; private set; }
 
         public List<TrainConsist> trainConsists = new List<TrainConsist>();
 
-        public Trains_WorldComp(World world) : base(world)
+        public WorldComponent_Trains(World world) : base(world)
         {
             Instance = this;
         }
@@ -53,8 +49,8 @@ namespace TrainsOfTheRim
         [DebugAction("Trains", "List current trains", actionType = DebugActionType.Action)]
         public static void ListCurrentTrains()
         {
-            Trains_WorldComp worldComp = Find.World.GetComponent<Trains_WorldComp>();
-            if (worldComp.trainConsists == null)
+            WorldComponent_Trains worldComp = Find.World.GetComponent<WorldComponent_Trains>();
+            if (worldComp.trainConsists.NullOrEmpty())
             {
                 Log.Message($"No trains currently exist");
             }

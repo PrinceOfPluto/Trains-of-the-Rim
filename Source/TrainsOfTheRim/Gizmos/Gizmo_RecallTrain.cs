@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using Vehicles;
 using Verse;
@@ -27,9 +23,10 @@ namespace TrainsOfTheRim.Gizmos
 
         public Gizmo_RecallTrain(VehiclePawn vehiclePawn)
         {
-            defaultLabel = "Recall train";
-            defaultDesc = "Orders the train vehicles to return to the saved positions";
+            defaultLabel = "TOTR.RecallTrainLabel".Translate();
+            defaultDesc = "TOTR.RecallTrainDesc".Translate();
             owner = vehiclePawn;
+            icon = ContentFinder<Texture2D>.Get("UI/Gizmos/RecallTrain");
         }
 
         public override GizmoResult GizmoOnGUI(Vector2 topLeft, float maxWidth, GizmoRenderParms parms)

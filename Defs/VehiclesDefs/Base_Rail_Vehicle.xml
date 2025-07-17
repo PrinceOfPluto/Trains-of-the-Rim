@@ -20,19 +20,34 @@
 		</soundOneShotsOnEvent>
         <properties>
             <iconTexPath>UI/Icons/DefaultTrainIcon</iconTexPath>
-            <!-- <customTerrainCosts AllowTerrainWithTag="Rail" PathCost="1">
+            <customTerrainCosts>
                 <li>
                     <key>Bridge</key>
                     <value>1</value>
                 </li>
-            </customTerrainCosts> -->
-            <!-- <defaultImpassable>
-                <li>Biome</li>
-                <li>Roads</li>
-            </defaultImpassable> -->
+                <li>
+                    <key>RailroadBallastSandstone</key>
+                    <value>1</value>
+                </li>
+                <li>
+                    <key>RailroadBallastGranite</key>
+                    <value>1</value>
+                </li>
+                <li>
+                    <key>RailroadBallastLimestone</key>
+                    <value>1</value>
+                </li>
+                <li>
+                    <key>RailroadBallastSlate</key>
+                    <value>1</value>
+                </li>
+                <li>
+                    <key>RailroadBallastMarble</key>
+                    <value>1</value>
+                </li>
+            </customTerrainCosts>
 			<visibilityWeight>12</visibilityWeight>
             <diagonalRotation>false</diagonalRotation>
-            <!-- <offRoadMultiplier>100000</offRoadMultiplier> -->
             <customRoadCosts>
                 <!-- <li>
                     <key>DirtRoad</key>

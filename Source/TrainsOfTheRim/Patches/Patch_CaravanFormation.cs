@@ -1,9 +1,5 @@
 ﻿using RimWorld;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Vehicles.World;
 using Vehicles;
 using Verse;
@@ -47,7 +43,7 @@ namespace TrainsOfTheRim.Patches
             if (isTrainCaravan && !locomotivePresent)
             {
                 //TOTR_TrainCaravanMustHaveAtLeastOneLocomotive
-                Messages.Message("A train caravan must have at least one locomotive.", MessageTypeDefOf.RejectInput, false);
+                Messages.Message("TOTR.CaravanRequiresLocomotive".Translate(), MessageTypeDefOf.RejectInput, false);
                 __result = false;
                 return;
             }

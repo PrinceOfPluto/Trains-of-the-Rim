@@ -1,17 +1,11 @@
-﻿using HarmonyLib;
-using RimWorld;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RimWorld;
 using Vehicles;
 using Verse;
 using Verse.AI;
 
 namespace TrainsOfTheRim.Patches
 {
-    [HarmonyPatch(typeof(Pawn_JobTracker))]
+    //[HarmonyPatch(typeof(Pawn_JobTracker))]
     internal class Patch_JobSystem
     {
         //[HarmonyPostfix]

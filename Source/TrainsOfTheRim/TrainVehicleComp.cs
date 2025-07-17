@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Vehicles;
 using Verse;
 using Verse.AI;
-using Verse.Noise;
 
 namespace TrainsOfTheRim
 {
@@ -19,11 +16,11 @@ namespace TrainsOfTheRim
         private List<Map> tempPositionsKeyList;
         private List<TrainVehiclePosition> tempPositionsValueList;
 
-        public Trains_WorldComp worldComp;
+        public WorldComponent_Trains worldComp;
 
         public TrainVehicleComp()
         {
-            worldComp = Find.World.GetComponent<Trains_WorldComp>();
+            worldComp = Find.World.GetComponent<WorldComponent_Trains>();
         }
 
         public bool HasCurrentTrain()
@@ -116,7 +113,7 @@ namespace TrainsOfTheRim
                 throw new Exception($"Cannot recall to train position. {Vehicle.ThingID} has no saved position on its current map.");
             }
             IntVec3 targetPosition = savedPositions[Vehicle.Map].position;
-            var job = JobMaker.MakeJob(Resources.Jobs.TOTR_RecallTrainToPosition, targetPosition);
+            var job = JobMaker.MakeJob(TOTR_DefOf.Jobs.TOTR_RecallTrainToPosition, targetPosition);
             Vehicle.jobs.TryTakeOrderedJob(job, JobTag.DraftedOrder);
         }
 

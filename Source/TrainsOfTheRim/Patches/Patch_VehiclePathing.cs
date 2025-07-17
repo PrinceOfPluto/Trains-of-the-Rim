@@ -1,10 +1,6 @@
 ﻿using HarmonyLib;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using Vehicles;
 using Verse;
 
@@ -13,10 +9,20 @@ namespace TrainsOfTheRim.Patches
     [HarmonyPatch(typeof(VehiclePathGrid))]
     internal class Patch_VehiclePathing
     {
-        //[HarmonyPostfix]
-        //[HarmonyPatch(nameof(VehiclePathGrid.CalculatePathCostFor))]
+        [HarmonyPostfix]
+        [HarmonyPatch(nameof(VehiclePathGrid.CalculatePathCostFor))]
         public static void CalculatePathCostForTrain(VehicleDef vehicleDef, Map map, IntVec3 cell, StringBuilder stringBuilder, ref int __result)
         {
+            if (__result == VehiclePathGrid.ImpassableCost)
+            {
+                return;
+            }
+
+            if (!LoadedModManager.GetMod<TrainMod>().GetSettings<TrainModSettings>().requireRailroadTerrain)
+            {
+                return;
+            }
+
             TrainVehicleCompProperties trainCompProps = (TrainVehicleCompProperties)vehicleDef.comps.Find(x => x is TrainVehicleCompProperties);
             if (trainCompProps == null)
             {
@@ -30,37 +36,26 @@ namespace TrainsOfTheRim.Patches
                 return;
             }
 
+            if (cell.OnEdge(map) || cell.CloseToEdge(map,10) || map.exitMapGrid.IsExitCell(cell))
+            {
+                // allow non-rails at exit grid
+                return;
+            }
+            
+
             stringBuilder?.AppendLine($"Starting patched calculation for railroad vehicle {vehicleDef} at {cell}.");
             try
             {
-                ThingGrid thingGrid = map.thingGrid;
-                Monitor.Enter(thingGrid);
-                try
+                TerrainDef terrainDef = map.terrainGrid.TerrainAt(cell);
+                if (vehicleDef.properties.customTerrainCosts.TryGetValue(terrainDef, out int terrainCost))
                 {
-                    List<Thing> thingList = thingGrid.ThingsListAt(cell);
-                    stringBuilder?.AppendLine("Starting ThingList check.");
-                    if (thingList.NullOrEmpty())
-                    {
-                        __result = VehiclePathGrid.ImpassableCost;
-                    }
-                    else
-                    {
-                        foreach (Thing thing in thingList)
-                        {
-                            RailComp railComp = thing.TryGetComp<RailComp>();
-                            if (railComp != null && railComp.Props != null && railComp.Props.hasRailAffordance)
-                            {
-                                Log.Message($"{thing.def.defName} has rail affordance");
-                                // Has rail affordance so don't change whatever the original result was
-                                __result = 0;
-                                return;
-                            }
-                        }
-                    }
+                    __result = terrainCost;
+                    return;
                 }
-                finally
+                if (terrainDef.HasTag("Rail"))
                 {
-                    Monitor.Exit(thingGrid);
+                    __result = 1;
+                    return;
                 }
                 __result = VehiclePathGrid.ImpassableCost;
             }

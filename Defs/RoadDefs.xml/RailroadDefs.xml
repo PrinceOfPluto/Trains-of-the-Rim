@@ -2,10 +2,12 @@
 <Defs>
     <RoadDef>
         <defName>TOTR_Railroad</defName>
-        <label>railroad</label>
+        <label>Railroad</label>
         <priority>50</priority>
         <movementCostMultiplier>0.5</movementCostMultiplier>
         <tilesPerSegment>400</tilesPerSegment>
+        <ancientOnly>true</ancientOnly>
+        <distortionFrequency>0</distortionFrequency>
         <pathingMode>Bulldoze</pathingMode>
         <roadGenSteps>
             <li Class="RoadDefGenStep_Bulldoze">
@@ -66,5 +68,4 @@
         </worldRenderSteps>
         <worldTransitionGroup>Asphalt</worldTransitionGroup>
     </RoadDef>
-
 </Defs>
