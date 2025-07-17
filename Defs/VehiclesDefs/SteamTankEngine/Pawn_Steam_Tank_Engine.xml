@@ -46,16 +46,8 @@
             <MoveSpeed>10</MoveSpeed>
             <CargoCapacity>75</CargoCapacity>
             <RepairRate>0.3</RepairRate>
-            <AccelerationRate>0.02</AccelerationRate>
+            <!-- <AccelerationRate>0.02</AccelerationRate> -->
         </vehicleStats>
-
-        <!-- <soundSustainersOnEvent>
-			<li>
-				<start>IgnitionOn</start>
-				<stop>IgnitionOff</stop>
-				<value>VVE_VehicleEngineCar</value>
-			</li>
-		</soundSustainersOnEvent> -->
 
         <race>
 			<baseBodySize>3.5</baseBodySize>
@@ -366,7 +358,7 @@
             <MoveSpeed>10</MoveSpeed>
             <CargoCapacity>75</CargoCapacity>
             <RepairRate>0.3</RepairRate>
-            <AccelerationRate>0.02</AccelerationRate>
+            <!-- <AccelerationRate>0.02</AccelerationRate> -->
         </vehicleStats>
 
         <!-- <soundSustainersOnEvent>

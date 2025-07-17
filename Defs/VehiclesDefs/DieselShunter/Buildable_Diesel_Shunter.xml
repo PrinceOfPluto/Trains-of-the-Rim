@@ -3,7 +3,7 @@
 <Defs>
     <Vehicles.VehicleBuildDef ParentName="RailVehicleBaseBuildable">
         <defName>TOTR_Diesel_Shunter_Blueprint</defName>
-        <label>Diesel Shunter</label>
+        <label>DE2</label>
         <description>A small 2 axle diesel electic locomotive primarily used for railyard shunting and light journeys.</description>
 
         <graphicData>

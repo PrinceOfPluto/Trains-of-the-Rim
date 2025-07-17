@@ -2,7 +2,6 @@
 <Defs>
 
     <ResearchProjectDef>
-        <tab>Vehicles</tab>
         <defName>Research_Vehicles_Trains_Steam</defName>
         <label>Steam Locomotives</label>
         <description>Build steam engine locomotives capable of transporting passengers and cargo
@@ -26,7 +25,6 @@
     </ResearchProjectDef>
 
     <ResearchProjectDef>
-        <tab>Vehicles</tab>
         <defName>Research_Vehicles_Trains_Chemfuel</defName>
         <label>Chemfuel Locomotives</label>
         <description>Build chemfuel powered locomotives capable of efficiently hauling massive

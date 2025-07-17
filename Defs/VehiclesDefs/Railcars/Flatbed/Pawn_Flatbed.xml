@@ -35,7 +35,7 @@
             <MoveSpeed>10</MoveSpeed>
             <CargoCapacity>15000</CargoCapacity>
             <RepairRate>0.5</RepairRate>
-            <AccelerationRate>0.02</AccelerationRate>
+            <!-- <AccelerationRate>0.02</AccelerationRate> -->
         </vehicleStats>
 
         <race>

@@ -4,20 +4,10 @@
     <Vehicles.VehicleBuildDef Name="RailVehicleBaseBuildable" ParentName="VehicleBaseBuildable" Abstract="True">
          <designationCategory>RailroadCategory</designationCategory>
     </Vehicles.VehicleBuildDef>
-    <Vehicles.VehicleDef Name = "VehiclePawn_Railroad" ParentName = "VehiclePawn_Mechanical" Abstract = "True">
+    <Vehicles.VehicleDef Name = "VehiclePawn_Railroad" ParentName = "BaseVehiclePawn" Abstract = "True">
         <vehicleCategory>Transport</vehicleCategory>
         <techLevel>Industrial</techLevel>
         <vehicleType>Land</vehicleType>
-        <soundOneShotsOnEvent Inherit = "False">
-			<li>
-				<key>PawnEntered</key>
-				<value>VVE_VehicleEnter</value>
-			</li>
-			<li>
-				<key>PawnExited</key>
-				<value>VVE_VehicleEnter</value>
-			</li>
-		</soundOneShotsOnEvent>
         <properties>
             <iconTexPath>UI/Icons/DefaultTrainIcon</iconTexPath>
             <customTerrainCosts>

@@ -3,7 +3,7 @@
 <Defs>
     <Vehicles.VehicleDef ParentName="VehiclePawn_Railroad">
         <defName>TOTR_Diesel_Shunter_Locomotive</defName>
-        <label>Diesel Shunter</label>
+        <label>DE2</label>
         <description>A small 2 axle diesel electic locomotive primarily used for railyard shunting and light journeys.</description>
 
         <graphicData>
@@ -35,16 +35,10 @@
             <MoveSpeed>10</MoveSpeed>
             <CargoCapacity>75</CargoCapacity>
             <RepairRate>0.5</RepairRate>
-            <AccelerationRate>0.02</AccelerationRate>
+            <!-- <AccelerationRate>0.02</AccelerationRate> -->
         </vehicleStats>
 
-        <soundSustainersOnEvent>
-			<li>
-				<start>IgnitionOn</start>
-				<stop>IgnitionOff</stop>
-				<value>VVE_VehicleEngineCar</value>
-			</li>
-		</soundSustainersOnEvent>
+        
 
         <race>
 			<baseBodySize>3.5</baseBodySize>
