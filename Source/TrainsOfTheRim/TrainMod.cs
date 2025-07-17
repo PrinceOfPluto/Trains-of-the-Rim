@@ -1,14 +1,18 @@
-﻿using UnityEngine;
+﻿using HarmonyLib;
+using UnityEngine;
 using Verse;
 
 namespace TrainsOfTheRim
 {
     internal class TrainMod : Mod
     {
+        public static Harmony Harm;
         TrainModSettings settings;
         public TrainMod(ModContentPack content) : base(content)
         {
             this.settings = GetSettings<TrainModSettings>();
+            Harm = new Harmony("TrainsOfTheRim");
+            Harm.PatchAll();
         }
 
         public override void DoSettingsWindowContents(Rect inRect)
