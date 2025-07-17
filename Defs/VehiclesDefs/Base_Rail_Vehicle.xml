@@ -20,6 +20,7 @@
 			</li>
 		</soundOneShotsOnEvent>
         <properties>
+            <iconTexPath>UI/Icons/DefaultTrainIcon</iconTexPath>
             <!-- <customTerrainCosts AllowTerrainWithTag="Rail" PathCost="1">
                 <li>
                     <key>Bridge</key>
