@@ -12,15 +12,10 @@
     </DesignationCategoryDef>
 
     <DesignatorDropdownGroupDef>
-        <defName>DRP_Rails</defName>
+        <defName>TOTR_Rails</defName>
     </DesignatorDropdownGroupDef>
 
     <DesignatorDropdownGroupDef>
-        <defName>DRP_Sleepers</defName>
+        <defName>TOTR_Sleepers</defName>
     </DesignatorDropdownGroupDef>
-
-    <DesignatorDropdownGroupDef>
-        <defName>DRP_Signs</defName>
-    </DesignatorDropdownGroupDef>
-
 </Defs>
