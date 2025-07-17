@@ -8,6 +8,9 @@
         <vehicleCategory>Transport</vehicleCategory>
         <techLevel>Industrial</techLevel>
         <vehicleType>Land</vehicleType>
+        <soundOneShotsOnEvent Inherit = "False">
+			
+		</soundOneShotsOnEvent>
         <properties>
             <iconTexPath>UI/Icons/DefaultTrainIcon</iconTexPath>
             <customTerrainCosts>
