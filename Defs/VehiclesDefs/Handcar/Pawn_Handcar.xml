@@ -26,7 +26,6 @@
 
         <!-- TODO: update train stats -->
         <statBases>
-            <Mass>200</Mass>
             <ArmorRating_Blunt>1.0</ArmorRating_Blunt>
             <ArmorRating_Sharp>1.0</ArmorRating_Sharp>
             <Flammability>0</Flammability>
@@ -46,7 +45,7 @@
 
         <!-- TODO: update train vehicle stats -->
         <vehicleStats>
-            <!-- <Mass>200</Mass> -->
+            <Mass>50</Mass>
             <MoveSpeed>8</MoveSpeed>
             <CargoCapacity>150</CargoCapacity>
             <RepairRate>0.5</RepairRate>
