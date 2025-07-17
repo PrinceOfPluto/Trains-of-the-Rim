@@ -12,6 +12,11 @@
     </DesignationCategoryDef>
 
     <DesignatorDropdownGroupDef>
+        <defName>Floor_RailroadBallast</defName>
+        <label>railroad ballast</label>
+    </DesignatorDropdownGroupDef>
+    
+    <DesignatorDropdownGroupDef>
         <defName>TOTR_Rails</defName>
     </DesignatorDropdownGroupDef>
 
