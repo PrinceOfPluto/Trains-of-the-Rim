@@ -76,6 +76,11 @@ namespace TrainsOfTheRim
             }
         }
 
+        public bool CanSavePosition()
+        {
+            return HasCurrentTrain();
+        }
+
         public void SavePosition()
         {
             if(savedPositions ==  null)
@@ -86,7 +91,7 @@ namespace TrainsOfTheRim
             {
                 throw new Exception($"Cannot save train position. {Vehicle.ThingID} had null map.");
             }
-            savedPositions.Add(Vehicle.Map, new TrainVehiclePosition(Vehicle.Position, Vehicle.Rotation));
+            savedPositions.SetOrAdd(Vehicle.Map, new TrainVehiclePosition(Vehicle.Position, Vehicle.Rotation));
         }
 
         public bool CanRecallToPosition()

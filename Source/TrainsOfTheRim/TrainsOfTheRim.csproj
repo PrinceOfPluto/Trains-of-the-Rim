@@ -72,6 +72,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Gizmos\Gizmo_SaveNewPosition.cs" />
     <Compile Include="Gizmos\Gizmo_CycleTrainTexture.cs" />
     <Compile Include="Gizmos\Gizmo_JoinTrain.cs" />
     <Compile Include="Gizmos\Gizmo_AddToTrain.cs" />

@@ -42,6 +42,10 @@ namespace TrainsOfTheRim.Patches
             {
                 gizmos.Add(new Gizmo_RecallTrain(__instance));
             }
+            if (trainVehicleComp.CanSavePosition())
+            {
+                gizmos.Add(new Gizmo_SaveNewPosition(__instance));
+            }
             if (trainVehicleComp.CanCycleTexture())
             {
                 gizmos.Add(new Gizmo_CycleTrainTexture(__instance));
