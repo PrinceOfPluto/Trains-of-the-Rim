@@ -4,6 +4,7 @@ using RimWorld.Planet;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Vehicles.World;
 using Verse;
 
 namespace TrainsOfTheRim
@@ -58,6 +59,14 @@ namespace TrainsOfTheRim
             }
         }
 
+        [HarmonyPatch]
+        [HarmonyReversePatch]
+        [HarmonyPatch(typeof(WorldVehiclePathGrid), "RecalculatePathGrid")]
+        private static void RegenWorldGridForRoads(object instance)
+        {
+            
+        }
+
         private static void FinishRoad(Caravan __instance, WorkInfo workInfo)
         {
             Find.WorldGrid.OverlayRoad(workInfo.Tile, workInfo.To, workInfo.ToBuild);
@@ -65,7 +74,7 @@ namespace TrainsOfTheRim
             Instance.RailWorkInfos.Remove(__instance);
             __instance.pather.StartPath(workInfo.To, null, true);
             Messages.Message("TOTR.RoadFinished".Translate(__instance.Name, workInfo.ToBuild.label), __instance, MessageTypeDefOf.TaskCompletion);
-            // regen worldgrid
+            RegenWorldGridForRoads(WorldVehiclePathGrid.Instance);
         }
 
         private static bool IsVFECEnabled()
