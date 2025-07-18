@@ -4,7 +4,7 @@
     <Vehicles.VehicleBuildDef ParentName="RailVehicleBaseBuildable">
         <defName>TOTR_Tank_Engine_Chemfuel_Blueprint</defName>
         <label>S060 (Chemfuel)</label>
-        <description>A small steam locomotive with the water tank and fuel bunker mounted on the frame, eliminating the need for a separate tender. This 0-6-0T is primarily used for railyard shunting and light journeys. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Engineer x1, Passenger x3\n&lt;color=#bb8f04&gt;Fuel type:&lt;/color&gt; Chemfuel</description>
+        <description>A small steam locomotive with the water tank and fuel bunker mounted on the frame, eliminating the need for a separate tender. This 0-6-0T is primarily used for railyard shunting and light journeys. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Engineer x2, Passenger x1\n&lt;color=#bb8f04&gt;Fuel type:&lt;/color&gt; Chemfuel</description>
 
         <graphicData>
             <texPath>Things/Vehicles/Rail/Locomotives/S060/s060</texPath>
@@ -40,7 +40,7 @@
     <Vehicles.VehicleBuildDef ParentName="RailVehicleBaseBuildable">
         <defName>TOTR_Tank_Engine_Wood_Blueprint</defName>
         <label>S060 (Wood)</label>
-        <description>A small steam locomotive with the water tank and fuel bunker mounted on the frame, eliminating the need for a separate tender. This 0-6-0T is primarily used for railyard shunting and light journeys. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Engineer x1, Passenger x3\n&lt;color=#bb8f04&gt;Fuel type:&lt;/color&gt; Wood</description>
+        <description>A small steam locomotive with the water tank and fuel bunker mounted on the frame, eliminating the need for a separate tender. This 0-6-0T is primarily used for railyard shunting and light journeys. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Engineer x2, Passenger x1\n&lt;color=#bb8f04&gt;Fuel type:&lt;/color&gt; Wood</description>
 
         <graphicData>
             <texPath>Things/Vehicles/Rail/Locomotives/S060/s060_wood</texPath>

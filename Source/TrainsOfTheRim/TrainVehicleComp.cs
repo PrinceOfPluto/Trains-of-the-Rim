@@ -130,6 +130,38 @@ namespace TrainsOfTheRim
             Vehicle.Rotation = savedPositions[Vehicle.Map].rotation;
         }
 
+        public bool CanCycleTexture()
+        {
+            return Props.alternateTextures.Count > 0;
+        }
+
+        public void CycleTexture()
+        {
+            if(CanCycleTexture()) 
+            {
+                int index = 0;
+                RetextureDef currentRetextureDef = Vehicle.Retexture;
+                if (currentRetextureDef != null)
+                {
+                    index = Props.alternateTextures.FindIndex(r => r.defName == currentRetextureDef.defName);
+                    if (index < 0 || index == Props.alternateTextures.Count - 1)
+                    {
+                        // reset to zero if it isn't found or if we've reached the end of the list
+                        index = 0;
+                    } else
+                    {
+                        // otherwise increment
+                        index++;
+                    }
+                }
+                RetextureDef nextRetexture = Props.alternateTextures[index];
+                if (nextRetexture != null)
+                {
+                    Vehicle.SetRetexture(nextRetexture);
+                }
+            }
+        }
+
         public override void PostExposeData()
         {
             if (Scribe.mode == LoadSaveMode.Saving)
