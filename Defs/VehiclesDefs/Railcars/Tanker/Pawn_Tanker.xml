@@ -42,6 +42,20 @@
 			<baseBodySize>3.5</baseBodySize>
 		</race>
 
+		<properties>
+            <roles>
+                <li>
+                    <key>passenger</key>
+                    <label>Passenger</label>
+                    <slots>1</slots>
+                    <hitbox>
+                        <side>Left</side>
+                        <side>Right</side>
+                    </hitbox>
+                </li>
+            </roles>
+        </properties>
+
         <components>
 			<li>
 				<key>FrontBogie</key>

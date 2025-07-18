@@ -3,8 +3,8 @@
 <Defs>
     <Vehicles.VehicleDef ParentName="VehiclePawn_Railroad">
         <defName>TOTR_Diesel_Shunter_Locomotive</defName>
-        <label>DE2</label>
-        <description>A small 2 axle diesel electic locomotive primarily used for railyard shunting and light journeys.</description>
+        <label>Goat DE2</label>
+        <description>A small 2 axle diesel electic locomotive, the Goat is primarily used for railyard shunting and light journeys. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Engineer x2, Passenger x1\n&lt;color=#bb8f04&gt;Fuel type:&lt;/color&gt; Chemfuel</description>
 
         <graphicData>
             <texPath>Things/Vehicles/Rail/Locomotives/DE2/de2</texPath>

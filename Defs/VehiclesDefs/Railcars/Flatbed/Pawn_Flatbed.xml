@@ -47,7 +47,7 @@
                 <li>
                     <key>passenger</key>
                     <label>Passenger</label>
-                    <slots>5</slots>
+                    <slots>1</slots>
                     <hitbox>
                         <side>Left</side>
                         <side>Right</side>
