@@ -26,9 +26,13 @@ namespace TrainsOfTheRim.Patches
             {
                 gizmos.Add(new Gizmo_CreateNewTrain(__instance));
             }
-            if (trainVehicleComp.CanAddToTrain())
+            if (trainVehicleComp.HasCurrentTrain())
             {
                 gizmos.Add(new Gizmo_AddToTrain(__instance));
+            }
+            if (trainVehicleComp.CanJoinTrain())
+            {
+                gizmos.Add(new Gizmo_JoinTrain(__instance));
             }
             if (trainVehicleComp.HasCurrentTrain())
             {

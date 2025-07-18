@@ -6,7 +6,7 @@ using Verse;
 
 namespace TrainsOfTheRim.Gizmos
 {
-    internal class Gizmo_AddToTrain : Command_Target
+    internal class Gizmo_JoinTrain : Command_Target
     {
         private VehiclePawn owner;
         public TrainVehicleComp OwnerTrainVehicleComp
@@ -22,13 +22,13 @@ namespace TrainsOfTheRim.Gizmos
             }
         }
 
-        public Gizmo_AddToTrain(VehiclePawn vehiclePawn)
+        public Gizmo_JoinTrain(VehiclePawn vehiclePawn)
         {
             owner = vehiclePawn;
             defaultLabel = "TOTR.CoupleToTrainLabel".Translate();
             action = Action;
             targetingParams = TargetingParameters.ForPawns();
-            targetingParams.validator = CanAddToTrain;
+            targetingParams.validator = IsPartOfTrain;
             icon = ContentFinder<Texture2D>.Get("UI/Gizmos/Couple");
         }
 
@@ -43,26 +43,26 @@ namespace TrainsOfTheRim.Gizmos
             return result;
         }
 
-        private static bool CanAddToTrain(TargetInfo target)
+        private static bool IsPartOfTrain(TargetInfo target)
         {
             TrainVehicleComp trainVehicleComp = target.Thing.TryGetComp<TrainVehicleComp>();
-            return trainVehicleComp != null && trainVehicleComp.CanJoinTrain();
+            return trainVehicleComp != null && trainVehicleComp.HasCurrentTrain();
         }
 
         private void Action(LocalTargetInfo target)
         {
-            if (!OwnerTrainVehicleComp.HasCurrentTrain())
+            if (OwnerTrainVehicleComp.HasCurrentTrain())
             {
-                throw new Exception($"Cannot add to train. {owner.Name} is not part of a train.");
+                throw new Exception($"Cannot join train. {owner.Name} is already part of a train.");
             }
 
             TrainVehicleComp targetTrainComp = target.Thing.TryGetComp<TrainVehicleComp>();
-            if (targetTrainComp?.currentTrain == null)
+            if (targetTrainComp?.currentTrain != null)
             {
-                targetTrainComp.TryJoinTrain(OwnerTrainVehicleComp.currentTrain);
+                OwnerTrainVehicleComp.TryJoinTrain(targetTrainComp.currentTrain);
             } else
             {
-                throw new Exception($"Cannot add to train. {targetTrainComp.Vehicle.Name} is already part of a train.");
+                throw new Exception($"Cannot join train. {target.Pawn.Name} is not part of a train.");
             }
         }
     }

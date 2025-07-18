@@ -28,12 +28,12 @@ namespace TrainsOfTheRim
             return currentTrain != null;
         }
 
-        public bool CanAddToTrain()
+        public bool CanJoinTrain()
         {
             return worldComp.trainConsists.Count > 0 && currentTrain == null;
         }
 
-        public void TryAddToTrain(TrainConsist trainConsist)
+        public void TryJoinTrain(TrainConsist trainConsist)
         {
             if (!Props.isRailroadVehicle)
             {
