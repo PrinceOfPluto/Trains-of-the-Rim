@@ -623,6 +623,7 @@
             <li Class="Vehicles.CompProperties_FueledTravel">
 				<fuelType>WoodLog</fuelType>
 				<leakDef>Filth_Fuel</leakDef>
+				<moteDisplayed>WoodLog</moteDisplayed>
 				<fuelConsumptionRate>24</fuelConsumptionRate>
 				<fuelCapacity>800</fuelCapacity>
                 <fuelConsumptionCondition>Drafted</fuelConsumptionCondition>
