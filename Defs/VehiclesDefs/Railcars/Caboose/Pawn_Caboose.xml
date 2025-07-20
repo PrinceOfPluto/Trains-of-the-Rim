@@ -4,7 +4,7 @@
     <Vehicles.VehicleDef ParentName="VehiclePawn_Railroad">
         <defName>TOTR_Trains_Railcar_Caboose</defName>
         <label>Caboose</label>
-        <description>A caboose for cargo transportation.</description>
+        <description>A caboose for crew transportation.</description>
 
         <graphicData>
             <texPath>Things/Vehicles/Rail/Railcars/Caboose/caboose</texPath>
