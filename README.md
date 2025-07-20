@@ -39,6 +39,11 @@ Trains of the Rim revolutionizes your colony's bulk transportation options by in
 - Add guidance for creating custom locomotives and railcars
 - Possibly increasing quantity of bulk goods available at nearby settlements if connected in a rail network.
 
+## Compatibility
+- Should be compatible with all vehicle mods including Vanilla Vehicles Expanded
+- Built-in compatibility with VFE: Classical
+- Planned compatibility for Rails and Roads of the Rim
+
 ## Credits
 
 - SmashPhil for creating Vehicle Framework
