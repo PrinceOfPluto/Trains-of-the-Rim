@@ -31,6 +31,9 @@
                 <hasRailAffordance>true</hasRailAffordance>
             </li>
         </comps>
+        <researchPrerequisites>
+            <li>Research_Vehicles_Trains_Steam</li>
+        </researchPrerequisites>
     </ThingDef>
 
     <ThingDef ParentName="TOTR_RailBase" Name="TOTR_Rail">
