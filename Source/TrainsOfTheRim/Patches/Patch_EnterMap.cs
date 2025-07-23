@@ -19,7 +19,7 @@ namespace TrainsOfTheRim.Patches
                 if (trainVehicleComp != null && trainVehicleComp.HasCurrentTrain())
                 {
                     trainVehicleComp.Vehicle.ignition.Drafted = true;
-                    trainVehicleComp.RecallToPosition();
+                    trainVehicleComp.RecallToCurrentMapSavedPosition();
                 }
             }
         }

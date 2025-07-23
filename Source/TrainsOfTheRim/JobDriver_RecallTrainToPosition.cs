@@ -27,7 +27,7 @@ namespace TrainsOfTheRim
                     TrainVehicleComp trainVehicleComp = vehicle.TryGetComp<TrainVehicleComp>();
                     if (trainVehicleComp != null)
                     {
-                        trainVehicleComp.RecallToRotation();
+                        trainVehicleComp.RotateToEndRotation();
                     }
                 }
             };

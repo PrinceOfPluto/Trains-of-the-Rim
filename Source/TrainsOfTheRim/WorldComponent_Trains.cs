@@ -22,27 +22,35 @@ namespace TrainsOfTheRim
         public void AddToTrain(VehiclePawn vehiclePawn, TrainConsist trainConsist)
         {
             trainConsist.AddToConsist(vehiclePawn);
-            Log.Message($"Added {vehiclePawn.Name} to existing train consist");
+            //Log.Message($"Added {vehiclePawn.VehicleDef.defName} {vehiclePawn.ThingID} to existing train consist");
         }
 
         public TrainConsist CreateNewTrain(VehiclePawn vehiclePawn)
         {
             TrainConsist consist = new TrainConsist(vehiclePawn);
             this.trainConsists.Add(consist);
-            Log.Message($"Added {vehiclePawn.Name} to new train consist");
+            //Log.Message($"Added {vehiclePawn.VehicleDef.defName} {vehiclePawn.ThingID} to new train consist");
             return consist;
         }
 
         public void RemoveFromTrain(VehiclePawn vehiclePawn, TrainConsist trainConsist)
         {
-            if (trainConsist.Members.Remove(vehiclePawn))
+            if (trainConsist.RemoveFromConsist(vehiclePawn))
             {
-                Log.Message($"Removed {vehiclePawn.Name} from train");
+                //Log.Message($"Removed {vehiclePawn.VehicleDef.defName} {vehiclePawn.ThingID} from train");
             };
             if (trainConsist.Members.NullOrEmpty())
             {
-                Log.Message($"Removed empty train consist");
+                //Log.Message($"Removed empty train consist");
                 trainConsists.Remove(trainConsist);
+            }
+        }
+
+        public void DisbandTrain(TrainConsist trainConsist)
+        {
+            foreach (var member in trainConsist.Members.ToList())
+            {
+                RemoveFromTrain(member, trainConsist);
             }
         }
 
@@ -53,6 +61,7 @@ namespace TrainsOfTheRim
             if (worldComp.trainConsists.NullOrEmpty())
             {
                 Log.Message($"No trains currently exist");
+                return;
             }
             StringBuilder sb = new StringBuilder();
             int counter = 0;

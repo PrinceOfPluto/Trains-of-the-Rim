@@ -41,7 +41,7 @@ namespace TrainsOfTheRim.Gizmos
 
         public override void ProcessInput(Event ev)
         {
-            OwnerTrainVehicleComp.RemoveFromTrain();
+            WorldComponent_Trains.Instance.RemoveFromTrain(owner, OwnerTrainVehicleComp.currentTrain);
         }
     }
 }

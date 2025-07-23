@@ -72,6 +72,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Gizmos\Gizmo_DisbandTrain.cs" />
     <Compile Include="Gizmos\Gizmo_SaveNewPosition.cs" />
     <Compile Include="Gizmos\Gizmo_CycleTrainTexture.cs" />
     <Compile Include="Gizmos\Gizmo_JoinTrain.cs" />
@@ -83,7 +84,7 @@
     <Compile Include="Patches\Patch_CaravanFormation.cs" />
     <Compile Include="Patches\Patch_EnterMap.cs" />
     <Compile Include="Patches\Patch_Gizmos.cs" />
-    <Compile Include="Patches\Patch_JobSystem.cs" />
+    <Compile Include="Patches\Patch_OrderVehicle.cs" />
     <Compile Include="Patches\Patch_VehiclePathing.cs" />
     <Compile Include="Patches\Patch_WorldPathing.cs" />
     <Compile Include="RailComp.cs" />

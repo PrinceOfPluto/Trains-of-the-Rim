@@ -34,17 +34,21 @@ namespace TrainsOfTheRim.Patches
             {
                 gizmos.Add(new Gizmo_JoinTrain(__instance));
             }
-            if (trainVehicleComp.HasCurrentTrain())
+            if (trainVehicleComp.CanRemoveFromTrain())
             {
                 gizmos.Add(new Gizmo_RemoveFromTrain(__instance));
             }
-            if(trainVehicleComp.CanRecallToPosition())
+            if (trainVehicleComp.CanRecallToPosition())
             {
                 gizmos.Add(new Gizmo_RecallTrain(__instance));
             }
             if (trainVehicleComp.CanSavePosition())
             {
                 gizmos.Add(new Gizmo_SaveNewPosition(__instance));
+            }
+            if (trainVehicleComp.CanDisbandTrain())
+            {
+                gizmos.Add(new Gizmo_DisbandTrain(__instance));
             }
             if (trainVehicleComp.CanCycleTexture())
             {

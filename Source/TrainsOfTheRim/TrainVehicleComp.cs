@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SmashTools;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Vehicles;
@@ -17,6 +18,7 @@ namespace TrainsOfTheRim
         private List<TrainVehiclePosition> tempPositionsValueList;
 
         public WorldComponent_Trains worldComp;
+        public Rot8 endRotation;
 
         public TrainVehicleComp()
         {
@@ -45,6 +47,7 @@ namespace TrainsOfTheRim
             }
             worldComp.AddToTrain(Vehicle, trainConsist);
             SavePosition();
+            currentTrain.SaveRelativeMemberPosition(Vehicle);
         }
 
         public bool CanCreateNewTrain()
@@ -66,14 +69,28 @@ namespace TrainsOfTheRim
             SavePosition();
         }
 
+        public bool CanRemoveFromTrain()
+        {
+            return HasCurrentTrain() && !LeadsCurrentTrain();
+        }
+
+        public void ClearSavedPositions()
+        {
+            savedPositions.Clear();
+        }
+
         public void RemoveFromTrain()
         {
             if (currentTrain != null)
             {
-                worldComp.RemoveFromTrain(Vehicle, currentTrain);
                 currentTrain = null;
                 savedPositions.Clear();
             }
+        }
+
+        public bool CanDisbandTrain()
+        {
+            return LeadsCurrentTrain();
         }
 
         public bool CanSavePosition()
@@ -83,6 +100,10 @@ namespace TrainsOfTheRim
 
         public void SavePosition()
         {
+            if (currentTrain == null)
+            {
+                throw new Exception($"Cannot save train position. {Vehicle.ThingID} is not part of a train.");
+            }
             if(savedPositions ==  null)
             {
                 savedPositions = new Dictionary<Map, TrainVehiclePosition>();
@@ -92,6 +113,15 @@ namespace TrainsOfTheRim
                 throw new Exception($"Cannot save train position. {Vehicle.ThingID} had null map.");
             }
             savedPositions.SetOrAdd(Vehicle.Map, new TrainVehiclePosition(Vehicle.Position, Vehicle.Rotation));
+        }
+
+        public bool LeadsCurrentTrain()
+        {
+            if(HasCurrentTrain() && currentTrain.Members.IndexOf(Vehicle) == 0)
+            {
+                return true;
+            }
+            return false;
         }
 
         public bool CanRecallToPosition()
@@ -107,7 +137,17 @@ namespace TrainsOfTheRim
             }
         }
 
-        public void RecallToPosition()
+        public void OrderToPosition(IntVec3 targetPosition, Rot4 targetRotation)
+        {
+            if(targetRotation.IsValid)
+            {
+                endRotation = targetRotation;
+            }
+            var job = JobMaker.MakeJob(TOTR_DefOf.Jobs.TOTR_RecallTrainToPosition, targetPosition);
+            Vehicle.jobs.TryTakeOrderedJob(job, JobTag.DraftedOrder);
+        }
+
+        public void RecallToCurrentMapSavedPosition()
         {
             if (Vehicle.Map == null)
             {
@@ -118,21 +158,16 @@ namespace TrainsOfTheRim
                 throw new Exception($"Cannot recall to train position. {Vehicle.ThingID} has no saved position on its current map.");
             }
             IntVec3 targetPosition = savedPositions[Vehicle.Map].position;
-            var job = JobMaker.MakeJob(TOTR_DefOf.Jobs.TOTR_RecallTrainToPosition, targetPosition);
-            Vehicle.jobs.TryTakeOrderedJob(job, JobTag.DraftedOrder);
+            Rot4 targetRotation = savedPositions[Vehicle.Map].rotation;
+            OrderToPosition(targetPosition, targetRotation);
         }
 
-        public void RecallToRotation()
+        public void RotateToEndRotation()
         {
-            if (savedPositions == null)
+            if (endRotation != null && endRotation.IsValid)
             {
-                throw new Exception($"Cannot recall to train rotation. {Vehicle.ThingID} had null saved positions.");
+                Vehicle.Rotation = endRotation;
             }
-            if (!savedPositions.ContainsKey(Vehicle.Map))
-            {
-                throw new Exception($"Cannot recall to train rotation. {Vehicle.ThingID} has no saved position on its current map");
-            }
-            Vehicle.Rotation = savedPositions[Vehicle.Map].rotation;
         }
 
         public bool CanCycleTexture()
@@ -192,7 +227,10 @@ namespace TrainsOfTheRim
 
         public override void PostDestroy(DestroyMode mode, Map previousMap)
         {
-            RemoveFromTrain();
+            if (HasCurrentTrain())
+            {
+                WorldComponent_Trains.Instance.RemoveFromTrain(this.Vehicle, currentTrain);
+            }
             base.PostDestroy(mode, previousMap);
         }
     }
