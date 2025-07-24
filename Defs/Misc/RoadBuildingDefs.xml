@@ -38,8 +38,7 @@
     <TrainsOfTheRim.RoadBuildingDef>
         <label>Build Railroad</label>
         <defName>BuildRailRoad</defName>
-        <description>Orders pawns in the caravan to clear foliage, assemble a stone track bed,
-            arrange railroad ties, and lay steel rails.</description>
+        <description>Orders pawns in the caravan to clear foliage, assemble a stone track bed, arrange railroad ties, and lay steel rails.</description>
         <iconPath>UI/Gizmos/BuildRailRoad</iconPath>
         <road>TOTR_Railroad</road>
         <workRequired>2000</workRequired>
