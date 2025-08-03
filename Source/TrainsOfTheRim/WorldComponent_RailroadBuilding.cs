@@ -62,7 +62,7 @@ namespace TrainsOfTheRim
         [HarmonyPatch]
         [HarmonyReversePatch]
         [HarmonyPatch(typeof(WorldVehiclePathGrid), "RecalculatePathGrid")]
-        private static void RegenWorldGridForRoads(object instance)
+        internal static void RegenWorldGridForRoads(object instance)
         {
             
         }

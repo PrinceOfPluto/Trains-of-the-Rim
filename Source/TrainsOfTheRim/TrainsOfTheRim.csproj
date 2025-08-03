@@ -42,6 +42,10 @@
       <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="RailsAndRoadsOfTheRim">
+      <HintPath>..\..\..\..\..\..\workshop\content\294100\3271115410\1.6\Assemblies\RailsAndRoadsOfTheRim.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="SmashTools">
       <HintPath>..\..\..\..\..\..\workshop\content\294100\3014915404\1.6\Assemblies\SmashTools.dll</HintPath>
       <Private>False</Private>
@@ -91,6 +95,7 @@
     <Compile Include="Patches\Patch_EnterMap.cs" />
     <Compile Include="Patches\Patch_Gizmos.cs" />
     <Compile Include="Patches\Patch_OrderVehicle.cs" />
+    <Compile Include="Patches\Patch_RRotR.cs" />
     <Compile Include="Patches\Patch_VehiclePathing.cs" />
     <Compile Include="Patches\Patch_WorldPathing.cs" />
     <Compile Include="RailComp.cs" />
