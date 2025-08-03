@@ -1,16 +1,17 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <Defs>
-    <Vehicles.VehicleBuildDef Name="RailVehicleBaseBuildable" ParentName="VehicleBaseBuildable" Abstract="True">
-         <designationCategory>RailroadCategory</designationCategory>
+    <Vehicles.VehicleBuildDef Name="RailVehicleBaseBuildable" ParentName="VehicleBaseBuildable"
+        Abstract="True">
+        <designationCategory>RailroadCategory</designationCategory>
     </Vehicles.VehicleBuildDef>
-    <Vehicles.VehicleDef Name = "VehiclePawn_Railroad" ParentName = "BaseVehiclePawn" Abstract = "True">
+    <Vehicles.VehicleDef Name="VehiclePawn_Railroad" ParentName="BaseVehiclePawn" Abstract="True">
         <vehicleCategory>Transport</vehicleCategory>
         <techLevel>Industrial</techLevel>
         <vehicleType>Land</vehicleType>
-        <soundOneShotsOnEvent Inherit = "False">
-			
-		</soundOneShotsOnEvent>
+        <soundOneShotsOnEvent Inherit="False">
+
+        </soundOneShotsOnEvent>
         <properties>
             <iconTexPath>UI/Icons/DefaultTrainIcon</iconTexPath>
             <customTerrainCosts>
@@ -39,41 +40,13 @@
                     <value>1</value>
                 </li>
             </customTerrainCosts>
-			<visibilityWeight>12</visibilityWeight>
+            <visibilityWeight>12</visibilityWeight>
             <diagonalRotation>false</diagonalRotation>
             <customRoadCosts>
-                <!-- <li>
-                    <key>DirtRoad</key>
-                    <value>0.2</value>
-                </li> -->
                 <li>
                     <key>TOTR_Railroad</key>
                     <value>0.2</value>
                 </li>
-                <!-- <li>
-                    <key>RailroadOverpass</key>
-                    <value>0.2</value>
-                </li>
-                <li>
-                    <key>RailYard</key>
-                    <value>0.2</value>
-                </li>
-                <li>
-                    <key>Glitterrail</key>
-                    <value>0.1</value>
-                </li>
-                <li>
-                    <key>GlitterOverpass</key>
-                    <value>0.1</value>
-                </li>
-                <li>
-                    <key>GlitterYard</key>
-                    <value>0.1</value>
-                </li>
-                <li>
-                    <key>RailTunnel</key>
-                    <value>0.2</value>
-                </li> -->
             </customRoadCosts>
         </properties>
     </Vehicles.VehicleDef>
