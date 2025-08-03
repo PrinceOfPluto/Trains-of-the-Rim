@@ -88,6 +88,11 @@ namespace TrainsOfTheRim
         {
             foreach (var gizmo in gizmos) yield return gizmo;
 
+            if(LoadedModManager.GetMod<TrainMod>().GetSettings<TrainModSettings>().hideRoadBuildingFeature)
+            {
+                yield break;
+            }
+
             if (IsVFECEnabled())
             {
                 yield break;

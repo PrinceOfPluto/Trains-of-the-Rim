@@ -20,6 +20,7 @@ namespace TrainsOfTheRim
             Listing_Standard listingStandard = new Listing_Standard();
             listingStandard.Begin(inRect);
             listingStandard.CheckboxLabeled("TOTR.RequireRailTerrainLabel".Translate(), ref settings.requireRailroadTerrain, "TOTR.RequireRailTerrainDesc".Translate());
+            listingStandard.CheckboxLabeled("TOTR.HideRoadBuildingFeatureLabel".Translate(), ref settings.hideRoadBuildingFeature, "TOTR.HideRoadBuildingFeatureDesc".Translate());
             listingStandard.End();
             base.DoSettingsWindowContents(inRect);
         }
