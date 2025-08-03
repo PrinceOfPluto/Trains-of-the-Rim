@@ -54,16 +54,20 @@
         </roadGenSteps>
         <worldRenderSteps>
             <li>
-                <layer>Outline</layer>
-                <width>0.95</width>
-            </li>
-            <li>
                 <layer>Gravel</layer>
-                <width>0.8</width>
+                <width>0.45</width>
             </li>
             <li>
-                <layer>Asphalt</layer>
-                <width>0.55</width>
+                <layer>TOTR_RoadLayer_Outersleepers</layer>
+                <width>0.3</width>
+            </li>
+            <li>
+                <layer>TOTR_RoadLayer_Rail</layer>
+                <width>0.2</width>
+            </li>
+            <li>
+                <layer>TOTR_RoadLayer_Innersleepers</layer>
+                <width>0.1</width>
             </li>
         </worldRenderSteps>
         <worldTransitionGroup>Asphalt</worldTransitionGroup>
