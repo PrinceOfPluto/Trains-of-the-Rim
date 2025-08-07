@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Chemfuel Locomotives -->
+  <Research_Vehicles_Trains_Chemfuel.label>化學燃料機車</Research_Vehicles_Trains_Chemfuel.label>
+  <!-- EN: Build chemfuel powered locomotives capable of efficiently hauling massive\n            amounts of cargo across the Rim. -->
+  <Research_Vehicles_Trains_Chemfuel.description>建造化學燃料驅動的機車，能夠高效地在邊緣世界運輸大量貨物。</Research_Vehicles_Trains_Chemfuel.description>
+  
+  <!-- EN: Steam Locomotives -->
+  <Research_Vehicles_Trains_Steam.label>蒸汽機車</Research_Vehicles_Trains_Steam.label>
+  <!-- EN: Build steam engine locomotives capable of transporting passengers and cargo\n            across the Rim. -->
+  <Research_Vehicles_Trains_Steam.description>建造蒸汽引擎機車，能夠在邊緣世界運輸乘客和貨物。</Research_Vehicles_Trains_Steam.description>
+  
+</LanguageData>

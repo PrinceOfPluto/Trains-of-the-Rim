@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Tanker -->
+  <TOTR_Railcars_Tanker_Blueprint.label>油罐车</TOTR_Railcars_Tanker_Blueprint.label>
+  <!-- EN: A railcar for transporting bulk fluids. -->
+  <TOTR_Railcars_Tanker_Blueprint.description>用于运输散装液体的铁路车辆。</TOTR_Railcars_Tanker_Blueprint.description>
+  
+</LanguageData>

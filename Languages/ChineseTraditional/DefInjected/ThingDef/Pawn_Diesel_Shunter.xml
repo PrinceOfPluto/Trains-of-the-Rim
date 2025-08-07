@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Goat DE2 -->
+  <TOTR_Diesel_Shunter_Locomotive.label>山羊DE2型柴油機車</TOTR_Diesel_Shunter_Locomotive.label>
+  <!-- EN: A small 2 axle diesel electic locomotive, the Goat is primarily used for railyard shunting and light journeys. \n\n<color=#bb8f04>Crew:</color> Engineer x2, Passenger x1\n<color=#bb8f04>Fuel type:</color> Chemfuel -->
+  <TOTR_Diesel_Shunter_Locomotive.description>小型雙軸柴油電力機車，主要用於調車作業和短途運輸。\n\n<color=#bb8f04>乘員：</color>工程師x2，乘客x1\n<color=#bb8f04>燃料類型：</color>化學燃料</TOTR_Diesel_Shunter_Locomotive.description>
+  <!-- EN: Axle Boxes -->
+  <TOTR_Diesel_Shunter_Locomotive.components.2.label>軸箱</TOTR_Diesel_Shunter_Locomotive.components.2.label>
+  <!-- EN: Traction Motor -->
+  <TOTR_Diesel_Shunter_Locomotive.components.3.label>牽引電機</TOTR_Diesel_Shunter_Locomotive.components.3.label>
+  <!-- EN: Front Coupler -->
+  <TOTR_Diesel_Shunter_Locomotive.components.4.label>前車鉤</TOTR_Diesel_Shunter_Locomotive.components.4.label>
+  <!-- EN: Rear Coupler -->
+  <TOTR_Diesel_Shunter_Locomotive.components.5.label>後車鉤</TOTR_Diesel_Shunter_Locomotive.components.5.label>
+  
+</LanguageData>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+    <!-- Road Building -->
+    <!-- EN: Building road: {0}, progress: {1}, ({2}/{3}) -->
+  <TOTR.BuildingRoad>正在修建道路：{0}，进度：{1}（{2}/{3}）</TOTR.BuildingRoad>
+    <!-- EN: {0} has finished building {1} -->
+  <TOTR.RoadFinished>{0}已完成修建{1}</TOTR.RoadFinished>
+    <!-- EN: DEV: Finish road -->
+  <TOTR.DebugFinishRoad>开发者模式：完成道路</TOTR.DebugFinishRoad>
+
+    <!-- Mod Settings -->
+    <!-- EN: Trains of the Rim -->
+  <TOTR.SettingsCategoryName>边缘列车</TOTR.SettingsCategoryName>
+    <!-- EN: Experimental: Require railroad terrain -->
+  <TOTR.RequireRailTerrainLabel>实验性：需要铁路地形</TOTR.RequireRailTerrainLabel>
+    <!-- EN: Controls whether train vehicles require special railroad ballast terrain to move on the colony map. This is different from the world map which requires trains to move along railroads. -->
+  <TOTR.RequireRailTerrainDesc>控制列车是否需要在殖民地地图上的特殊铁路道砟地形上移动。与世界地图不同，世界地图要求列车沿铁路移动。</TOTR.RequireRailTerrainDesc>
+    <!-- EN: Hide road building feature from Trains of the Rim -->
+  <TOTR.HideRoadBuildingFeatureLabel>隐藏边缘列车的道路修建功能</TOTR.HideRoadBuildingFeatureLabel>
+    <!-- EN: Hides the gizmos for road building from Trains of the Rim, in case you prefer using another road mod like Rails and Roads of the Rim. -->
+  <TOTR.HideRoadBuildingFeatureDesc>隐藏边缘列车的道路修建小工具，以防你更喜欢使用其他道路模组（如边缘铁轨与道路）。</TOTR.HideRoadBuildingFeatureDesc>
+
+    <!-- Train Gizmos -->
+    <!-- EN: Create train -->
+  <TOTR.CreateTrainLabel>创建列车</TOTR.CreateTrainLabel>
+    <!-- EN: Couple to train -->
+  <TOTR.CoupleToTrainLabel>连接列车</TOTR.CoupleToTrainLabel>
+    <!-- EN: Uncouple from train -->
+  <TOTR.UncoupleFromTrainLabel>断开列车连接</TOTR.UncoupleFromTrainLabel>
+    <!-- EN: Recall train -->
+  <TOTR.RecallTrainLabel>召回列车</TOTR.RecallTrainLabel>
+    <!-- EN: Orders the train vehicles to return to the saved positions -->
+  <TOTR.RecallTrainDesc>命令列车返回保存的位置</TOTR.RecallTrainDesc>
+    <!-- EN: Cycle texture -->
+  <TOTR.CycleTextureLabel>切换贴图</TOTR.CycleTextureLabel>
+    <!-- EN: Cycles between available textures for this vehicle -->
+  <TOTR.CycleTextureDesc>循环切换该车辆可用的贴图</TOTR.CycleTextureDesc>
+    <!-- EN: Save new position -->
+  <TOTR.SaveNewPositionLabel>保存新位置</TOTR.SaveNewPositionLabel>
+    <!-- EN: Sets the train vehicle's saved position to its current position -->
+  <TOTR.SaveNewPositionDesc>将列车的保存位置设置为当前位置</TOTR.SaveNewPositionDesc>
+    <!-- EN: Disband train -->
+  <TOTR.DisbandTrainLabel>解散列车</TOTR.DisbandTrainLabel>
+    <!-- EN: Disbands the current train -->
+  <TOTR.DisbandTrainDesc>解散当前列车</TOTR.DisbandTrainDesc>
+
+    <!-- Messages -->
+    <!-- EN: A train caravan must have at least one locomotive. -->
+  <TOTR.CaravanRequiresLocomotive>列车商队必须至少有一辆机车。</TOTR.CaravanRequiresLocomotive>
+</LanguageData>

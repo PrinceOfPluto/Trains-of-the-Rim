@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Gondola -->
+  <TOTR_Trains_Railcar_Gondola.label>敞篷車</TOTR_Trains_Railcar_Gondola.label>
+  <!-- EN: A Gondola for cargo transportation. -->
+  <TOTR_Trains_Railcar_Gondola.description>用於貨物運輸的敞篷車。</TOTR_Trains_Railcar_Gondola.description>
+  <!-- EN: Front Bogie -->
+  <TOTR_Trains_Railcar_Gondola.components.0.label>前轉向架</TOTR_Trains_Railcar_Gondola.components.0.label>
+  <!-- EN: Rear Bogie -->
+  <TOTR_Trains_Railcar_Gondola.components.1.label>後轉向架</TOTR_Trains_Railcar_Gondola.components.1.label>
+  <!-- EN: Front Coupler -->
+  <TOTR_Trains_Railcar_Gondola.components.2.label>前車鉤</TOTR_Trains_Railcar_Gondola.components.2.label>
+  <!-- EN: Rear Coupler -->
+  <TOTR_Trains_Railcar_Gondola.components.3.label>後車鉤</TOTR_Trains_Railcar_Gondola.components.3.label>
+  
+</LanguageData>

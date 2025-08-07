@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Caboose -->
+  <TOTR_Trains_Railcar_Caboose_Blueprint.label>守车</TOTR_Trains_Railcar_Caboose_Blueprint.label>
+  <!-- EN: A caboose for crew transportation. -->
+  <TOTR_Trains_Railcar_Caboose_Blueprint.description>用于乘务人员运输的守车。</TOTR_Trains_Railcar_Caboose_Blueprint.description>
+  
+</LanguageData>

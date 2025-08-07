@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Flatbed with Stakes -->
+  <TOTR_Railcars_FlatbedStaked.label>帶樁平板車</TOTR_Railcars_FlatbedStaked.label>
+  <!-- EN: A flatbed railcar with stakes to secure cargo. -->
+  <TOTR_Railcars_FlatbedStaked.description>帶有固定樁的平板車，用於穩固貨物。</TOTR_Railcars_FlatbedStaked.description>
+  <!-- EN: Front Bogie -->
+  <TOTR_Railcars_FlatbedStaked.components.0.label>前轉向架</TOTR_Railcars_FlatbedStaked.components.0.label>
+  <!-- EN: Rear Bogie -->
+  <TOTR_Railcars_FlatbedStaked.components.1.label>後轉向架</TOTR_Railcars_FlatbedStaked.components.1.label>
+  <!-- EN: Front Coupler -->
+  <TOTR_Railcars_FlatbedStaked.components.2.label>前車鉤</TOTR_Railcars_FlatbedStaked.components.2.label>
+  <!-- EN: Rear Coupler -->
+  <TOTR_Railcars_FlatbedStaked.components.3.label>後車鉤</TOTR_Railcars_FlatbedStaked.components.3.label>
+  
+</LanguageData>

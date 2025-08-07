@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Frisco 4-8-4 -->
+  <TOTR_Steam_Locomotive_Frisco_Chemfuel.label>Frisco 4-8-4型蒸汽机车（化学燃料）</TOTR_Steam_Locomotive_Frisco_Chemfuel.label>
+  <!-- EN: A large steam locomotive with a separate tender for fuel and water. The Frisco 4-8-4 is primarily used as a road engine for hauling long and heavy trains. \n\n<color=#bb8f04>Crew:</color> Engineer x2, Passenger x1\n<color=#bb8f04>Fuel type:</color> Chemfuel -->
+  <TOTR_Steam_Locomotive_Frisco_Chemfuel.description>大型蒸汽机车，配有独立的燃料和水箱。Frisco 4-8-4型主要用于牵引长途重载列车。\n\n<color=#bb8f04>乘员：</color>工程师x2，乘客x1\n<color=#bb8f04>燃料类型：</color>化学燃料</TOTR_Steam_Locomotive_Frisco_Chemfuel.description>
+  <!-- EN: Axle Boxes -->
+  <TOTR_Steam_Locomotive_Frisco_Chemfuel.components.2.label>轴箱</TOTR_Steam_Locomotive_Frisco_Chemfuel.components.2.label>
+  <!-- EN: Right Cylinder -->
+  <TOTR_Steam_Locomotive_Frisco_Chemfuel.components.4.label>右气缸</TOTR_Steam_Locomotive_Frisco_Chemfuel.components.4.label>
+  <!-- EN: Left Cylinder -->
+  <TOTR_Steam_Locomotive_Frisco_Chemfuel.components.5.label>左气缸</TOTR_Steam_Locomotive_Frisco_Chemfuel.components.5.label>
+  <!-- EN: Left Coupling Rods -->
+  <TOTR_Steam_Locomotive_Frisco_Chemfuel.components.6.label>左连杆</TOTR_Steam_Locomotive_Frisco_Chemfuel.components.6.label>
+  <!-- EN: Right Coupling Rods -->
+  <TOTR_Steam_Locomotive_Frisco_Chemfuel.components.7.label>右连杆</TOTR_Steam_Locomotive_Frisco_Chemfuel.components.7.label>
+  <!-- EN: Front Coupler -->
+  <TOTR_Steam_Locomotive_Frisco_Chemfuel.components.8.label>前车钩</TOTR_Steam_Locomotive_Frisco_Chemfuel.components.8.label>
+  <!-- EN: Rear Coupler -->
+  <TOTR_Steam_Locomotive_Frisco_Chemfuel.components.9.label>后车钩</TOTR_Steam_Locomotive_Frisco_Chemfuel.components.9.label>
+  
+  <!-- EN: Frisco 4-8-4 -->
+  <TOTR_Steam_Locomotive_Frisco_Wood.label>Frisco 4-8-4型蒸汽机车（木材）</TOTR_Steam_Locomotive_Frisco_Wood.label>
+  <!-- EN: A large steam locomotive with a separate tender for fuel and water. This 4-8-4 is primarily used as a road engine for hauling large, heavy trains. \n\n<color=#bb8f04>Crew:</color> Engineer x2, Passenger x1\n<color=#bb8f04>Fuel type:</color> Wood -->
+  <TOTR_Steam_Locomotive_Frisco_Wood.description>大型蒸汽机车，配有独立的燃料和水箱。4-8-4型主要用于牵引大型重载列车。\n\n<color=#bb8f04>乘员：</color>工程师x2，乘客x1\n<color=#bb8f04>燃料类型：</color>木材</TOTR_Steam_Locomotive_Frisco_Wood.description>
+  <!-- EN: Axle Boxes -->
+  <TOTR_Steam_Locomotive_Frisco_Wood.components.2.label>轴箱</TOTR_Steam_Locomotive_Frisco_Wood.components.2.label>
+  <!-- EN: Right Cylinder -->
+  <TOTR_Steam_Locomotive_Frisco_Wood.components.4.label>右气缸</TOTR_Steam_Locomotive_Frisco_Wood.components.4.label>
+  <!-- EN: Left Cylinder -->
+  <TOTR_Steam_Locomotive_Frisco_Wood.components.5.label>左气缸</TOTR_Steam_Locomotive_Frisco_Wood.components.5.label>
+  <!-- EN: Left Coupling Rods -->
+  <TOTR_Steam_Locomotive_Frisco_Wood.components.6.label>左连杆</TOTR_Steam_Locomotive_Frisco_Wood.components.6.label>
+  <!-- EN: Right Coupling Rods -->
+  <TOTR_Steam_Locomotive_Frisco_Wood.components.7.label>右连杆</TOTR_Steam_Locomotive_Frisco_Wood.components.7.label>
+  <!-- EN: Front Coupler -->
+  <TOTR_Steam_Locomotive_Frisco_Wood.components.8.label>前车钩</TOTR_Steam_Locomotive_Frisco_Wood.components.8.label>
+  <!-- EN: Rear Coupler -->
+  <TOTR_Steam_Locomotive_Frisco_Wood.components.9.label>后车钩</TOTR_Steam_Locomotive_Frisco_Wood.components.9.label>
+  
+</LanguageData>

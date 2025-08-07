@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Rail -->
+  <TOTR_Rail.label>鐵軌</TOTR_Rail.label>
+  
+  <!-- EN: Rail Shift 4x4 -->
+  <TOTR_Rail_4x4_S.label>4x4偏移鐵軌</TOTR_Rail_4x4_S.label>
+  
+  <!-- EN: Rail Shift 4x4 Reversed -->
+  <TOTR_Rail_4x4_S_Reverse.label>4x4反向偏移鐵軌</TOTR_Rail_4x4_S_Reverse.label>
+  
+  <!-- EN: Rail Shift 5x6 -->
+  <TOTR_Rail_5x6_S.label>5x6偏移鐵軌</TOTR_Rail_5x6_S.label>
+  
+  <!-- EN: Rail Shift 5x6 Reversed -->
+  <TOTR_Rail_5x6_S_Reverse.label>5x6反向偏移鐵軌</TOTR_Rail_5x6_S_Reverse.label>
+  
+  <!-- EN: Rail Curve 6x6 -->
+  <TOTR_Rail_6x6_C.label>6x6彎道鐵軌</TOTR_Rail_6x6_C.label>
+  
+  <!-- EN: Rail Shift 6x6 -->
+  <TOTR_Rail_6x6_S.label>6x6偏移鐵軌</TOTR_Rail_6x6_S.label>
+  
+  <!-- EN: Rail Shift 6x6 Reversed -->
+  <TOTR_Rail_6x6_S_Reverse.label>6x6反向偏移鐵軌</TOTR_Rail_6x6_S_Reverse.label>
+  
+  <!-- EN: Rail Curve 7x7 -->
+  <TOTR_Rail_7x7_C.label>7x7彎道鐵軌</TOTR_Rail_7x7_C.label>
+  
+</LanguageData>
