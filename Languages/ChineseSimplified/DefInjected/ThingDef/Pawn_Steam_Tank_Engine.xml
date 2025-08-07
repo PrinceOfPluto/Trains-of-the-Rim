@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Tommy 0-6-0T -->
+  <TOTR_Tank_Engine_Chemfuel.label>Tommy 0-6-0T型蒸汽机车（化学燃料）</TOTR_Tank_Engine_Chemfuel.label>
+  <!-- EN: A small steam locomotive with the water tank and fuel bunker mounted on the frame, eliminating the need for a separate tender. The Tommy 0-6-0T is primarily used for railyard shunting and light journeys. \n\n<color=#bb8f04>Crew:</color> Engineer x2, Passenger x1\n<color=#bb8f04>Fuel type:</color> Chemfuel -->
+  <TOTR_Tank_Engine_Chemfuel.description>小型蒸汽机车，水箱和燃料箱直接安装在车架上，无需独立煤水车。Tommy 0-6-0T型主要用于调车作业和短途运输。\n\n<color=#bb8f04>乘员：</color>工程师x2，乘客x1\n<color=#bb8f04>燃料类型：</color>化学燃料</TOTR_Tank_Engine_Chemfuel.description>
+  <!-- EN: Axle Boxes -->
+  <TOTR_Tank_Engine_Chemfuel.components.2.label>轴箱</TOTR_Tank_Engine_Chemfuel.components.2.label>
+  <!-- EN: Right Cylinder -->
+  <TOTR_Tank_Engine_Chemfuel.components.4.label>右气缸</TOTR_Tank_Engine_Chemfuel.components.4.label>
+  <!-- EN: Left Cylinder -->
+  <TOTR_Tank_Engine_Chemfuel.components.5.label>左气缸</TOTR_Tank_Engine_Chemfuel.components.5.label>
+  <!-- EN: Left Coupling Rods -->
+  <TOTR_Tank_Engine_Chemfuel.components.6.label>左连杆</TOTR_Tank_Engine_Chemfuel.components.6.label>
+  <!-- EN: Right Coupling Rods -->
+  <TOTR_Tank_Engine_Chemfuel.components.7.label>右连杆</TOTR_Tank_Engine_Chemfuel.components.7.label>
+  <!-- EN: Front Coupler -->
+  <TOTR_Tank_Engine_Chemfuel.components.8.label>前车钩</TOTR_Tank_Engine_Chemfuel.components.8.label>
+  <!-- EN: Rear Coupler -->
+  <TOTR_Tank_Engine_Chemfuel.components.9.label>后车钩</TOTR_Tank_Engine_Chemfuel.components.9.label>
+  
+  <!-- EN: Tommy 0-6-0T -->
+  <TOTR_Tank_Engine_Wood.label>Tommy 0-6-0T型蒸汽机车（木材）</TOTR_Tank_Engine_Wood.label>
+  <!-- EN: A small steam locomotive with the water tank and fuel bunker mounted on the frame, eliminating the need for a separate tender. The Tommy 0-6-0T is primarily used for railyard shunting and light journeys. \n\n<color=#bb8f04>Crew:</color> Engineer x2, Passenger x1\n<color=#bb8f04>Fuel type:</color> Wood -->
+  <TOTR_Tank_Engine_Wood.description>小型蒸汽机车，水箱和燃料箱直接安装在车架上，无需独立煤水车。Tommy 0-6-0T型主要用于调车作业和短途运输。\n\n<color=#bb8f04>乘员：</color>工程师x2，乘客x1\n<color=#bb8f04>燃料类型：</color>木材</TOTR_Tank_Engine_Wood.description>
+  <!-- EN: Axle Boxes -->
+  <TOTR_Tank_Engine_Wood.components.2.label>轴箱</TOTR_Tank_Engine_Wood.components.2.label>
+  <!-- EN: Right Cylinder -->
+  <TOTR_Tank_Engine_Wood.components.4.label>右气缸</TOTR_Tank_Engine_Wood.components.4.label>
+  <!-- EN: Left Cylinder -->
+  <TOTR_Tank_Engine_Wood.components.5.label>左气缸</TOTR_Tank_Engine_Wood.components.5.label>
+  <!-- EN: Left Coupling Rods -->
+  <TOTR_Tank_Engine_Wood.components.6.label>左连杆</TOTR_Tank_Engine_Wood.components.6.label>
+  <!-- EN: Right Coupling Rods -->
+  <TOTR_Tank_Engine_Wood.components.7.label>右连杆</TOTR_Tank_Engine_Wood.components.7.label>
+  <!-- EN: Front Coupler -->
+  <TOTR_Tank_Engine_Wood.components.8.label>前车钩</TOTR_Tank_Engine_Wood.components.8.label>
+  <!-- EN: Rear Coupler -->
+  <TOTR_Tank_Engine_Wood.components.9.label>后车钩</TOTR_Tank_Engine_Wood.components.9.label>
+  
+</LanguageData>

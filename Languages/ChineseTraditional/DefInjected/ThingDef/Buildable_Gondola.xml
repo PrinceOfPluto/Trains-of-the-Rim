@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Gondola -->
+  <TOTR_Trains_Railcar_Gondola_Blueprint.label>敞篷車</TOTR_Trains_Railcar_Gondola_Blueprint.label>
+  <!-- EN: A Gondola for cargo transportation. -->
+  <TOTR_Trains_Railcar_Gondola_Blueprint.description>用於貨物運輸的敞篷車。</TOTR_Trains_Railcar_Gondola_Blueprint.description>
+  
+</LanguageData>

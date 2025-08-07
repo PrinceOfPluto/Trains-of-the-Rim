@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Caboose -->
+  <TOTR_Trains_Railcar_Caboose.label>守車</TOTR_Trains_Railcar_Caboose.label>
+  <!-- EN: A caboose for crew transportation. -->
+  <TOTR_Trains_Railcar_Caboose.description>用於乘務人員運輸的守車。</TOTR_Trains_Railcar_Caboose.description>
+  <!-- EN: Front Bogie -->
+  <TOTR_Trains_Railcar_Caboose.components.0.label>前轉向架</TOTR_Trains_Railcar_Caboose.components.0.label>
+  <!-- EN: Rear Bogie -->
+  <TOTR_Trains_Railcar_Caboose.components.1.label>後轉向架</TOTR_Trains_Railcar_Caboose.components.1.label>
+  <!-- EN: Front Coupler -->
+  <TOTR_Trains_Railcar_Caboose.components.2.label>前車鉤</TOTR_Trains_Railcar_Caboose.components.2.label>
+  <!-- EN: Rear Coupler -->
+  <TOTR_Trains_Railcar_Caboose.components.3.label>後車鉤</TOTR_Trains_Railcar_Caboose.components.3.label>
+  
+</LanguageData>

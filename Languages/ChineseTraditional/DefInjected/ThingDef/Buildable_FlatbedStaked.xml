@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Flatbed with Stakes -->
+  <TOTR_Railcars_FlatbedStaked_Blueprint.label>帶樁平板車</TOTR_Railcars_FlatbedStaked_Blueprint.label>
+  <!-- EN: A flatbed railcar with stakes to secure cargo. -->
+  <TOTR_Railcars_FlatbedStaked_Blueprint.description>帶有固定樁的平板車，用於穩固貨物。</TOTR_Railcars_FlatbedStaked_Blueprint.description>
+  
+</LanguageData>
