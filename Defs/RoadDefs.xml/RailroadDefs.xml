@@ -6,7 +6,6 @@
         <priority>50</priority>
         <movementCostMultiplier>0.5</movementCostMultiplier>
         <tilesPerSegment>400</tilesPerSegment>
-        <ancientOnly>true</ancientOnly>
         <distortionFrequency>0</distortionFrequency>
         <pathingMode>Bulldoze</pathingMode>
         <roadGenSteps>
