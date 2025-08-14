@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using SmashTools;
 using UnityEngine;
 using Verse;
 
@@ -21,6 +22,7 @@ namespace TrainsOfTheRim
             listingStandard.Begin(inRect);
             listingStandard.CheckboxLabeled("TOTR.RequireRailTerrainLabel".Translate(), ref settings.requireRailroadTerrain, "TOTR.RequireRailTerrainDesc".Translate());
             listingStandard.CheckboxLabeled("TOTR.HideRoadBuildingFeatureLabel".Translate(), ref settings.hideRoadBuildingFeature, "TOTR.HideRoadBuildingFeatureDesc".Translate());
+            listingStandard.SliderLabeled("TOTR.RoadBuildingSpeedMultiplierLabel".Translate(), "TOTR.RoadBuildingSpeedMultiplierDesc".Translate(), endSymbol: "x", ref settings.roadBuildingSpeedMultiplier, 1f, 10f, decimalPlaces: 1);
             listingStandard.End();
             base.DoSettingsWindowContents(inRect);
         }

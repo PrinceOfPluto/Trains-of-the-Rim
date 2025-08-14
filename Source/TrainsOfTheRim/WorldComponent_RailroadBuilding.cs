@@ -1,6 +1,7 @@
 ﻿using HarmonyLib;
 using RimWorld;
 using RimWorld.Planet;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -48,7 +49,9 @@ namespace TrainsOfTheRim
 
             if (__instance.IsHashIntervalTick(250) && Instance.RailWorkInfos.TryGetValue(__instance, out var workInfo))
             {
-                workInfo.WorkDone += __instance.PawnsListForReading.Count(p => p.IsFreeColonist && !p.Dead && !p.Downed && !p.InMentalState);
+                float multiplier = LoadedModManager.GetMod<TrainMod>().GetSettings<TrainModSettings>().roadBuildingSpeedMultiplier;
+                float pawnWork = __instance.PawnsListForReading.Count(p => (p.IsFreeColonist || p.IsColonyMechPlayerControlled || p.IsPrisonerOfColony) && !p.Dead && !p.Downed && !p.InMentalState);
+                workInfo.WorkDone += (int)Math.Ceiling(pawnWork * multiplier);
                 Instance.RailWorkInfos[__instance] = workInfo;
                 if (__instance.Tile != workInfo.Tile || __instance.pather.MovingNow)
                     Instance.RailWorkInfos.Remove(__instance);

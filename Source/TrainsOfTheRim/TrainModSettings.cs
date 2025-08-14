@@ -6,11 +6,13 @@ namespace TrainsOfTheRim
     {
         public bool requireRailroadTerrain = false;
         public bool hideRoadBuildingFeature = false;
+        public float roadBuildingSpeedMultiplier = 1f;
 
         public override void ExposeData()
         {
             Scribe_Values.Look(ref requireRailroadTerrain, "requireRailroadTerrain");
             Scribe_Values.Look(ref hideRoadBuildingFeature, "hideRoadBuildingFeature");
+            Scribe_Values.Look(ref roadBuildingSpeedMultiplier, "roadBuildingSpeedMultiplier");
             base.ExposeData();
         }
     }

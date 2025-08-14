@@ -11,6 +11,8 @@
     <TOTR.RequireRailTerrainDesc>Controls whether train vehicles require special railroad ballast terrain to move on the colony map. This is different from the world map which requires trains to move along railroads.</TOTR.RequireRailTerrainDesc>
     <TOTR.HideRoadBuildingFeatureLabel>Hide road building feature from Trains of the Rim</TOTR.HideRoadBuildingFeatureLabel>
     <TOTR.HideRoadBuildingFeatureDesc>Hides the gizmos for road building from Trains of the Rim, in case you prefer using another road mod like Rails and Roads of the Rim.</TOTR.HideRoadBuildingFeatureDesc>
+    <TOTR.RoadBuildingSpeedMultiplierLabel>Road building speed multipler</TOTR.RoadBuildingSpeedMultiplierLabel>
+    <TOTR.RoadBuildingSpeedMultiplierDesc>Adjusts how fast pawns build roads. 2x means twice as fast.</TOTR.RoadBuildingSpeedMultiplierDesc>
 
     <!-- Train Gizmos -->
     <TOTR.CreateTrainLabel>Create train</TOTR.CreateTrainLabel>
