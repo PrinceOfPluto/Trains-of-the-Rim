@@ -1,5 +1,5 @@
 $sourceDir = "..\"
-$destinationDir = "..\..\Trains of the Rim"
+$destinationDir = "..\..\Trains of the Rim\"
 
 $foldersToInclude = @("Defs", "Languages", "Patches", "Sounds", "Textures", "Assemblies");
 
@@ -22,11 +22,10 @@ if (-Not (Test-Path -Path $destinationDir)) {
 
 foreach ($folderName in $foldersToInclude) {
     $sourceFolderPath = Join-Path -Path $sourceDir -ChildPath $folderName
-    $destinationFolderPath = Join-Path -Path $destinationDir -ChildPath $folderName
 
     if (Test-Path -Path $sourceFolderPath) {
         try {
-            Copy-Item -Path $sourceFolderPath -Destination $destinationFolderPath -Recurse -Force
+            Copy-Item -Path $sourceFolderPath -Destination $destinationDir -Recurse -Force
             Write-Host "Copied folder $folderName to $destinationDir"
         } catch {
             Write-Host "Failed to copy folder $folderName"
