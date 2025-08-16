@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+    <!-- Road Building -->
+    <!-- EN: Building road: {0}, progress: {1}, ({2}/{3}) -->
+  <TOTR.BuildingRoad>道路建設中：{0}、進捗：{1}（{2}/{3}）</TOTR.BuildingRoad>
+    <!-- EN: {0} has finished building {1} -->
+  <TOTR.RoadFinished>{0}が{1}の建設を完了しました</TOTR.RoadFinished>
+    <!-- EN: DEV: Finish road -->
+  <TOTR.DebugFinishRoad>開発者用：道路完成</TOTR.DebugFinishRoad>
+
+    <!-- Mod Settings -->
+    <!-- EN: Trains of the Rim -->
+  <TOTR.SettingsCategoryName>リムワールドの列車</TOTR.SettingsCategoryName>
+    <!-- EN: Experimental: Require railroad terrain -->
+  <TOTR.RequireRailTerrainLabel>実験的：鉄道地形の要求</TOTR.RequireRailTerrainLabel>
+    <!-- EN: Controls whether train vehicles require special railroad ballast terrain to move on the colony map. This is different from the world map which requires trains to move along railroads. -->
+  <TOTR.RequireRailTerrainDesc>列車がコロニーマップ上で特別な鉄道バラスト地形を必要とするかどうかを制御します。これは列車が鉄道に沿って移動する必要があるワールドマップとは異なります。</TOTR.RequireRailTerrainDesc>
+    <!-- EN: Hide road building feature from Trains of the Rim -->
+  <TOTR.HideRoadBuildingFeatureLabel>リムワールドの列車から道路建設機能を隠す</TOTR.HideRoadBuildingFeatureLabel>
+    <!-- EN: Hides the gizmos for road building from Trains of the Rim, in case you prefer using another road mod like Rails and Roads of the Rim. -->
+  <TOTR.HideRoadBuildingFeatureDesc>リムワールドの列車から道路建設のギズモを隠します。リムワールドの鉄道と道路などの他の道路MODを使用する場合に有用です。</TOTR.HideRoadBuildingFeatureDesc>
+
+    <!-- Train Gizmos -->
+    <!-- EN: Create train -->
+  <TOTR.CreateTrainLabel>列車作成</TOTR.CreateTrainLabel>
+    <!-- EN: Couple to train -->
+  <TOTR.CoupleToTrainLabel>列車に連結</TOTR.CoupleToTrainLabel>
+    <!-- EN: Uncouple from train -->
+  <TOTR.UncoupleFromTrainLabel>列車から切り離し</TOTR.UncoupleFromTrainLabel>
+    <!-- EN: Recall train -->
+  <TOTR.RecallTrainLabel>列車呼び戻し</TOTR.RecallTrainLabel>
+    <!-- EN: Orders the train vehicles to return to the saved positions -->
+  <TOTR.RecallTrainDesc>列車を保存された位置に戻すよう命令します</TOTR.RecallTrainDesc>
+    <!-- EN: Cycle texture -->
+  <TOTR.CycleTextureLabel>テクスチャ切り替え</TOTR.CycleTextureLabel>
+    <!-- EN: Cycles between available textures for this vehicle -->
+  <TOTR.CycleTextureDesc>この車両で利用可能なテクスチャを順番に切り替えます</TOTR.CycleTextureDesc>
+    <!-- EN: Save new position -->
+  <TOTR.SaveNewPositionLabel>新しい位置を保存</TOTR.SaveNewPositionLabel>
+    <!-- EN: Sets the train vehicle's saved position to its current position -->
+  <TOTR.SaveNewPositionDesc>列車の保存位置を現在の位置に設定します</TOTR.SaveNewPositionDesc>
+    <!-- EN: Disband train -->
+  <TOTR.DisbandTrainLabel>列車解散</TOTR.DisbandTrainLabel>
+    <!-- EN: Disbands the current train -->
+  <TOTR.DisbandTrainDesc>現在の列車を解散します</TOTR.DisbandTrainDesc>
+
+    <!-- Messages -->
+    <!-- EN: A train caravan must have at least one locomotive. -->
+  <TOTR.CaravanRequiresLocomotive>列車キャラバンには少なくとも1台の機関車が必要です。</TOTR.CaravanRequiresLocomotive>
+</LanguageData>

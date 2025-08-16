@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Hopper -->
+  <TOTR_Railcars_Hopper_Blueprint.label>ホッパー車</TOTR_Railcars_Hopper_Blueprint.label>
+  <!-- EN: A railcar for transporting bulk materials. -->
+  <TOTR_Railcars_Hopper_Blueprint.description>バルク材料輸送用の貨車。</TOTR_Railcars_Hopper_Blueprint.description>
+  
+</LanguageData>
