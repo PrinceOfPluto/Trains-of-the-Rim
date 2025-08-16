@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Flatbed -->
+  <TOTR_Trains_Railcar_Flatbed_Blueprint.label>平板車</TOTR_Trains_Railcar_Flatbed_Blueprint.label>
+  <!-- EN: A flatbed for cargo transportation. -->
+  <TOTR_Trains_Railcar_Flatbed_Blueprint.description>用於貨物運輸的平板車。</TOTR_Trains_Railcar_Flatbed_Blueprint.description>
+  
+</LanguageData>

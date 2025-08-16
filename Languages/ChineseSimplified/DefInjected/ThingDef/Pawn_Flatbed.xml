@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Flatbed -->
+  <TOTR_Trains_Railcar_Flatbed.label>平板车</TOTR_Trains_Railcar_Flatbed.label>
+  <!-- EN: A flatbed for cargo transportation. -->
+  <TOTR_Trains_Railcar_Flatbed.description>用于货物运输的平板车。</TOTR_Trains_Railcar_Flatbed.description>
+  <!-- EN: Front Bogie -->
+  <TOTR_Trains_Railcar_Flatbed.components.0.label>前转向架</TOTR_Trains_Railcar_Flatbed.components.0.label>
+  <!-- EN: Rear Bogie -->
+  <TOTR_Trains_Railcar_Flatbed.components.1.label>后转向架</TOTR_Trains_Railcar_Flatbed.components.1.label>
+  <!-- EN: Front Coupler -->
+  <TOTR_Trains_Railcar_Flatbed.components.2.label>前车钩</TOTR_Trains_Railcar_Flatbed.components.2.label>
+  <!-- EN: Rear Coupler -->
+  <TOTR_Trains_Railcar_Flatbed.components.3.label>后车钩</TOTR_Trains_Railcar_Flatbed.components.3.label>
+  
+</LanguageData>

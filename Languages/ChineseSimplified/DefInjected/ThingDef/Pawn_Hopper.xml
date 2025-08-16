@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Hopper -->
+  <TOTR_Railcars_Hopper.label>漏斗车</TOTR_Railcars_Hopper.label>
+  <!-- EN: A railcar for transporting bulk materials. -->
+  <TOTR_Railcars_Hopper.description>用于运输散装物料的铁路车辆。</TOTR_Railcars_Hopper.description>
+  <!-- EN: Front Bogie -->
+  <TOTR_Railcars_Hopper.components.0.label>前转向架</TOTR_Railcars_Hopper.components.0.label>
+  <!-- EN: Rear Bogie -->
+  <TOTR_Railcars_Hopper.components.1.label>后转向架</TOTR_Railcars_Hopper.components.1.label>
+  <!-- EN: Front Coupler -->
+  <TOTR_Railcars_Hopper.components.2.label>前车钩</TOTR_Railcars_Hopper.components.2.label>
+  <!-- EN: Rear Coupler -->
+  <TOTR_Railcars_Hopper.components.3.label>后车钩</TOTR_Railcars_Hopper.components.3.label>
+  
+</LanguageData>

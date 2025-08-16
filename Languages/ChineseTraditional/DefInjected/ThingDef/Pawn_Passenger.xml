@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Passenger Car -->
+  <TOTR_Railcars_Passenger.label>客車車廂</TOTR_Railcars_Passenger.label>
+  <!-- EN: A carriage for transporting passengers. -->
+  <TOTR_Railcars_Passenger.description>用於運輸乘客的車廂。</TOTR_Railcars_Passenger.description>
+  <!-- EN: Front Bogie -->
+  <TOTR_Railcars_Passenger.components.0.label>前轉向架</TOTR_Railcars_Passenger.components.0.label>
+  <!-- EN: Rear Bogie -->
+  <TOTR_Railcars_Passenger.components.1.label>後轉向架</TOTR_Railcars_Passenger.components.1.label>
+  <!-- EN: Front Coupler -->
+  <TOTR_Railcars_Passenger.components.2.label>前車鉤</TOTR_Railcars_Passenger.components.2.label>
+  <!-- EN: Rear Coupler -->
+  <TOTR_Railcars_Passenger.components.3.label>後車鉤</TOTR_Railcars_Passenger.components.3.label>
+  
+</LanguageData>

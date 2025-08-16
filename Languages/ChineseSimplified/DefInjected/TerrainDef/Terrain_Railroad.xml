@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: granite railroad ballast -->
+  <RailroadBallastGranite.label>花岗岩铁路道砟</RailroadBallastGranite.label>
+  <!-- EN: Track ballast forms the trackbed upon which railroad ties (sleepers) are laid. -->
+  <RailroadBallastGranite.description>铁路道砟构成轨道床，用于铺设铁路枕木。</RailroadBallastGranite.description>
+  
+  <!-- EN: limestone railroad ballast -->
+  <RailroadBallastLimestone.label>石灰岩铁路道砟</RailroadBallastLimestone.label>
+  <!-- EN: Track ballast forms the trackbed upon which railroad ties (sleepers) are laid. -->
+  <RailroadBallastLimestone.description>铁路道砟构成轨道床，用于铺设铁路枕木。</RailroadBallastLimestone.description>
+  
+  <!-- EN: marble railroad ballast -->
+  <RailroadBallastMarble.label>大理石铁路道砟</RailroadBallastMarble.label>
+  <!-- EN: Track ballast forms the trackbed upon which railroad ties (sleepers) are laid. -->
+  <RailroadBallastMarble.description>铁路道砟构成轨道床，用于铺设铁路枕木。</RailroadBallastMarble.description>
+  
+  <!-- EN: sandstone railroad ballast -->
+  <RailroadBallastSandstone.label>砂岩铁路道砟</RailroadBallastSandstone.label>
+  <!-- EN: Track ballast forms the trackbed upon which railroad ties (sleepers) are laid. -->
+  <RailroadBallastSandstone.description>铁路道砟构成轨道床，用于铺设铁路枕木。</RailroadBallastSandstone.description>
+  
+  <!-- EN: slate railroad ballast -->
+  <RailroadBallastSlate.label>板岩铁路道砟</RailroadBallastSlate.label>
+  <!-- EN: Track ballast forms the trackbed upon which railroad ties (sleepers) are laid. -->
+  <RailroadBallastSlate.description>铁路道砟构成轨道床，用于铺设铁路枕木。</RailroadBallastSlate.description>
+  
+</LanguageData>

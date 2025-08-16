@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Passenger Car -->
+  <TOTR_Railcars_Passenger_Blueprint.label>客車車廂</TOTR_Railcars_Passenger_Blueprint.label>
+  <!-- EN: A carriage for transporting passengers. -->
+  <TOTR_Railcars_Passenger_Blueprint.description>用於運輸乘客的車廂。</TOTR_Railcars_Passenger_Blueprint.description>
+  
+</LanguageData>
