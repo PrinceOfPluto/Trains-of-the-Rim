@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Goat DE2 -->
+  <TOTR_Diesel_Shunter_Blueprint.label>ゴートDE2</TOTR_Diesel_Shunter_Blueprint.label>
+  <!-- EN: A small 2 axle diesel electic locomotive, the Goat is primarily used for railyard shunting and light journeys. \n\n<color=#bb8f04>Crew:</color> Engineer x2, Passenger x1\n<color=#bb8f04>Fuel type:</color> Chemfuel -->
+  <TOTR_Diesel_Shunter_Blueprint.description>小型2軸ディーゼル電気機関車。ゴートは主に操車場での入換作業や軽い運行に使用される。\n\n<color=#bb8f04>乗員：</color>エンジニアx2、乗客x1\n<color=#bb8f04>燃料タイプ：</color>化学燃料</TOTR_Diesel_Shunter_Blueprint.description>
+  
+</LanguageData>

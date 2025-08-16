@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Boxcar -->
+  <TOTR_Trains_Railcar_Boxcar_Blueprint.label>ボックスカー</TOTR_Trains_Railcar_Boxcar_Blueprint.label>
+  <!-- EN: A boxcar for cargo transportation. -->
+  <TOTR_Trains_Railcar_Boxcar_Blueprint.description>貨物輸送用のボックスカー。</TOTR_Trains_Railcar_Boxcar_Blueprint.description>
+  
+</LanguageData>

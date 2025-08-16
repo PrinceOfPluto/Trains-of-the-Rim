@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Chemfuel Locomotives -->
+  <Research_Vehicles_Trains_Chemfuel.label>化学燃料機関車</Research_Vehicles_Trains_Chemfuel.label>
+  <!-- EN: Build chemfuel powered locomotives capable of efficiently hauling massive\n            amounts of cargo across the Rim. -->
+  <Research_Vehicles_Trains_Chemfuel.description>リムワールド全体で大量の貨物を効率的に輸送できる化学燃料駆動機関車を建造する。</Research_Vehicles_Trains_Chemfuel.description>
+  
+  <!-- EN: Steam Locomotives -->
+  <Research_Vehicles_Trains_Steam.label>蒸気機関車</Research_Vehicles_Trains_Steam.label>
+  <!-- EN: Build steam engine locomotives capable of transporting passengers and cargo\n            across the Rim. -->
+  <Research_Vehicles_Trains_Steam.description>リムワールド全体で乗客と貨物を輸送できる蒸気機関車を建造する。</Research_Vehicles_Trains_Steam.description>
+  
+</LanguageData>
