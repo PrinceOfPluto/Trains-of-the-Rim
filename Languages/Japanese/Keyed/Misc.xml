@@ -10,15 +10,15 @@
 
     <!-- Mod Settings -->
     <!-- EN: Trains of the Rim -->
-  <TOTR.SettingsCategoryName>リムワールドの列車</TOTR.SettingsCategoryName>
+  <TOTR.SettingsCategoryName>Trains of the Rim</TOTR.SettingsCategoryName>
     <!-- EN: Experimental: Require railroad terrain -->
   <TOTR.RequireRailTerrainLabel>実験的：鉄道地形の要求</TOTR.RequireRailTerrainLabel>
     <!-- EN: Controls whether train vehicles require special railroad ballast terrain to move on the colony map. This is different from the world map which requires trains to move along railroads. -->
   <TOTR.RequireRailTerrainDesc>列車がコロニーマップ上で特別な鉄道バラスト地形を必要とするかどうかを制御します。これは列車が鉄道に沿って移動する必要があるワールドマップとは異なります。</TOTR.RequireRailTerrainDesc>
     <!-- EN: Hide road building feature from Trains of the Rim -->
-  <TOTR.HideRoadBuildingFeatureLabel>リムワールドの列車から道路建設機能を隠す</TOTR.HideRoadBuildingFeatureLabel>
+  <TOTR.HideRoadBuildingFeatureLabel>Trains of the Rimから道路建設機能を隠す</TOTR.HideRoadBuildingFeatureLabel>
     <!-- EN: Hides the gizmos for road building from Trains of the Rim, in case you prefer using another road mod like Rails and Roads of the Rim. -->
-  <TOTR.HideRoadBuildingFeatureDesc>リムワールドの列車から道路建設のギズモを隠します。リムワールドの鉄道と道路などの他の道路MODを使用する場合に有用です。</TOTR.HideRoadBuildingFeatureDesc>
+  <TOTR.HideRoadBuildingFeatureDesc>Trains of the Rimから道路建設のギズモを隠します。Trains of the Rimの鉄道と道路などの他の道路MODを使用する場合に有用です。</TOTR.HideRoadBuildingFeatureDesc>
 
     <!-- Train Gizmos -->
     <!-- EN: Create train -->
