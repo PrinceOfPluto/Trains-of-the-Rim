@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Frisco 4-8-4 (Chemfuel) -->
+  <TOTR_Steam_Locomotive_Frisco_Chemfuel_Blueprint.label>フリスコ4-8-4（化学燃料）</TOTR_Steam_Locomotive_Frisco_Chemfuel_Blueprint.label>
+  <!-- EN: A large steam locomotive with a separate tender for fuel and water. This 4-8-4 is primarily used as a road engine for hauling large, heavy trains. \n\n<color=#bb8f04>Crew:</color> Engineer x2, Passenger x1\n<color=#bb8f04>Fuel type:</color> Chemfuel -->
+  <TOTR_Steam_Locomotive_Frisco_Chemfuel_Blueprint.description>燃料と水のための別の炭水車を備えた大型蒸気機関車。この4-8-4は主に大型重量列車の牽引用として使用される。\n\n<color=#bb8f04>乗員：</color>エンジニアx2、乗客x1\n<color=#bb8f04>燃料タイプ：</color>化学燃料</TOTR_Steam_Locomotive_Frisco_Chemfuel_Blueprint.description>
+  
+  <!-- EN: Frisco 4-8-4 (Wood) -->
+  <TOTR_Steam_Locomotive_Frisco_Wood_Blueprint.label>フリスコ4-8-4（木材）</TOTR_Steam_Locomotive_Frisco_Wood_Blueprint.label>
+  <!-- EN: A large steam locomotive with a separate tender for fuel and water. The Frisco 4-8-4 is primarily used as a road engine for hauling long and heavy trains. \n\n<color=#bb8f04>Crew:</color> Engineer x2, Passenger x1\n<color=#bb8f04>Fuel type:</color> Wood -->
+  <TOTR_Steam_Locomotive_Frisco_Wood_Blueprint.description>燃料と水のための別の炭水車を備えた大型蒸気機関車。フリスコ4-8-4は主に長距離重量列車の牽引用として使用される。\n\n<color=#bb8f04>乗員：</color>エンジニアx2、乗客x1\n<color=#bb8f04>燃料タイプ：</color>木材</TOTR_Steam_Locomotive_Frisco_Wood_Blueprint.description>
+  
+</LanguageData>
