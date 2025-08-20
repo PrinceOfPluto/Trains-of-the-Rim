@@ -2,11 +2,12 @@
 <Defs>
 
     <TerrainDef Abstract="True" Name="RailroadBallastBase">
-        <!-- <layerable>true</layerable> -->
+        <layerable>true</layerable>
         <affordances>
             <li>Light</li>
             <li>Medium</li>
             <li>Heavy</li>
+            <li>Walkable</li>
         </affordances>
         <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
         <tags>
@@ -16,16 +17,17 @@
         <renderPrecedence>370</renderPrecedence>
         <description>Track ballast forms the trackbed upon which railroad ties (sleepers) are laid.</description>
         <texturePath>Terrain/Surfaces/RailroadBallast</texturePath>
-        <!-- <pollutionShaderType MayRequire="Ludeon.RimWorld.Biotech">TerrainFadeRoughLinearBurn</pollutionShaderType>
+        <pollutionShaderType MayRequire="Ludeon.RimWorld.Biotech">TerrainFadeRoughLinearBurn</pollutionShaderType>
         <pollutionOverlayTexturePath>Terrain/Surfaces/PollutionFloorSmooth</pollutionOverlayTexturePath>
         <pollutionColor>(1, 1, 1, 1)</pollutionColor>
-        <isPaintable>true</isPaintable> -->
+        <isPaintable>true</isPaintable>
         <edgeType>FadeRough</edgeType>
         <statBases>
             <WorkToBuild>100</WorkToBuild>
             <Beauty>-1</Beauty>
             <Cleanliness>-2</Cleanliness>
         </statBases>
+        <drawStyleCategory>Floors</drawStyleCategory>
         <designatorDropdown>Floor_RailroadBallast</designatorDropdown>
         <designationCategory>RailroadCategory</designationCategory>
         <fertility>0</fertility>
