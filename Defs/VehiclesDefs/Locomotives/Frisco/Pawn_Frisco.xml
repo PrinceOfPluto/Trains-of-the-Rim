@@ -9,7 +9,7 @@
         <graphicData>
             <texPath>Things/Vehicles/Rail/Locomotives/FriscoWithTender/frisco</texPath>
             <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
-            <!-- <shaderType>CutoutComplexPattern</shaderType> -->
+            <shaderType>CutoutComplexPattern</shaderType>
             <drawSize>(5,22)</drawSize>
 			<drawOffsetWest>(0,0,0.75)</drawOffsetWest>
             <drawOffsetEast>(0,0,0.75)</drawOffsetEast>
@@ -308,7 +308,7 @@
         <graphicData>
             <texPath>Things/Vehicles/Rail/Locomotives/FriscoWithTender/frisco</texPath>
             <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
-            <!-- <shaderType>CutoutComplexPattern</shaderType> -->
+            <shaderType>CutoutComplexPattern</shaderType>
             <drawSize>(5,22)</drawSize>
 			<drawOffsetWest>(0,0,0.75)</drawOffsetWest>
             <drawOffsetEast>(0,0,0.75)</drawOffsetEast>
